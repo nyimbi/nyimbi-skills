@@ -1,0 +1,121 @@
+# The seven phase prompts, generalized
+
+Adapted from the Agentic Engineering course build (20 lessons at 10–12k words, live on nyimbi.com).
+Replace bracketed fields; keep the operative structure. The `[DOMAIN]` phrasing in Prompt 1 becomes
+the course topic at `/course` invocation.
+
+## Prompt 1 — Capability definition
+
+> **Role.** Help design a post-graduate-level curriculum in [DOMAIN]. The learner starts at
+> [PREREQUISITES], and should end [TERMINAL LEVEL] — able to do research-grade work, not just apply
+> techniques.
+>
+> **Deliverables.**
+> 1. **The end state.** 15–25 observable capabilities, each starting with a verb (derive, design,
+>    compute, diagnose, produce, evaluate, critique). Each corresponds to an artefact or decision
+>    someone else can assess. No topic labels, no familiarity claims.
+> 2. **The spine.** 2–4 questions that, if answerable for any problem in the domain, prove mastery.
+>    The course's every module traces to at least one.
+> 3. **The mastery criteria.** 5 rules any claimed improvement must satisfy, stated as rules ("every
+>    claimed improvement carries uncertainty estimates and controls"), not aspirations.
+> 4. **The capability map.** 4–6 clusters; each names prerequisite and terminal capabilities. Clusters
+>    become the parts; terminal capabilities become lesson objectives.
+>
+> **Constraints.** Testable, cumulative, research-grade. No "understand".
+>
+> **Output.** End state, spine, mastery criteria, capability map (Markdown).
+
+## Prompt 2 — Outline (for the requested lesson count, default 20)
+
+> **Deliverables.**
+> 1. **Architecture table**: *Part | Lessons | Theme | Primary outcome* — parts from the clusters.
+> 2. **Lessons** (the exact requested count): number+title, weeks/slot, objectives (3–6, as
+>    capabilities), content (key results, techniques, debates), a runnable **lab** with acceptance
+>    criteria, **core readings** each tiered A/B/C and statused R/S/P/C — flag single-lab and
+>    over-relied-on readings.
+> 3. **The prelude** spec: the derivations, results and formal objects the course assumes, fully
+>    self-sufficient, closing with an annotated cheat sheet (*Term | Statement | Where used*).
+> 4. **The capstone**: 3–4 tracks with weights, including a **replication-and-negative-result track**
+>    (pre-registered replication, publishable either way).
+> 5. **Assessment weights**, **mastery criteria restated**, **open intellectual questions** (4–6, each
+>    with evidence on both sides, no administrative ones), **currency caveat**.
+>
+> **Constraints.** Sequenced prerequisites, runnable labs, classified readings, self-sufficient document.
+>
+> **Output.** Architecture, lessons with all fields, prelude spec, capstone, assessment, criteria,
+>    questions, caveat.
+
+## Prompt 3 — Critique
+
+> **Task.** Critique the outline, then propose fixes. Every criticism carries a fix; every fix states
+> impact.
+>
+> **Cover**: the spine (is the evidence base thin — tier-P or single-lab load-bearing citations?); the
+> gaps (objectives named but untaught; literature present but outline absent; assumed-but-unestablished
+> prerequisites); the weaknesses (unsupported claims, tier-C sourcing, numbers asserted without
+> arithmetic); the sequencing (concrete before abstract; violated dependencies; prelude placement); the
+> depth (where a formal derivation, worked example, measurement protocol or forcing table is missing);
+> the assessment (labs test objectives; acceptance criteria observable; a negative-result path exists).
+> Apply the course's own standards to the course.
+>
+> **Output.** Executive verdict, section-by-section analysis, expansions/extensions/deepenings,
+> revised sequencing, priority table (*Priority | Change | Effort | Impact*).
+
+## Prompt 4 — Rewrite
+
+> **Task.** Produce the v2 outline as a complete document (never a diff): structure that survived kept;
+> everything the critique identified fixed; the prelude spec at the top, self-sufficient, closing with
+> the annotated cheat sheet; the weak sections replaced by the critic's fixes; evidence discipline
+> applied to the course's own claims (a tier-P dependency is stated as such); every recommendation
+> carrying a revision condition (what observation would change it). Style rules enforced.
+
+## Prompt 5 — Lesson creation (pacing: one lesson per "next")
+
+> **Task.** Write the **full pedagogical content** for lesson N — never a summary, never an outline.
+> Fully self-sufficient.
+>
+> **The lesson structure.**
+> 1. **Header**: number, title, weeks/slot, prerequisite lessons and prelude sections, note that prior
+>    results are restated in the form needed.
+> 2. **§N.0 — Module map and objectives**: the *Part | Content | Lab* table; a paragraph, then 7–12
+>    observable outcomes (verbs, artefacts); the closing "Everything is self-contained..." sentence.
+> 3. **Parts A–E** (or as many as truthful): every section in order — objects, results (proof sketch or
+>    flag), a **worked example with arithmetic and interpretation**, a **table** where three or more
+>    options compare, a design-principle callout where a transferable heuristic emerges, inline
+>    cross-references. **At least 2 inline SVG diagrams**, drawn for this lesson's own objects with real
+>    quantities and labelled axes, consistent with the course's diagram palette. **At least 10,000
+>    words** including tables.
+> 4. **Concept checks** after each major section: block-quoted question + full answer naming the
+>    mechanism, not the definition. Answerable from the section alone.
+> 5. **Evidence discipline**: every citation tiered and statused; vendor/preprint claims marked as
+>    hypotheses; every number either reproduced in the module's own arithmetic or flagged unreproduced.
+> 6. **The lab**: task, conditions, held-fixed controls, metrics table, pre-registered hypotheses
+>    H1–H5, acceptance-criteria table, "What good looks like" with five properties.
+> 7. **The cheat sheet**: one table — *Term | Statement | Role in this lesson and in the course* —
+>    covering every term introduced and every term used from earlier.
+> 8. **Exercises and solutions**: 6–9, `E N.M` / `S N.M`, numerical or diagnostic (never recall),
+>    arithmetic shown, each closing with "The lesson:".
+> 9. **Exit test**: "You are ready for lesson N+1 when you can, without notes:" — 10–20 capabilities.
+>
+> **Style.** No code in the body (pseudocode only where precision demands); every formula used in a
+> worked example; no forward references; no claim without tier. Possessive sparingly; tables for
+> comparisons; block quotes for concept checks and design principles.
+
+## Prompt 6 — Correction protocol (applied mid-course on drift)
+
+> 1. Name the drift precisely ("the text is littered with possessives").
+> 2. State the correction as a rule the agent applies ("prefer 'the output of the model' over 'the
+>    model's output' when the possessive earns nothing").
+> 3. Apply forward only; completed lessons are not rewritten unless asked.
+> 4. Check the next lesson against the correction; repeat with an example only if it fails again.
+>
+> **Watch list**: the possessive drift; the summary-instead-of-material failure; a forward reference to
+> an undefined term; a claim without its evidence tier; the comparison table whose axes are unnamed; the
+> concept check whose answer restates the definition; the lab with unobservable acceptance criteria; the
+> exercise that tests recall.
+
+## Prompt 7 — Synthesis (after the last lesson)
+
+> One consolidated cheat sheet, readable in one sitting: one table per part (*Concept | Rule or formula
+> | Use*), no prose, no examples (the arithmetic stayed in the lessons), closing with the mastery
+> criteria and the spine questions. Over ~6,000 words means it is a summary, not a cheat sheet; compress.

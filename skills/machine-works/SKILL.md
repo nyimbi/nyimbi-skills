@@ -51,6 +51,19 @@ When both looks would serve, ask the owner once. Never blend the engines on one 
    from the encoded video. Read every tile. Stop when a full pass finds nothing.
 8. **Neat over busy.** The subject fills 60–70% of the frame; nothing important within 60 px of an edge;
    repeated details read at normal size; every state holds long enough to read.
+9. **Speed, step and zoom are part of the interface, not extras.** A continuous process is draggable in
+   pace: webgl ships the two sliders (engine speed and playback slow-motion, keyboard-repeatable) and
+   zoom in (wheel, pinch, keyboard) to camera limits; ink ships a step control for one increment of the
+   real process per press and the build.py zoom chip is never omitted. A viewer must be able to slow the
+   mechanism down to inspect it, walk it stage by stage, and push into the detail full-frame.
+10. **The page explains the machine, not only plays it.** Every delivered machine comes with an operation
+    discussion on the host page (or a companion section of it): at least 4 paragraphs of explanatory text on
+    how the machine actually runs, at least 5 real equations stated with the machine's own numbers
+    (swept volume, kinematics of the input, the working pressure relation — each derived honestly from the
+    constants in the model, never from a textbook boilerplate), technical naming of every component used
+    consistently between the text and the labels, and one still named view — a labelled plate or frozen frame
+    with the callouts lit — where a person can read the name of every part. The figure canvas itself stays
+    prose-free (both engines keep words in buttons and labels); the discussion lives beside it.
 
 ## Engine boundaries
 
