@@ -5,6 +5,7 @@
 // drag, wheel or key hands control to the visitor, 25 s of quiet hands it back.
 import {warmComposer} from '../kit/warm.js';
 import {CAMS, createConsole, CUTS, OVERLAYS, RPM_MAX} from './console.js';
+import {createStage} from './stage.js';
 import {camAt, camName, cutAt, DURATION, makeConsoleFrame, makeCursor, rpmAt, SCRIPT, STROKES_AT, thetaAt, VIEW_FN} from './film.js';
 
 const W = 1600;

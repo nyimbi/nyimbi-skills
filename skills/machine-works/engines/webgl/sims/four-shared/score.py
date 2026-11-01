@@ -8,6 +8,7 @@ Times and the crank model mirror four-shared/film.js: the rpm profile is the sam
 the same way (Euler, 1/240 s, playback 1/20), with theta0 set so t=7 lands on intake TDC.
 """
 
+import json
 import math
 import os
 
@@ -15,9 +16,9 @@ from sfx.score_kit import airy, bed, chords, hz, puff, thud
 from sfx.synth import click
 
 HERE = os.path.dirname(os.path.abspath(__file__))
-import json
+TIMELINE = "../four-film/timeline.json"
 
-with open(os.path.join(HERE, "..", "four-film", "timeline.json"), encoding="utf8") as f:
+with open(os.path.join(HERE, TIMELINE), encoding="utf8") as f:
     TL = json.load(f)
 OUT = os.path.join(os.environ.get("TEARDOWN_OUT", os.path.join(HERE, "..", "..", "teardown-out")), "four-score.wav")
 TARGET_LUFS = -14.0
