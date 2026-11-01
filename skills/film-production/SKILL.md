@@ -223,9 +223,9 @@ GPU-heavy work alongside a render if the machine must stay responsive.
 **Overnight arithmetic** (measured targets, M2 Max 96 GB — replace with your own
 first measured run, then hold):
 
-| Engine | Role | Per 4–5 s shot | 75-shot night |
+| Engine | Role | Per 5 s shot | 75-shot night |
 |---|---|---:|---:|
-| LTX-2.3 q4-av (`ltx-2-mlx`) | hero + coverage, joint audio | ~3–5 min | 4–6 h |
+| LTX-2.3 q4-av (`ltx-2-mlx`) | hero + coverage, joint audio | **6.7 min measured** (704×512, display active) | ~8.5 h one variant; heroes ×3 ≈ 12–13 h |
 | LTX-Video 0.9.8 (ComfyUI) | animatic, draft passes | ~100 s | 2 h |
 
 Longer takes change the math in your favour: LTX-2 clips run to ~10–20 s, so a
@@ -246,18 +246,21 @@ disk         = generations × clip_size + keyframes + audio + masters
 
 On this machine (M2 Max, 96 GB):
 
-| Engine | Role | Seconds per 4–5 s shot | 10-min short, one pass |
+| Engine | Role | Seconds per 5 s shot | 10-min short, one pass |
 |---|---|---:|---:|
-| LTX-2.3 q4-av (`ltx-2-mlx`, joint audio) | hero + coverage | ~180–300 s (target; measure first run) | ~6–8 h |
+| LTX-2.3 q4-av (`ltx-2-mlx`, joint audio) | hero + coverage | **401 s measured** (704×512×121f, M2 Max 96 GB, display active, 2026-11-01) | ~14 h |
 | LTX-Video 0.9.8 distilled (ComfyUI) | animatic, drafts | ~100 s | ~4.2 h |
 | Wan 2.2 14B | archived alternate | ~400+ | ~17 h |
 
-The LTX-2.3 figure is a target assembled from published Apple-Silicon runs
-(~101 s on an M5 Max 128 GB at 4-bit, ~150 s on a 24 GB M5 Pro at int8
-streamed); replace it with the first measured run and hold. Three variants per
-shot multiplies all of it by three — which is why overnight mode renders
-variants serially and auto-approves mechanically-valid takes. Keyframes,
-retries, audio and edit are additional. A feature is a campaign, not a render.
+The LTX-2.3 number is measured on this machine, not estimated — 400.7 s wall
+for a 121-frame 704×512 distilled render including prompt encoding, denoise,
+VAE and audio decode, with `AGX_RELAX_CDM_CTXSTORE_TIMEOUT=1`. A closed lid
+may beat it; UI contention during the run can add to it. Longer takes change
+the math in your favour: the same engine sustains ~10–20 s clips, so a
+5-minute film is 20–30 shots, not 75 — under 3 hours. Three variants per shot
+multiplies all of it by three — which is why overnight mode renders variants
+serially and auto-approves mechanically-valid takes. Keyframes, retries, audio
+and edit are additional. A feature is a campaign, not a render.
 Full table and cloud considerations: `references/feasibility.md`.
 
 **The model decision (2026-11).** LTX-2.5 is the current Lightricks flagship
