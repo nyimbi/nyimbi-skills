@@ -1,6 +1,6 @@
 ---
 name: ai-design-check
-description: Run the machine floor-gate for AI-built interfaces before any UI work is called done — 49 rules checked automatically (of 74; the rest need eyes), reporting rule id + file:line, exit 1 on errors; plus inventory (distinct button/heading "looks" census), narrow (320px render to catch overflow), baseline mode and reasoned inline ignores for mid-project adoption. Use on "run the design gate", "is this UI slop-check clean?", before shipping any React/Next/Vue/Svelte/Svelte/HTML/Blade/SwiftUI/Compose screen, or whenever impeccable/ux-excellence/web-artifact-and-app-building finished a screen. Prose craft skills judge what the checker cannot; this proves the floor.
+description: Run the machine floor-gate for AI-built interfaces before any UI work is called done — 49 rules checked automatically (of 74; the rest need eyes), reporting rule id + file:line, exit 1 on errors; plus inventory (distinct button/heading "looks" census), narrow (320px render to catch overflow), baseline mode and reasoned inline ignores for mid-project adoption. Use on "run the design gate", "is this UI slop-check clean?", before shipping any React/Next/Vue/Svelte/HTML/Blade/SwiftUI/Compose screen, or whenever impeccable/ux-excellence/web-artifact-and-app-building finished a screen. Prose craft skills judge what the checker cannot; this proves the floor.
 ---
 
 # ai-design-check
