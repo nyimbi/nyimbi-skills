@@ -100,7 +100,10 @@ the course topic at `/course` invocation.
 >    completion problem → faded problem → independent problem. Every formula carries its limit case:
 >    dimensional check, degenerate case by hand, one sanity inversion. **At least 2 inline SVG
 >    diagrams**, drawn for this lesson's own objects with real quantities and labelled axes, consistent
->    with the course's diagram palette. **At least 10,000 words** including tables.
+>    with the course's diagram palette. **At least 10,000 words** including tables, enforced per the
+>    length protocol (SKILL.md): a per-section budget table in §N.0 that sums past 10,000, assembly
+>    section by section rather than in one pass, a `wc -w` count before the lesson is accepted, and
+>    deepen-don't-pad on any shortfall.
 > 4. **Concept checks** after each major section: block-quoted question + full answer naming the
 >    mechanism, not the definition. Answerable from the section alone.
 > 5. **Evidence discipline**: every citation tiered and statused; vendor/preprint claims marked as

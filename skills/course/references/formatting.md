@@ -162,8 +162,8 @@ learns the shapes once:
 8. Hints are collapsed rungs; answers live in the solutions only.
 
 **Measures**
-9. Word count ≥ 10,000 including tables; ≥ 2 drawn diagrams; neither
-   constraint met by padding.
+9. Word count ≥ 10,000 including tables, measured as `wc -w` on the source (the §N.0 budget table
+   sums past it); ≥ 2 drawn diagrams; neither constraint met by padding.
 
 ---
 

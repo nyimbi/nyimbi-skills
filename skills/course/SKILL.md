@@ -89,8 +89,24 @@ through the destination's own build before lesson 2 is written.
 
 ## The lesson contract
 
-- **At least 10,000 words per lesson**, tables included in the count. Under 10,000 is a failure of the
-  instruction, not a style choice.
+- **At least 10,000 words per lesson, enforced mechanically** — tables included, counted as `wc -w`
+  on the markdown source. Ten thousand words exceeds what one output pass holds at full depth, so
+  length is engineered, not hoped for:
+  1. *Budget.* §N.0's module map carries a word budget per section (parts, concept checks, lab,
+     exercises, solutions) that sums to ≥ 10,000. Length is a property of the plan, not of the
+     writing session.
+  2. *Assemble in parts.* Write the lesson section by section — separate writes/appends where the
+     destination is files, clearly marked continuations where it is not — each section to its
+     budget. The exercises and solutions carry the same budget as the body; they are the sections
+     most often thinned when an output window runs long, and a thinned exercise set is the
+     summary-instead-of-material failure in miniature.
+  3. *Count.* Run `wc -w` (or the destination's equivalent) before the lesson is accepted as done.
+     Under 10,000 fails the lesson; the correction protocol applies, forward only.
+  4. *Deepen, never pad.* A shortfall is repaired by expanding named section types: worked-example
+     arithmetic and interpretation, exercise solutions, limit-case checks, comparison-table rows,
+     the lab's controls and acceptance criteria. Forbidden: restating, throat-clearing
+     introductions, adjectives, duplicated content — padding is detected the same way a summary
+     is, by asking what it teaches.
 - **At least 2 drawn SVG diagrams per lesson** — inline `<svg>` (or `<img src=data:...>`), hand-composed
   for that lesson: a mechanism, a control flow, a decision boundary, a timeline — with real quantities,
   labelled axes and a consistent palette shared across the course. Mermaid is acceptable only for
@@ -156,3 +172,7 @@ through the destination's own build before lesson 2 is written.
   `\[`/`\(` delimiter, the unescaped `%` inside math, the diagram pasted without a figure or title, the
   mermaid edge that mixes `-- text -->` with `-->|label|`. The layout contract
   (`references/formatting.md`) exists so none of these is a judgement call.
+- The truncated lesson: the body delivered at full depth and the exercises thinned to a line each
+  because the output window ran long, or the count that was never taken. The budget table and the
+  `wc -w` gate exist to catch both; a lesson is not done — and the course does not advance on
+  "next" — until the count passes.
