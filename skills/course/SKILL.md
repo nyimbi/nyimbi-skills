@@ -1,12 +1,12 @@
 ---
 name: course
-description: Design and write a full-depth, research-grade curriculum with the user in command of pacing — seven phases (capability definition, outline, critique, rewrite, lesson creation, correction protocol, synthesis) run one prompt at a time, on a "next" pace, with self-sufficiency, evidence tiers, mathematical rigour and one style code enforced throughout. Default 20 lessons; the lesson count is user-specifiable. Every lesson is at least 10,000 words including tables, and carries relevant drawn SVG diagrams. Use on "/course" or when the user asks for a course, a curriculum, a lecture series, a syllabus, or full lesson material of research-grade depth — not for a single lesson or a summary document (say so and route back).
+description: Design and write a full-depth, research-grade curriculum with the user in command of pacing — seven phases (capability definition, outline, critique, rewrite, lesson creation, correction protocol, synthesis) run one prompt at a time, on a "next" pace, with self-sufficiency, evidence tiers, mathematical rigour and one style code enforced throughout. Default 20 lessons; the lesson count is user-specifiable. Every lesson is at least 10,000 words including tables, and carries relevant drawn SVG diagrams. Lessons are formatted to the layout contract in references/formatting.md (real headings, pipe tables, figure-wrapped SVGs, collapsible hint ladders, renderer-safe math) so the result reads beautifully in any destination. Use on "/course" or when the user asks for a course, a curriculum, a lecture series, a syllabus, or full lesson material of research-grade depth — not for a single lesson or a summary document (say so and route back).
 ---
 
 # Course
 
 A curriculum is built by phases, and each phase's output is the next phase's input. The method was
-proven end to end on a 20-lesson post-doctoral Agentic Engineering course (the prompts in
+proven end to end on a 20-lesson research-grade Agentic Engineering course (the prompts in
 `references/phase-prompts.md` are that run's prompts, generalized). The user controls the pacing;
 the agent never skips, batches or improvises a phase.
 
@@ -43,7 +43,8 @@ plain files are equally valid when the user names them.
 4. **Rewrite.** The v2 outline as a complete document (never a diff), critique incorporated, prelude
    specified, replacements made, every recommendation carrying a revision condition. See Prompt 4.
 5. **Lesson creation.** One lesson per "next", each the full pedagogical content in the lesson structure
-   (Prompt 5) — never a summary. The prelude comes first.
+   (Prompt 5) — never a summary — formatted to the layout contract (`references/formatting.md`), which
+   carries the renderer-safe math, table, diagram and callout rules. The prelude comes first.
 6. **Correction protocol.** Mid-course: name the drift, state the correction as a applicable rule, apply
    forward only. Completed lessons are not rewritten unless asked. See Prompt 6.
 7. **Synthesis.** The consolidated cheat sheet after the last lesson: one table per part
@@ -65,10 +66,26 @@ plain files are equally valid when the user names them.
    when the possessive earns nothing). Tables for any comparison of three or more. Block quotes for
    concept checks and design principles. "The lesson:" sentence after worked examples and exercises.
    "What good looks like" sections with five properties. Numbered sections, lettered parts. Bold for
-   emphasis, not decoration.
+   emphasis, not decoration. No credential-label framing — never "post-doctoral" or "post-graduate"
+   in a course title or body; "research-grade" carries the claim and does not narrow the readership.
 5. **Spine and mastery.** Each lesson traceable to at least one spine question; every claimed
    improvement carries uncertainty estimates and harness controls (adapt the wording to the domain once,
    in Phase 1, and hold it).
+
+## Formatting and layout
+
+A course is read, not just written. Every phase's output — and every lesson in
+Phase 5 especially — follows the **layout contract in
+`references/formatting.md`**: real headings at fixed levels (never bold-line
+pseudo-headings), pipe tables with named axes, figure-wrapped SVG diagrams,
+collapsible hint ladders, block-quote callouts, and renderer-safe math
+(`$$`/`$` only, `%` escaped, `aligned` not `align*`). The contract is portable
+— it holds for any destination, any subject — with a site appendix for
+nyimbi.com (frontmatter, `[[prompt:]]` boxes, margin notes, the audit command).
+Three moments enforce it: the outline (Phase 2) fixes the diagram palette and
+citation shape; the pre-flight checklist in the contract runs on every finished
+lesson before it is accepted as done; the smoke test (below) renders lesson 1
+through the destination's own build before lesson 2 is written.
 
 ## The lesson contract
 
@@ -118,7 +135,9 @@ plain files are equally valid when the user names them.
   page) and read the rendered page once; fix the lesson conventions on lesson 1, never across 20.
 - **Style check between lessons**: the possessive drift, the summary-instead-of-material failure, the
   forward reference, the claim without tier, the table whose axes are not named — scan each finished
-  lesson before accepting it as done (Prompt 6's list, applied to yourself).
+  lesson before accepting it as done (Prompt 6's list, applied to yourself) — **plus the formatting
+  contract's pre-flight checklist** (`references/formatting.md` §7): pseudo-headings, ASCII tables,
+  unbalanced or renderer-unsafe math, unfigure-wrapped diagrams, untagged callouts.
 
 ## Anti-failures
 
@@ -133,3 +152,7 @@ plain files are equally valid when the user names them.
   at the current lesson; the demonstration a domain expert could not get wrong. Each of these teaches
   fluency in the lesson's own wording and nothing about the domain — which is the illusion the course
   exists to prevent.
+- Formatting that fights the renderer: the bold-line pseudo-heading, the ASCII or grid table, the
+  `\[`/`\(` delimiter, the unescaped `%` inside math, the diagram pasted without a figure or title, the
+  mermaid edge that mixes `-- text -->` with `-->|label|`. The layout contract
+  (`references/formatting.md`) exists so none of these is a judgement call.

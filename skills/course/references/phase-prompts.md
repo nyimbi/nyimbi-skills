@@ -6,7 +6,7 @@ the course topic at `/course` invocation.
 
 ## Prompt 1 — Capability definition
 
-> **Role.** Help design a post-graduate-level curriculum in [DOMAIN]. The learner starts at
+> **Role.** Help design a research-grade curriculum in [DOMAIN]. The learner starts at
 > [PREREQUISITES], and should end [TERMINAL LEVEL] — able to do research-grade work, not just apply
 > techniques.
 >
@@ -44,6 +44,10 @@ the course topic at `/course` invocation.
 >    turns in advance, and the retrieval schedule each future lesson opens with, stated here once.
 >
 > **Constraints.** Sequenced prerequisites, runnable labs, classified readings, self-sufficient document.
+>
+> **Formatting.** Fix here, once, what every later lesson reuses: the diagram palette (paper, ink,
+> accent, soft ink — named hex values), the citation shape (`[Author, Year · tier A/R]`), and the
+> heading scheme (parts as H2 numbered N.M, subsections H3). See references/formatting.md.
 >
 > **Output.** Architecture, lessons with all fields, prelude spec, capstone, assessment, criteria,
 >    questions, caveat.
@@ -119,6 +123,13 @@ the course topic at `/course` invocation.
 > **Style.** No code in the body (pseudocode only where precision demands); every formula used in a
 > worked example; no forward references; no claim without tier. Possessive sparingly; tables for
 > comparisons; block quotes for concept checks and design principles.
+>
+> **Formatting.** The lesson follows references/formatting.md end to end: real headings (parts H2
+> numbered `N.M`, subsections H3, nothing deeper than H4, no bold-line pseudo-headings); pipe tables
+> with named axes; every diagram figure-wrapped SVG with `<title>` and caption, or a
+> strictly-syntaxed mermaid flowchart; math as `$…$`/`$$…$$` only (`%` escaped, `aligned` not
+> `align*`); hint ladders as one `<details>` rung per hint. Before the lesson is accepted as done,
+> run the contract's pre-flight checklist (§7) against it.
 
 ## Prompt 6 — Correction protocol (applied mid-course on drift)
 
@@ -131,7 +142,10 @@ the course topic at `/course` invocation.
 > **Watch list**: the possessive drift; the summary-instead-of-material failure; a forward reference to
 > an undefined term; a claim without its evidence tier; the comparison table whose axes are unnamed; the
 > concept check whose answer restates the definition; the lab with unobservable acceptance criteria; the
-> exercise that tests recall.
+> exercise that tests recall; **the formatting drifts** — the bold-line pseudo-heading, the ASCII or
+> grid table, the `\[`/`\(` math delimiter, the unescaped `%` inside math, the diagram pasted without
+> a figure or title, the mermaid edge that mixes `-- text -->` with `-->|label|` (see
+> references/formatting.md §5–§7).
 
 ## Prompt 7 — Synthesis (after the last lesson)
 
