@@ -87,7 +87,12 @@ render_one() {
     [[ -s "$take" ]] || {
       echo "[$sid] take $n rendering (${#key[@]:+I2V}${key[@]:-T2V} ${WIDTH}x${HEIGHT} ${FRAMES}f)..."
       [[ -n "$DRY" ]] && continue
-      (cd "$LTX" && uv run ltx-2-mlx generate --distilled --model "$MODEL" \
+      # AGX_RELAX_CDM_CTXSTORE_TIMEOUT=1 relaxes the macOS GPU watchdog for this
+      # process (MLX 0.31 + macOS 26.x kills sustained GPU work otherwise).
+      # The 100%-reliable variant is a closed lid — which is where this script
+      # runs. See ltx-2-mlx docs/PIPELINES.md.
+      (cd "$LTX" && AGX_RELAX_CDM_CTXSTORE_TIMEOUT=1 uv run ltx-2-mlx generate \
+        --distilled --model "$MODEL" \
         --prompt "$prompt" "${key[@]}" \
         -W "$WIDTH" -H "$HEIGHT" --frames "$FRAMES" --frame-rate "$RATE" \
         --seed $((RANDOM % 100000)) -o "$take") >>"$dir/prompt.log" 2>&1 \

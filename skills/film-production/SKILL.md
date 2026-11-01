@@ -213,6 +213,13 @@ performance; that is the morning's first job, and `04_gen/render-log.csv` plus
 shot auto-fail that shot and move on — a blocked queue wastes the whole night
 on one stubborn shot, so the night sacrifices shots, never the film.
 
+**The GPU watchdog (macOS 26.x + MLX 0.31.x).** Sustained GPU work can be
+killed while the display is active — a known regression the runner detects
+and names. `render_shots.sh` sets `AGX_RELAX_CDM_CTXSTORE_TIMEOUT=1`, the
+process-level mitigation; the only 100%-reliable workaround upstream is a
+closed lid, which is exactly where overnight runs live. Do not run interactive
+GPU-heavy work alongside a render if the machine must stay responsive.
+
 **Overnight arithmetic** (measured targets, M2 Max 96 GB — replace with your own
 first measured run, then hold):
 
