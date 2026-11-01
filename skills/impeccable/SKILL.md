@@ -14,6 +14,14 @@ Core principles:
 - Scale ambition to the surface's mode (see Modes). Persuade and Experience get full commitment: bold, distinct work with a point of view. On Operate and Read, ambition shows as precision and restraint, and patterns the visitor already knows earn their place.
 - Verify by looking at the rendered result at the sizes it ships at, and batch the checks: fix what one look shows before looking again, rather than screenshotting after every tweak.
 
+## Machine floor gate
+
+Before any UI work is called done, run the bundle's `ai-design-check` skill (the vendored zero-dependency
+checker) over the touched **source** — never the built bundle. Findings above the project's baseline
+(`--write-baseline` for mid-project adoption; inline ignores carry a reason) are material for the polish
+loop. The gate proves the mechanical floor; the taste work stays here. Run `inventory` on deliverables
+spanning many screens to census the drift this skill's design-systemness checks by reading.
+
 ## Setup
 
 1. Run `<skill-base-dir>/scripts/impeccable context` once per session, where `<skill-base-dir>` is the directory that contains this SKILL.md (the skill folder, not a plugin root two levels above it); keep cwd at the user's project. That base directory resolves every `.claude/skills/impeccable/scripts/impeccable <verb>` command in this skill and its references, and `.claude/skills/impeccable/scripts` is the fallback only when the runtime reports no base directory. On a Windows shell without `sh`, call `.claude/skills/impeccable/scripts/impeccable.cmd` instead. The launcher runs a self-contained binary that ships next to it or is downloaded once on first run; no Node or other runtime is required. Pass a named source file or route as `--target <path>`. It loads PRODUCT.md, DESIGN.md, the matching surface brief, and native-platform guidance when applicable; follow its directives and do not rerun it.

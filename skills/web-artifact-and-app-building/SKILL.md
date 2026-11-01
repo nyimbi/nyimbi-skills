@@ -135,6 +135,8 @@ or MCP server rather than a web interface.
       with every scoped interaction clicked through, not just the page load
 - [ ] Console clean on the paths exercised — no uncaught errors or failed requests
 - [ ] Mobile-width render checked for clipping and overflow; keyboard focus visible
+- [ ] `ai-design-check` gate run over the source (never the built bundle): exit 0 or every finding
+      above a committed baseline resolved; class-string false positives counted, not fixed silently
 - [ ] Anti-slop floor met: no centered-layout/purple-gradient/uniform-radius/default-font
       cluster unless the brief asked for it
 - [ ] Playwright runs used `networkidle` before inspection, launched headless, and

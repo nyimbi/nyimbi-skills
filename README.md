@@ -25,11 +25,11 @@ skills (`film-directing` MIT from DirectorSKILL, `ai-video-directing` and
 | Upstream duplicate collapses | 14 (13 exact-name pairs + 1 near-duplicate pair) |
 | Unique upstream sources merged | 876 |
 | Personal skills adopted | 63 → **55** (8 duplicate overlaps merged away; 1 dangling link dropped) |
-| External skills adopted | **51** (platforms, HF, testing, scientific, obsidian, behavior, Pydantic, LangChain, impeccable, film) |
+| External skills adopted | **52** (platforms, HF, testing, scientific, obsidian, behavior, Pydantic, LangChain, impeccable, film, design gate) |
 | New film syntheses | **7** (production, story, design, character, generation, post, poster) |
 | New engine syntheses | **1** (`machine-works` — two-engine routing skill: April Zhu's colorfigures SVG engine + elvarofficial/teardown three.js pipeline, each vendored intact as `engines/ink` / `engines/webgl` with a shared doctrine in SKILL.md) |
 | New course syntheses | **1** (`course` — the seven-phase curriculum method proven on the Agentic Engineering course: capability → outline → critique → rewrite → paced lessons → corrections → synthesis; default 20 lessons at ≥10,000 words with tables and drawn SVG diagrams) |
-| Bundle skills | **145** (30 consolidated + 55 personal + 51 external + 7 film + 1 engine synthesis + 1 course synthesis) |
+| Bundle skills | **146** (30 consolidated + 55 personal + 52 external + 7 film + 1 engine synthesis + 1 course synthesis) |
 | Upstream compression | ~30x (817 cyber skills → 13 domain skills) |
 | Deliberately excluded | 832 `composio-skills` generated API automations |
 

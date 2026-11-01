@@ -323,6 +323,11 @@ If no design system configuration is found, default to:
 4. **Cognitive Walkthrough Failure** — any "no" answer to the four walkthrough questions.
 
 ### Token & Syntax Level (Automatable, framework‑aware)
+0. **Machine floor gate** — `ai-design-check` (vendored bundle skill) proves 49 of the 74 upstream rules
+   mechanically, class-string scoped to real attributes (JSX comments and built bundles are known
+   false-positive surfaces; scope to source). Grade every finding this skill produces on the same two
+   axes as that gate: severity (error/warning/note) × enforcement (checked/review) — a finding with a
+   concrete threshold belongs at the checked end when its jurisdiction is code we generate.
 1. **Spatial Grid Violation** — margins/paddings not matching project spacing scale.
 2. **Non‑modular Typographic Scale** — font sizes not following defined scale.
 3. **Raw Hex/RGB Values** — color literals not semantic tokens.
