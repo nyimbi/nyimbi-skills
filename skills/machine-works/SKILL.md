@@ -76,6 +76,14 @@ When both looks would serve, ask the owner once. Never blend the engines on one 
   `engines/webgl/sims/` V8 / Cessna / Strandbeest, `engines/ink/assets/examples/` toaster / lamp / claw)
   and copy the closest one rather than starting from nothing.
 
+## Shipping a page to a host
+
+When a figure or sim page deploys beyond `file://` (a vhost, an artifact host), its deliverable is the
+**deployed URL**; hand-over requires the deploy contract in the `web-artifact-and-app-building` skill
+(`references/deploy-contract.md` — CSP for self-framing and inlined `data:` assets, baked-vs-live
+precedence, iframe band measurement) and its verify triad (`references/verify-loop.md`). Build and
+frame-verify there; the smoke always comes from the deployed host.
+
 ## Credits
 
 - **ink** engine: [April Zhu's colorfigures](https://april-zhu.com/colorfigures) — licence in `engines/ink/LICENSE`.

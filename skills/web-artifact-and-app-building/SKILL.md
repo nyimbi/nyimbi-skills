@@ -116,11 +116,27 @@ or MCP server rather than a web interface.
    decide how to call them). Full protocol, server helper usage, and the runnable
    examples: [browser-verification.md](references/browser-verification.md).
 
-7. **Iterate, re-verify, deliver.** Fix what the run surfaced — console errors,
+7. **Verify in depth (the triad).** Browser verification is mandatory unless the user explicitly says
+   to skip it — but it is only one of three independent checks, ordered by cost:
+   1. **Machine gates** — `ai-design-check` on the generated source, `diagram-design`'s verifiers on
+      any shipped SVG figure, the build's own math/type gate. A gate that has never been observed
+      failing doesn't count as a gate: plant one violation and watch it fire, once per project.
+   2. **Rendered frames** — the browser run from the table below, then read its screenshots as
+      images: seven views minimum for figures, interaction run-throughs from `?press=`-style URL
+      params, phone and dark where claimed, plus the exact embed geometry the host will use.
+   3. **The deployed smoke** — the only check the visitor meets. If the artifact ships to a vhost
+      (or any host with a CSP), the deliverable is the deployed URL and **every** check's final
+      answer is measured there: asset 200s + content types, cold-cache headless render, video
+      `readyState`, zero pageerrors on one interaction.
+   Full protocol: [verify-loop.md](references/verify-loop.md) and
+   [deploy-contract.md](references/deploy-contract.md).
+
+8. **Iterate, re-verify, deliver.** Fix what the run surfaced — console errors,
    selectors that never appeared, clipping at mobile width, a flow that needs two
    clicks where the scope said one — then re-run *only* the checks that failed plus a
-   final render. Hand over the deliverable with a short note: what it does, how to open
-   it, what was verified, what was not.
+   final render from the **deployed** URL when one exists. Hand over the deliverable with a short
+   note: what it does, how to open it, what was verified at which layer, what was not — the honest
+   residue by name, never hidden.
 
 ## Quality bar
 
@@ -137,6 +153,14 @@ or MCP server rather than a web interface.
 - [ ] Mobile-width render checked for clipping and overflow; keyboard focus visible
 - [ ] `ai-design-check` gate run over the source (never the built bundle): exit 0 or every finding
       above a committed baseline resolved; class-string false positives counted, not fixed silently
+- [ ] Every check whose answer matters was measured at the **deployed** URL, cold cache — never
+      `file://` (deploy-contract.md §§1–3): asset 200s + content-types, CSP verified with `curl -I`
+      on both page classes, inlined `data:` assets against their policy
+- [ ] Baked/live state precedence asserted in code and exercised with an empty live store (§4)
+- [ ] Zero pageerror at default params and one interaction from the embed (§5) — a blank canvas is
+      an import bug until proven otherwise
+- [ ] Embedded pages measured at four widths × two heights; the pinned band + reason live in a
+      host-page CSS comment (§6)
 - [ ] Anti-slop floor met: no centered-layout/purple-gradient/uniform-radius/default-font
       cluster unless the brief asked for it
 - [ ] Playwright runs used `networkidle` before inspection, launched headless, and

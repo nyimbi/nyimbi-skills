@@ -393,6 +393,12 @@ When the user asks to export, save, rasterize, or convert a generated diagram to
 
 For an imported diagram, pixel dimensions come from the `viewBox` × scale factor, so its size decision belongs to §11, not to export. For any diagram that needs an exact frame (an OG card or a slide image), see [`export.md` § Sizing the export](references/export.md).
 
+## Shipping published pages to a host
+
+A diagram page deployed to a vhost is a web artifact: run `web-artifact-and-app-building`'s
+deploy contract and verify triad (CSP for the Google Fonts link, the deployed-URL smoke) —
+the deliverable is the deployed URL, not the local file.
+
 ## In this bundle (changes from upstream)
 
 - The repo's root CI verifiers (`verify-*.py`, `lint-skin.py` + baseline, `screenshot_catalog.py`, `vendor/`) ship inside `scripts/` alongside the import/export helpers, so every gate runs from the skill directory without a repo checkout.
