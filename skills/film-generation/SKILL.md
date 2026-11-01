@@ -23,7 +23,8 @@ approved takes, with the minimum number of paid or slow attempts.
 ## Preflight — probe before promising
 
 Never assume a provider, model, or workflow is available. Probe and write the result into
-`state.json`:
+`state.json`. `filmctl.py` ships with `film-production` (`skills/film-production/scripts/`);
+run it from anywhere by path:
 
 ```bash
 python3 scripts/filmctl.py doctor <project>

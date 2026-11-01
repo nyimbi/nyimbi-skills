@@ -138,8 +138,9 @@ Open the stage skill, hand it the artifacts it needs, and return with the gate a
 
 ## Approvals
 
-Five human gates. Do not proceed past one without an explicit yes. Record the approval
-in `state.json` and one line in `decision-log.md`.
+Five creative gates and one delivery gate. Do not proceed past a gate without an explicit
+yes. Record each approval in `state.json` and one line in `decision-log.md`. The delivery
+gate (stage 9) checks the spec, not the creativity.
 
 | Gate | Question the approver answers |
 |---|---|
@@ -279,7 +280,7 @@ assembles local files.
 | `references/project-layout.md` | directory tree, naming, `state.json` schema |
 | `references/feasibility.md` | shot arithmetic, local throughput, cloud tiers, honest limits |
 | `references/series-mode.md` | season grid, episode loop, batching, continuity |
-| `references/gates.md` | the five approval checklists in full |
+| `references/gates.md` | the creative-gate and delivery-gate checklists in full |
 | `references/quality-ceiling.md` | honest local-vs-reference quality assessment, three routes, pilot protocol and pass thresholds |
 | `references/local-production-manifest.md` | local-only install list: HF-cache aliases, quantizations, runtime per model, disk and memory plan |
 | `scripts/pull_models.py` | idempotent HF-cache puller: tiers, disk check, resume, retries, log |

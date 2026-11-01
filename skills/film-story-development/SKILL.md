@@ -124,6 +124,10 @@ Rules:
   scene's conditions**. A scene that only delivers information is a candidate for a line
   of dialogue or an insert.
 - **Enter late, leave early.** Start after the greeting, end before the goodbye.
+- **Track setups and payoffs as you go** in `01_story/setup-payoff.csv`
+  (`setup scene | element introduced | payoff scene | resolved?`) — Step 9's
+  `storycheck.py` reads it; a ledger written after the draft is a ledger of
+  rationalizations.
 - Keep a **scene economy budget**: in a 10-minute short, 8–12 scenes; in a feature,
   roughly one scene per 90–150 seconds of screen time.
 - Mark **AI-risk scenes** now: crowds, children, animals, hands, text, sustained
