@@ -32,7 +32,11 @@ plain files are equally valid when the user names them.
 2. **Outline.** The full skeleton at the requested lesson count: architecture table (part | lessons |
    theme | primary outcome), per-lesson objectives/content/lab/readings with tiers, the mathematical
    prelude specification, capstone tracks (including a replication-and-negative-result track), assessment
-   weights, open intellectual questions, the currency caveat. See Prompt 2.
+   weights, open intellectual questions, the currency caveat, and — every 3–4 lessons — a **recitation
+   plan**: 3–4 problems solved aloud in a group (or with the agent as tutor), in peer-instruction form
+   (a board question, individual commitment, discussion, re-commitment), with a facilitator script that
+   names the common wrong turns in advance. The retrieval schedule of the lesson contract is fixed here
+   too, so it is a property of the outline, not a habit. See Prompt 2.
 3. **Critique.** A rigorous review of the outline's own output: the spine's evidence base, the gaps, the
    weak sections, the sequencing, the depth, the assessment — every criticism carries a fix, every fix
    states impact, ending in a priority table. Apply the course's own standards to the course. See Prompt 3.
@@ -74,6 +78,35 @@ plain files are equally valid when the user names them.
   for that lesson: a mechanism, a control flow, a decision boundary, a timeline — with real quantities,
   labelled axes and a consistent palette shared across the course. Mermaid is acceptable only for
   conventional flowcharts; anything precise about the domain's own objects is drawn, not mermaid'd.
+- **One demonstration per lesson, predict–observe–explain.** Open with the case that surprises: a live
+  experiment (lab, simulation or numeric probe the learner runs), the learner states a prediction first,
+  the result is then produced, and the discrepancy is explained. The demonstration earns its place only
+  if a competent guesser in the domain would get it wrong.
+- **Misconception engineering.** Each lesson names 2–4 target misconceptions (the wrong model a capable
+  outsider actually holds) in the §N.0 map; each concept check tests a mechanism, and at least one
+  exercise per lesson is a **trap** — it passes only if the misconception is gone, and its marking key
+  names the belief that failed. A trap that cannot fail for anyone is decoration.
+- **The guidance ladder.** Each lesson's body moves from full worked examples → completion problems
+  (the learner fills the final step) → faded problems (structure cued, steps missing) → independent
+  problems, in that order. Exercises are tiered the same way; hints are a ladder (nudge → mechanism →
+  step), published as a collapsible sequence, never the answer with extra words.
+- **Retrieval is spaced and cumulative.** Every lesson opens with a retrieval set: 5 questions sampled
+  on a fixed schedule (the previous lesson, three lessons back, ten lessons back — or, when N≥15, the
+  mid-course spine review). Each lesson exports a flashcard front/back table for a spaced-repetition
+  deck. From lesson 4 on the exit test is cumulative — it may not test only the current lesson.
+- **Drawing is retrieval too.** One exercise per lesson: reproduce the lesson's central diagram from
+  memory, then check it against the SVG. The check verifies the diagram actually encoded.
+- **A load-bearing mnemonic per lesson, tested forward.** The densest system in the lesson (a tuple, a
+  decision sequence, a naming scheme) carries one structured mnemonic stated in the cheat sheet; the
+  next lesson's retrieval set includes recalling the previous mnemonics by their letters or pegs. A
+  mnemonic never tested again is decoration and is deleted.
+- **Teach-back with calibration.** After the lab: explain the lesson's mechanism aloud to a novice in
+  8+ sentences (the teach-back); the sentences that come out vague become the learner's study list.
+  Before the exit test, the learner predicts their score; grading reports the prediction beside the
+  result. Calibration is trained, not assumed.
+- **Every formula carries its limit case.** At first use: a dimensional check, the degenerate case
+  evaluated by hand (θ = 0, the ratio at its bound, the input at 0), and one sanity inversion (what
+  would have to be true for this to fail?). A formula with no checked limit case is incomplete.
 - **The lesson structure** (Prompt 5): header with prerequisites; §N.0 module map and 7–12 observable
   outcomes; 4–5 lettered parts (objects → results → worked example → comparison table → design-principle
   callout, inline cross-references); concept checks with answers naming the mechanism; the lab (task,
@@ -95,3 +128,8 @@ plain files are equally valid when the user names them.
 - Batching phases because they "would flow". The user's pacing is the design.
 - Numbers quoted without arithmetic; citations without tier and status; intellectual questions replaced
   by administrative ones.
+- Pedagogical set-dressing: the exercise whose answer was just worked through in the body (near-transfer
+  only counts); the trap that cannot fail; the mnemonic nobody retrieves again; the exit test that stops
+  at the current lesson; the demonstration a domain expert could not get wrong. Each of these teaches
+  fluency in the lesson's own wording and nothing about the domain — which is the illusion the course
+  exists to prevent.

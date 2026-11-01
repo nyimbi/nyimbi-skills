@@ -39,6 +39,9 @@ the course topic at `/course` invocation.
 >    (pre-registered replication, publishable either way).
 > 5. **Assessment weights**, **mastery criteria restated**, **open intellectual questions** (4–6, each
 >    with evidence on both sides, no administrative ones), **currency caveat**.
+> 5a. **Recitation plans** every 3–4 lessons: 3–4 problems in peer-instruction form (board question,
+>    individual commitment, discussion, re-commitment), a facilitator script naming the common wrong
+>    turns in advance, and the retrieval schedule each future lesson opens with, stated here once.
 >
 > **Constraints.** Sequenced prerequisites, runnable labs, classified readings, self-sufficient document.
 >
@@ -77,25 +80,41 @@ the course topic at `/course` invocation.
 > **The lesson structure.**
 > 1. **Header**: number, title, weeks/slot, prerequisite lessons and prelude sections, note that prior
 >    results are restated in the form needed.
+> 1a. **Retrieval open (from lesson 2)**: 5 questions on the fixed schedule — the previous lesson, three
+>    lessons back, ten lessons back — plus recall of the previous lesson's mnemonics by their letters or
+>    pegs, with answers at the same depth as concept checks.
+> 1b. **Demonstration (predict–observe–explain)**: the surprising case stated, the learner's prediction
+>    requested explicitly, the result produced (a lab clip, a simulation run, or a numeric probe with its
+>    code shown once), the discrepancy explained.
 > 2. **§N.0 — Module map and objectives**: the *Part | Content | Lab* table; a paragraph, then 7–12
->    observable outcomes (verbs, artefacts); the closing "Everything is self-contained..." sentence.
+>    observable outcomes (verbs, artefacts); the 2–4 **target misconceptions** named; the closing
+>    "Everything is self-contained..." sentence.
 > 3. **Parts A–E** (or as many as truthful): every section in order — objects, results (proof sketch or
 >    flag), a **worked example with arithmetic and interpretation**, a **table** where three or more
 >    options compare, a design-principle callout where a transferable heuristic emerges, inline
->    cross-references. **At least 2 inline SVG diagrams**, drawn for this lesson's own objects with real
->    quantities and labelled axes, consistent with the course's diagram palette. **At least 10,000
->    words** including tables.
+>    cross-references. The guidance ladder runs across the section's exercises: full worked example →
+>    completion problem → faded problem → independent problem. Every formula carries its limit case:
+>    dimensional check, degenerate case by hand, one sanity inversion. **At least 2 inline SVG
+>    diagrams**, drawn for this lesson's own objects with real quantities and labelled axes, consistent
+>    with the course's diagram palette. **At least 10,000 words** including tables.
 > 4. **Concept checks** after each major section: block-quoted question + full answer naming the
 >    mechanism, not the definition. Answerable from the section alone.
 > 5. **Evidence discipline**: every citation tiered and statused; vendor/preprint claims marked as
 >    hypotheses; every number either reproduced in the module's own arithmetic or flagged unreproduced.
 > 6. **The lab**: task, conditions, held-fixed controls, metrics table, pre-registered hypotheses
->    H1–H5, acceptance-criteria table, "What good looks like" with five properties.
+>    H1–H5, acceptance-criteria table, "What good looks like" with five properties; then the
+>    **teach-back** (explain the mechanism to a novice in 8+ sentences; vague sentences become the study
+>    list) and **calibration** (predict the exit-test score; the report shows prediction beside result).
 > 7. **The cheat sheet**: one table — *Term | Statement | Role in this lesson and in the course* —
->    covering every term introduced and every term used from earlier.
-> 8. **Exercises and solutions**: 6–9, `E N.M` / `S N.M`, numerical or diagnostic (never recall),
->    arithmetic shown, each closing with "The lesson:".
-> 9. **Exit test**: "You are ready for lesson N+1 when you can, without notes:" — 10–20 capabilities.
+>    covering every term introduced and every term used from earlier, including the lesson's
+>    **mnemonic** and its pegs, and the flashcard front/back table for the spaced-repetition deck.
+> 8. **Exercises and solutions**: 8–10 in the three tiers (guided / faded / independent, the last two at
+>    least half the set), `E N.M` / `S N.M`, numerical or diagnostic (never recall), arithmetic shown,
+>    each closing with "The lesson:". At least one is a **trap** keyed to a named misconception; one is
+>    **redraw the diagram from memory** against the lesson's SVG; hint ladders (nudge → mechanism →
+>    step) publish under each, never the answer restated.
+> 9. **Exit test (cumulative from lesson 4)**: "You are ready for lesson N+1 when you can, without
+>    notes:" — 10–20 capabilities, at least a third drawn from earlier lessons.
 >
 > **Style.** No code in the body (pseudocode only where precision demands); every formula used in a
 > worked example; no forward references; no claim without tier. Possessive sparingly; tables for
