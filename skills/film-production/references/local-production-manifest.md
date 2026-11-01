@@ -68,7 +68,7 @@ Install these first. All are HF-cache models served by rapid-mlx.
 | Role | Alias | Quantization | Size | Runtime / port | Why this quant |
 |---|---|---|---:|---|---|
 | LLM, quality | `qwen3.8-27b-4bit` | MLX 4-bit + MTP | 20.0 GB | rapid-mlx :8001 | 4-bit is the speed/quality sweet spot at 96 GB; rapid-mlx calls it 92% capability, ~41 tok/s |
-| Video, default | `ltx-2.3-mlx-q4` | MLX q4, audio-capable | 21.2 GB | rapid-mlx :8003 | fastest realistic shot engine with native audio; 8-bit is 63 GB and not the default |
+| Video, default | `ltx-2.3-mlx-q4` | MLX q4, joint audio-video | 14.0 GB | ltx-2-mlx CLI | fastest realistic shot engine with native audio; the runner author's own pack, verified against `ltx-2-mlx` (see sources/ for why third-party repacks fail: connector weight schemas drift) |
 | Video, practical quality | `wan2.2-ti2v-5b-q8` | MLX q8 | 18.2 GB | rapid-mlx :8003 | 5B at q8 fits comfortably and is the quality step above LTX drafts |
 | TTS, leads | `qwen3-tts-4bit` | MLX 4-bit | 2.2 GB | rapid-mlx :8004 | multilingual, custom voice; 4-bit is realtime-class |
 | TTS, expressive | `chatterbox-4bit` | MLX 4-bit | 0.4 GB | rapid-mlx :8004 | fast emotion/voice-clone pass |

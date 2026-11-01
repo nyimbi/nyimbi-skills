@@ -24,10 +24,36 @@ metadata:
 > **Pipeline position.** This is the directing brain of the `film-*` family. For a
 > whole film or series from a rough outline, start at **film-production**, which routes
 > story (film-story-development), design (film-design), this skill (planning and
-> directing), execution (film-generation), and post (film-postproduction). Use this skill
-> directly for direction, blocking, shot lists, coverage, keyframe strategy, continuity
-> bibles, edit plans, and QC repair. For model-specific prompt syntax use
-> **ai-video-directing**; for still-image prompt syntax use **ai-image-art-direction**.
+> directing), execution (film-generation), and post (film-postproduction). This skill
+> owns both halves of direction: the decisions (what to shoot, blocking, coverage,
+> continuity invariants) and the words (prompt construction and dialects). The prompt
+> craft corpus lives in `references/prompt-craft/` — see "Prompt craft" below. For
+> still-image prompt syntax use **ai-image-art-direction**.
+
+## Prompt craft — the words
+
+Decisions are made in the pipeline above; this section turns them into prompts a
+model executes. The craft lives in `references/prompt-craft/`, loaded in this
+order — do not write a final prompt without steps 1–2:
+
+1. **Always first** — `prompt-craft/dramaturgy.md`: the scene formula, the Details
+   Law, the three-jobs rule, the 14-field shot card, the dramaturgy check.
+2. **Always second** — `prompt-craft/universal-rules.md`: U1–U12 rules that hold for
+   every video model (skeleton, weight-at-start, show-don't-tell, final image rule).
+3. **The model file, exactly one** — `prompt-craft/seedance.md`, `kling.md`, `veo.md`
+   for cloud dialects. For the local LTX stack the dialect is owned by
+   `film-generation/references/model-dialects.md`; LTX-2 rewards one clean cinematic
+   sentence, not a novel.
+4. **Task-shaped, only what matches** — `role-modes.md`, `animatic-keyframes.md`,
+   `patterns-and-genres.md`, `fixes-and-skeletons.md`, `race-and-speed.md`,
+   `camera-lighting-vocabulary.md`.
+
+Before any prompt ships: run the dramaturgy check (dramaturgy.md §15) and the
+three-detail audit (universal-rules.md §13) on every shot. A prompt that fails
+either check is rewritten, not sent.
+
+The prompt-craft corpus is adapted from Serge Shima's visual-skills, licensed
+CC BY 4.0 — attribution in `references/prompt-craft/LICENSE`; do not strip it.
 
 ## Operating stance
 

@@ -8,7 +8,7 @@ description: >-
   says "generate the shots", "render the film", "make the clips", "run the pipeline", "why
   does this clip drift", "regenerate this shot", or when a shot list and design are locked.
   Do not use for planning the shots (see film-directing), for prompt craft without execution
-  (see ai-video-directing), or for cutting and finishing (see film-postproduction).
+  (see film-directing's Prompt craft section), or for cutting and finishing (see film-postproduction).
 ---
 
 # Film Generation
@@ -100,17 +100,18 @@ rule in the pipeline.
 ## Prompt compilation
 
 Do not write a fresh prompt per model by hand. Compile the canonical record into the
-target dialect. For the craft of the prompt itself, load `ai-video-directing`; for the
+target dialect. For the craft of the prompt itself, load `film-directing` (Prompt craft); for the
 dialect table and word budgets, load `references/model-dialects.md`.
 
 | Control surface | Shape | Typical models |
 |---|---|---|
 | Text-to-video | full description: subject, action, scene, camera, lens, light, style, audio | Veo, Kling T2V, Seedance T2V, Wan, LTX |
-| Image-to-video | motion only: camera, action, end state, constraints | Kling I2V, Seedance I2V, Gen-4.5 |
+| Image-to-video | motion only: camera, action, end state, constraints | Kling I2V, Seedance I2V, Gen-4.5, LTX (`--image`) |
 | First + last frame | describe the bridge, not the stills | Kling, Seedance, MiniMax H3 Max |
 | Reference-to-video | bind roles to reference slots; name the character verbatim | Seedance 2.5, Kling 4.0, MiniMax H3, WAN 3.0 |
 | Multi-shot timestamped | overall continuity block + per-segment lines | Seedance 2.5, Kling 3.0+, Veo |
 | Video-to-video | restyle/relight/repair an approved take | Aleph 2.0, Kling 4.0 editing |
+| Local MLX (default) | one clean cinematic sentence; joint audio+video in one pass | LTX-2.3 via `ltx-2-mlx` |
 
 Compile with:
 

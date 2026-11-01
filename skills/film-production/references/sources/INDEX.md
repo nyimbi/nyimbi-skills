@@ -42,5 +42,5 @@ retirements below happened within five weeks of this archive.
 
 The Refay and Visual Skills material is CC BY 4.0 and requires attribution. Attribution
 lives in `character-design/references/NOTICE-refay.md`, `film-directing/NOTICE`,
-`ai-video-directing/NOTICE`, and `ai-image-art-direction/NOTICE`. DirectorSKILL is MIT;
+prompt-craft corpus NOTICE (in `film-directing/references/prompt-craft/`, adapted from Serge Shima visual-skills, CC BY 4.0), and `ai-image-art-direction/NOTICE`. DirectorSKILL is MIT;
 its licence text is in `film-directing/LICENSE`.

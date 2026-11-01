@@ -3,16 +3,18 @@ name: film-production
 description: >-
   Run a film or series end to end from a rough outline: develop the premise into a
   screenplay and series bible, lock characters, world and visual style, build the shot
-  list, storyboards and animatic, generate shots on local or cloud models, edit, sound,
-  finish, QC and deliver. Use when the user says "make a movie", "turn this idea into a
-  film", "create a series", "produce this script end to end", "I have an outline, make
-  the whole thing", or asks for the full production pipeline rather than one clip or one
-  prompt. Routes the work to film-story-development, film-design, film-directing,
-  film-generation and film-postproduction, and holds the project state, continuity ledger,
-  approval gates, budget and resume logic across all of them. Do not use for editing
-  footage the user already has (see video-use), for a single generated clip (see
-  cinematic-pipeline or ai-video-directing), or for writing one prompt (see
-  ai-video-directing).
+  list, storyboards and animatic, generate shots on local models overnight while the
+  user sleeps, edit, sound, finish, QC and deliver. Use when the user says "make a
+  movie", "turn this idea into a film", "create a series", "produce this script end to
+  end", "I have an outline, make the whole thing", "make this overnight", or asks for
+  the full production pipeline rather than one clip or one prompt. Local-only by
+  default: LTX-2.3 joint audio-video via ltx-2-mlx, with LTX-Video 0.9.8 as the fast
+  animatic/coverage engine, F5-TTS and MusicGen for sound. Routes the work to
+  film-story-development, film-design, film-directing, film-generation and
+  film-postproduction, and holds the project state, continuity ledger, approval gates,
+  budget and resume logic across all of them. Do not use for editing footage the user
+  already has (see video-use), for a single generated clip (see cinematic-pipeline),
+  or for prompt craft without execution (see film-directing's Prompt craft section).
 ---
 
 # Film Production
@@ -73,14 +75,18 @@ film. Finalize after picture lock, when the title and credits stop moving.
 | Format | Runtime | Shot budget at 4 s | Default tier |
 |---|---:|---:|---|
 | Vertical micro-drama episode | 60–180 s | 15–45 | local |
-| Short film | 5–15 min | 75–225 | local, cloud for heroes |
-| Series episode | 5–10 min | 75–150 | local + selective cloud |
-| Feature | 80–120 min | 1,200–1,800 | hybrid: animatic, stock, 2D, selective generation |
-| Trailer / teaser | 60–120 s | 15–30 | cloud or local |
+| Short film | 5–15 min | 75–225 (or 20–30 at 10–20 s takes) | local |
+| Series episode | 5–10 min | 75–150 | local |
+| Feature | 80–120 min | 1,200–1,800 | local, nights: animatic → selective full-gen |
+| Trailer / teaser | 60–120 s | 15–30 | local |
 
-**Tiers.** `local` = ComfyUI/MLX on this Mac (LTX-2.3, Wan 2.2, MiniMax H3, F5-TTS,
-MusicGen). `standard` = paid cloud models for hero shots, local for coverage.
-`premium` = cloud-first, highest-quality model per shot, budget-cap required.
+**Tiers.** `local` is the default and the preference: LTX-2.3 joint audio-video
+via `ltx-2-mlx` (hero and coverage), LTX-Video 0.9.8 via ComfyUI (animatic and
+draft passes), F5-TTS for voices, MusicGen for score — all from the local
+Hugging Face cache. Cloud tiers (`standard`, `premium`) exist as archived
+escape hatches for a shot the local stack demonstrably cannot hold; they need
+explicit user opt-in, and the dialect craft for them lives in
+`film-directing/references/prompt-craft/`.
 
 ## Intake
 
@@ -127,7 +133,7 @@ Open the stage skill, hand it the artifacts it needs, and return with the gate a
 | premise, beats, screenplay, series bible | `film-story-development` |
 | characters, world, style, voice, continuity assets | `film-design` |
 | blocking, shot list, coverage, keyframes, animatic, edit plan | `film-directing` |
-| model-specific prompt syntax (Seedance, Kling, Veo, Runway) | `ai-video-directing` |
+| prompt craft and model dialect syntax | `film-directing` (Prompt craft), `film-generation` (dialects) |
 | still-image prompt syntax (character sheets, plates, panels) | `ai-image-art-direction` |
 | provider execution, variants, retakes, generation log | `film-generation` |
 | cut, sound, grade, captions, masters, QC | `film-postproduction` |
@@ -173,6 +179,52 @@ season, then loop plan → generate → post per episode.
 
 Details: `references/series-mode.md`.
 
+## Overnight mode — brief in, master out
+
+The default when the user hands over a rough outline and says produce it: the
+machine works while nobody watches. Overnight mode is not a different pipeline —
+it is this pipeline with the approval gates converted to logged self-checks
+(already defined above) and the generation stages wrapped in resumable scripts.
+What changes is discipline before bed, not the standards.
+
+**The shape of an overnight run** — a 5–8 minute short is one night; a series
+episode is one night; a feature is a week of nights, not one:
+
+1. **Evening (with the user, ~30–60 min):** intake → premise → script → design →
+   shot plan, each gate a stated decision with evidence, logged in `state.json`.
+   Anything undecided here becomes a stalled queue at 2 a.m. — "just make it" is
+   an answer, never a question left open.
+2. **Pre-flight:** `filmctl.py doctor`, keyframes approved for every hero shot
+   (the single highest-leverage rule holds doubly at night), prompts compiled,
+   `filmctl.py validate --stage prepare` green, disk headroom ≥ 2× the estimate.
+3. **Launch:** `bash scripts/overnight.sh <project>` — wraps the run in
+   `caffeinate`, renders every pending shot (`render_shots.sh`, resumable,
+   Ctrl-C safe), assembles the rough cut, and prints the morning report.
+4. **Morning:** creative review of the auto-approvals (swap any take by copying
+   over `approved.mp4`), redesign the auto-failed shots per the three-strike
+   rule, then hand to `film-postproduction` for cut, sound, finish, delivery.
+
+**What the scripts guarantee, and what they do not.** `render_shots.sh`
+approves the first take that passes *mechanical* checks — right size, right
+duration, more than one distinct frame, an audio stream (a joint audio-video
+pack that returns silence has failed). It never judges identity, palette or
+performance; that is the morning's first job, and `04_gen/render-log.csv` plus
+`continuity-failures.md` say exactly where to look. Three failed takes on one
+shot auto-fail that shot and move on — a blocked queue wastes the whole night
+on one stubborn shot, so the night sacrifices shots, never the film.
+
+**Overnight arithmetic** (measured targets, M2 Max 96 GB — replace with your own
+first measured run, then hold):
+
+| Engine | Role | Per 4–5 s shot | 75-shot night |
+|---|---|---:|---:|
+| LTX-2.3 q4-av (`ltx-2-mlx`) | hero + coverage, joint audio | ~3–5 min | 4–6 h |
+| LTX-Video 0.9.8 (ComfyUI) | animatic, draft passes | ~100 s | 2 h |
+
+Longer takes change the math in your favour: LTX-2 clips run to ~10–20 s, so a
+5-minute film can be 20–30 shots rather than 75. Render heroes first, coverage
+second, so the make-or-break shots are the ones that exist if dawn comes early.
+
 ## Feasibility arithmetic
 
 Do this before the first generation, and put the numbers in `PRODUCTION.md`:
@@ -185,18 +237,34 @@ cloud_cost   = generations × clip_seconds × provider_price_per_second
 disk         = generations × clip_size + keyframes + audio + masters
 ```
 
-On this machine (M2 Max, 96 GB), measured from `cinematic-pipeline`:
+On this machine (M2 Max, 96 GB):
 
-| Engine | Render | Seconds per 4 s shot | 10-min short, one pass |
+| Engine | Role | Seconds per 4–5 s shot | 10-min short, one pass |
 |---|---|---:|---:|
-| LTX-Video 0.9.8 distilled | 512×768 | ~100 | ~4.2 h |
-| Wan 2.2 14B | 720p | ~400+ | ~17 h |
-| MiniMax H3 REF2VA | reference-driven | slowest | multi-day |
-| LTX-2.3 MLX | probe first | unknown | probe first |
+| LTX-2.3 q4-av (`ltx-2-mlx`, joint audio) | hero + coverage | ~180–300 s (target; measure first run) | ~6–8 h |
+| LTX-Video 0.9.8 distilled (ComfyUI) | animatic, drafts | ~100 s | ~4.2 h |
+| Wan 2.2 14B | archived alternate | ~400+ | ~17 h |
 
-Three variants per shot multiplies all of it by three. Keyframes, retries, audio and
-edit are additional. A feature is a campaign, not a render. Full table and cloud
-considerations: `references/feasibility.md`.
+The LTX-2.3 figure is a target assembled from published Apple-Silicon runs
+(~101 s on an M5 Max 128 GB at 4-bit, ~150 s on a 24 GB M5 Pro at int8
+streamed); replace it with the first measured run and hold. Three variants per
+shot multiplies all of it by three — which is why overnight mode renders
+variants serially and auto-approves mechanically-valid takes. Keyframes,
+retries, audio and edit are additional. A feature is a campaign, not a render.
+Full table and cloud considerations: `references/feasibility.md`.
+
+**The model decision (2026-11).** LTX-2.5 is the current Lightricks flagship
+and the one its repo recommends — but on this machine it loses to LTX-2.3 for
+three reasons: the only mature Apple-Silicon route (the dgrauet q8 MLX pack,
+~75 GB) does not fit a disk with ~38 GB free; its fine-tuned bf16 Gemma 4 text
+encoder (~24 GB resident) roughly doubles the memory floor; and its one
+published Mac timing is ~10 minutes per 4-second clip on an M3 Max — slower
+than the 2.3 evidence. LTX-2.3 with a joint audio-video q4 pack
+(`dgrauet/ltx-2.3-mlx-q4`, ~14 GB on disk, ~20 GB resident, already in
+the HF cache) generates picture *and* stereo 48 kHz audio in one pass — which
+removes the lip-sync pass from the overnight queue entirely. Revisit 2.5 when
+the disk is upgraded; the skills name models explicitly so the swap is one
+manifest line.
 
 ## Quality ceiling and the pilot
 
@@ -284,4 +352,6 @@ assembles local files.
 | `references/quality-ceiling.md` | honest local-vs-reference quality assessment, three routes, pilot protocol and pass thresholds |
 | `references/local-production-manifest.md` | local-only install list: HF-cache aliases, quantizations, runtime per model, disk and memory plan |
 | `scripts/pull_models.py` | idempotent HF-cache puller: tiers, disk check, resume, retries, log |
+| `scripts/render_shots.sh` | resumable overnight batch renderer (ltx-2-mlx, mechanical auto-approval) |
+| `scripts/overnight.sh` | caffeinate-wrapped unattended run: validate → render → assemble → morning report |
 | `references/sources/INDEX.md` | archived sources for the pipeline's non-obvious claims |

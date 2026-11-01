@@ -8,7 +8,7 @@ description: >
   product shots, UI mockups, storyboards, character sheets, edit/colorize, style transfer,
   vision analysis, image-to-prompt, nb, NBP, NB2, gpt-image-2.5, multi-panel grids,
   ecommerce product photography, fashion editorial, food/beverage ads, cinematic portraits.
-  Do NOT use for: video (use ai-video-directing), 3D models, audio, non-image tasks.
+  Do NOT use for: video (use film-directing's Prompt craft section), 3D models, audio, non-image tasks.
   Part of the film pipeline: character sheets, world plates, storyboard panels and keyframes
   feed film-design, film-directing, and film-generation; start at film-production for a whole film.
 ---

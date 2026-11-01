@@ -89,7 +89,15 @@ Details: `references/edit-and-sound.md`. Suno MCP setup: `references/suno-mcp.md
 
 ## Step 5 — QC
 
-Run the technical and continuity checks before delivery:
+Run the mechanical sweep first — it probes every deliverable, measures loudness
+and true peak, sanity-checks captions, and cross-checks the manifest, then
+writes `qc-report.md` and exits non-zero on any failure:
+
+```bash
+python3 scripts/qc.py <project> --target streaming
+```
+
+Then the checks no script can run — eyeball these on the actual picture:
 
 ```bash
 ffprobe -v error -show_entries format=duration,size,bit_rate \
@@ -97,17 +105,13 @@ ffprobe -v error -show_entries format=duration,size,bit_rate \
         -of json 05_post/deliver/final_16x9.mp4
 ```
 
-Check:
-
-- [ ] Correct duration, resolution, fps, codec, audio layout.
-- [ ] No black frames, freezes, dropped frames, or A/V drift.
-- [ ] Loudness and true peak measured; no clipping.
-- [ ] Captions in sync at first, middle, and last cue.
+- [ ] No black frames, freezes, dropped frames, or A/V drift (scrub the master).
+- [ ] Captions in sync at first, middle, and last cue (the script counts cues;
+      humans judge sync).
 - [ ] Titles and credits legible at delivery size.
 - [ ] Continuity: no unexplained wardrobe, prop, injury, or screen-direction jumps.
 - [ ] Artifacts: hands, text, warping, duplicated limbs, watermarks.
 - [ ] Legal: music and footage licences, consent, AI disclosure, rating.
-- [ ] Every deliverable in the manifest exists and plays.
 
 Template: `references/qc-and-delivery.md`.
 
@@ -158,3 +162,4 @@ The process notes are how the next film gets cheaper.
 | `references/ffmpeg-cookbook.md` | concat, normalize, mux, loudness, captions, delivery commands |
 | `references/qc-and-delivery.md` | QC checklist, delivery specs, manifest template |
 | `references/suno-mcp.md` | connecting Suno as the score provider |
+| `scripts/qc.py` | mechanical QC sweep: probes media, measures loudness/true peak, checks captions and manifest, writes `qc-report.md` (exit 1 on failure) |
