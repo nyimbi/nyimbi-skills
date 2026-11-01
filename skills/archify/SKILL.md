@@ -137,3 +137,11 @@ When shell access is unavailable, hand-place architecture SVG into `assets/templ
 ## Output
 
 Return the checked HTML path, diagram type, validation summary, specification/artifact receipt, browser-evidence status, and truthful visual-review status. Do not claim success for a non-zero command or claim visual inspection you did not perform.
+
+## Routing boundary
+
+`diagram-design` produces the **editorial static** rendering of the same 45 shape families —
+self-contained HTML+SVG for posts, with Mermaid/draw.io/Excalidraw import, a fidelity ledger and
+machine gates (`self_check.py`, `verify-geometry.py`, `lint-skin.py`) inside its own skill. Route:
+interactive/explorable/trace-motion output → archify; published static/editorial, brand-skinned
+one-shots, or "redraw this Mermaid/drawio file" → diagram-design. The two route, not compete.

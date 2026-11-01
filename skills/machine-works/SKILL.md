@@ -19,6 +19,7 @@ is only routing and the rules the engines share.
 | Illustrated, hand-inked, sketchy, flat colour, warm paper; everyday objects and appliances; "what's inside"; works on a phone | **ink** (SVG painter's-algorithm, no depth buffer) | One HTML page via `python3 "$ENG/scripts/build.py" figure.html OUT.html` | Full phone layout (numbered badge labels + list), real-object research with a 30–60 part see-through, painter's-sort discipline |
 | Simulator, 3D, cutaway, exploded, engine/aircraft/linkage/pump/gearbox, "show it running", video, film, animation, sound | **webgl** (three.js/WebGL) | One offline HTML page via `node "$ENG/sims/build.mjs" <name>` (-live), plus `-film` variants | Deterministic `render(t)` frame capture to 60 fps mp4, review sheets, procedural score synced to the film timeline, auto tour with cursor and handoff, cutaway camera modes, GPU quality tiers |
 | Style is unstated | Everyday object/appliance, no film mentioned → **ink**. A real large machine, a mechanism study, or film/video asked → **webgl** | | |
+| Static editorial 2D teardown / exploded axonometric for a post, no interaction → **diagram-design** (its own skill, with geometry gates) |
 | Not renderable here | Dark glowing line art → **iso-glow** | | |
 
 When both looks would serve, ask the owner once. Never blend the engines on one page.
