@@ -1,0 +1,13 @@
+Cinematic Director Skill, adopted into this bundle as `film-directing`
+Copyright (c) 2026 wangzhang-wu
+
+Licensed under the MIT License. Full text: LICENSE.
+
+Source: https://github.com/wuwangzhang1216/DirectorSKILL (v2.1.0)
+
+Modifications in this copy:
+- frontmatter `name` changed from `cinematic-director` to `film-directing`
+- a pipeline-position routing note added at the top of SKILL.md
+- the director-styles README now names the host skill `film-directing`
+
+No craft content, reference file, or template was removed.

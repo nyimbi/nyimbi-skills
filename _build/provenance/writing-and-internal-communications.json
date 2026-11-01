@@ -1,0 +1,60 @@
+{
+  "skill": "writing-and-internal-communications",
+  "merged_from_count": 7,
+  "exact_duplicates_merged": [
+    "internal-comms (skills/skills) + internal-comms (awesome-claude-skills): SKILL.md byte-identical (md5 965e18658e8c1b7da6ff2be579b81934); examples/ (3p-updates, company-newsletter, faq-answers, general-comms) byte-identical; LICENSE.txt differed only in the Apache-2.0 appendix copyright line — kept the filled-in 'Copyright 2026 Anthropic, PBC.' copy"
+  ],
+  "near_duplicates_merged": [
+    "doc-coauthoring (structured co-authoring process) + internal-comms (format catalogue): merged as process and content halves of one workflow rather than two competing workflows",
+    "content-research-writer section-feedback/final-review loops + doc-coauthoring section loop: single section loop in step 3, research-specific feedback detail moved to references/research-citations-and-hooks.md",
+    "discernment-nudge final-answer nudge: folded into the Quality bar as the final gate (step 8) rather than kept as a standalone skill concept"
+  ],
+  "dropped": [
+    {
+      "name": "doc-coauthoring — artifact/connector instructions",
+      "reason": "tool-specific (create_file, str_replace, Claude.ai connectors, claude.ai web sub-agent setup); superseded by generic scaffold-and-surgical-edit instructions"
+    },
+    {
+      "name": "content-research-writer — file-organization scaffold and 'Pro Tips' (work in VS Code, set deadlines)",
+      "reason": "environment-specific advice, not load-bearing for the workflow"
+    },
+    {
+      "name": "content-research-writer — four near-identical workflow lists (blog/newsletter/tutorial/thought-leadership)",
+      "reason": "concatenation of the same six steps with different nouns; replaced by the format catalogue table"
+    },
+    {
+      "name": "internal-comms — frontmatter 'Keywords' block",
+      "reason": "superseded by the trigger phrases in the description"
+    },
+    {
+      "name": "changelog-generator / tailored-resume-generator — 'When to Use' and 'What This Skill Does' restatements",
+      "reason": "already covered by the When to use section; technique detail preserved in references"
+    },
+    {
+      "name": "tailored-resume-generator — Privacy Note",
+      "reason": "one-line reminder folded into the reference file rather than kept as a separate section"
+    }
+  ],
+  "source_roots": [
+    "skills/skills (Anthropic official)",
+    "awesome-claude-skills"
+  ],
+  "reference_files": [
+    "coauthoring-workflow.md",
+    "quality-gate.md",
+    "release-notes-changelog.md",
+    "research-citations-and-hooks.md",
+    "tailored-resume.md",
+    "format-3p-updates.md",
+    "format-company-newsletter.md",
+    "format-faq-answers.md",
+    "format-general-comms.md"
+  ],
+  "scripts_copied": [],
+  "carried_reference_files": [
+    "format-3p-updates.md (verbatim from internal-comms/examples/3p-updates.md)",
+    "format-company-newsletter.md (verbatim from internal-comms/examples/company-newsletter.md)",
+    "format-faq-answers.md (verbatim from internal-comms/examples/faq-answers.md)",
+    "format-general-comms.md (verbatim from internal-comms/examples/general-comms.md)"
+  ]
+}

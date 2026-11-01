@@ -1,0 +1,44 @@
+{
+  "skill": "executive-communication-and-alignment",
+  "merged_from_count": 4,
+  "exact_duplicates_merged": [],
+  "near_duplicates_merged": [
+    "decision-memo + narrative-builder (both answer-first Pyramids): one recommendation and one evidence set, written once — decision-memo owns the one-page document for a decision-maker, narrative-builder owns the headline sequence and hostile-question prep for a deck or a room",
+    "stakeholder-alignment pre-wire + decision-memo risks section: resistance points and objections live in the stakeholder map; the memo only cites them, it does not re-derive them"
+  ],
+  "dropped": [
+    {
+      "name": "management-consulting/SKILL.md — mode table, MECE/issue-tree construction, evidence-label definitions, six-section Pyramid contract, epistemic rules, failure modes",
+      "reason": "method layer owned by strategy-diagnosis-and-framing; depth mode, evidence rules, and the answer-first contract are linked, not restated"
+    },
+    {
+      "name": "management-consulting/SKILL.md — diagram rules and references/tooling-appendix.md",
+      "reason": "diagram templates and rendering owned by strategy-diagnosis-and-framing (references/diagram-templates.md)"
+    },
+    {
+      "name": "option comparison and valuation logic behind the Options Considered table",
+      "reason": "owned by strategic-choices-and-economics; the memo cites the analysis rather than repeating it"
+    },
+    {
+      "name": "risk scoring and KPI definitions cited in the memo",
+      "reason": "owned by risk-performance-and-value-governance; the memo carries only the register's top rows"
+    },
+    {
+      "name": "management-consulting/examples/*.md, variants/strategy-memo.md",
+      "reason": "worked examples assigned to strategy-diagnosis-and-framing; variants out of assigned scope"
+    }
+  ],
+  "source_roots": [
+    "strategy-skills-for-claude/skills/06-alignment-and-executive-communication",
+    "management-consulting"
+  ],
+  "source_files": [
+    "strategy-skills-for-claude/skills/06-alignment-and-executive-communication/decision-memo.md",
+    "strategy-skills-for-claude/skills/06-alignment-and-executive-communication/narrative-builder.md",
+    "strategy-skills-for-claude/skills/06-alignment-and-executive-communication/stakeholder-alignment.md",
+    "management-consulting/SKILL.md",
+    "management-consulting/LICENSE"
+  ],
+  "reference_files": [],
+  "scripts_copied": 0
+}

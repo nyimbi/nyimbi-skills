@@ -1,0 +1,35 @@
+{
+  "skill": "strategic-choices-and-economics",
+  "merged_from_count": 8,
+  "exact_duplicates_merged": [],
+  "near_duplicates_merged": [
+    "strategic-options.md + business-case-builder.md (both cover option comparison) → strategic-options.md owns option generation, distinctness, and criteria; business-case-builder.md owns quantified economics and sensitivity; each links to the other",
+    "strategic-options.md + frameworks-decision.md decision matrix/pre-mortem → scoring and challenge mechanics live in references/frameworks-decision.md; the playbook owns the option set and recommendation logic",
+    "business-case-builder.md + assumption-audit (strategy-diagnosis-and-framing) → assumption register, evidence grading, and test plan are owned by ../strategy-diagnosis-and-framing/references/assumption-audit.md; the playbook links and feeds kill conditions",
+    "pricing-strategy.md + frameworks-pricing.md → diagnosis, leakage, WTP and rollout live in the playbook; method walkthroughs (value-based, cost-plus, competitive, dynamic, freemium) live in references/frameworks-pricing.md",
+    "portfolio-review.md + frameworks-strategy.md growth-share/nine-box → grid mechanics live in ../market-and-competitive-intelligence/references/frameworks-strategy.md; the playbook owns scoring criteria and allocation moves"
+  ],
+  "dedup": [
+    "Option comparison explained ONCE per aspect: structure and criteria in references/strategic-options.md, numbers and sensitivity in references/business-case-builder.md, scoring mechanics in references/frameworks-decision.md — no full re-statement across the three",
+    "Market-size inputs for business cases link to ../market-and-competitive-intelligence/references/market-mapping.md instead of re-teaching TAM/SAM/SOM (the detailed walkthrough remains only in references/frameworks-financial.md)",
+    "Recommendation contract (risks, kill conditions, next actions) referenced from ../strategy-diagnosis-and-framing/SKILL.md, not duplicated"
+  ],
+  "dropped": [],
+  "source_roots": [
+    "management-consulting/references/frameworks-decision.md",
+    "management-consulting/references/frameworks-financial.md",
+    "management-consulting/references/frameworks-pricing.md",
+    "strategy-skills-for-claude/skills/03-strategic-choice-and-economics"
+  ],
+  "reference_files": [
+    "references/strategic-options.md",
+    "references/business-case-builder.md",
+    "references/portfolio-review.md",
+    "references/pricing-strategy.md",
+    "references/frameworks-decision.md",
+    "references/frameworks-financial.md",
+    "references/frameworks-pricing.md"
+  ],
+  "license_files": ["LICENSE"],
+  "scripts_copied": []
+}

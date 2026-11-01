@@ -1,0 +1,19 @@
+{
+  "skill": "obsidian",
+  "merged_from_count": 4,
+  "origin": "Curated subset of https://github.com/kepano/obsidian-skills (MIT, 48k stars) \u2014 4 of 6 skills",
+  "exact_duplicates_merged": [],
+  "near_duplicates_merged": [],
+  "dropped": [],
+  "source_roots": [
+    "Curated subset of https://github.com/kepano/obsidian-skills (MIT, 48k stars)"
+  ],
+  "reference_files": [
+    "references/obsidian-cli/obsidian-cli.md",
+    "references/obsidian-markdown/obsidian-markdown.md",
+    "references/json-canvas/json-canvas.md",
+    "references/obsidian-bases/obsidian-bases.md"
+  ],
+  "scripts_copied": [],
+  "note": "Vault on this machine: ~/src/pjs/work_docs (Obsidian.app + Web Clipper installed). Upstream SKILL.md files renamed to <name>.md. defuddle and knap (separate CLI tools) not adopted."
+}

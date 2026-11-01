@@ -1,0 +1,27 @@
+{
+  "skill": "open-design",
+  "merged_from_count": 0,
+  "origin": "Platform wrapper for https://github.com/nexu-io/open-design (Apache-2.0, ~98.4k stars, main 2026-09-27) \u2014 local-first 'Claude Design alternative' that turns the coding agent into the design engine",
+  "exact_duplicates_merged": [],
+  "near_duplicates_merged": [],
+  "dropped": [
+    {
+      "name": "163 functional skills in upstream skills/",
+      "reason": "adopted as an index (references/skill-catalog.md), not merged \u2014 they are the platform's own catalog that runs inside the OpenDesign app/daemon, and several overlap each other and with bundle skills; merging would destroy both the platform and bundle deduplication"
+    },
+    {
+      "name": "151 design-system packages, 277 plugins, design-templates/, prompt-templates/ (93 image + 39 Seedance)",
+      "reason": "used in place from the installed app; documented via references, not copied into the bundle"
+    }
+  ],
+  "source_roots": [
+    "https://github.com/nexu-io/open-design (README, docs/agent-adapters.md, docs/design-systems.md, skills/ frontmatter, commit on main 2026-09-27)"
+  ],
+  "reference_files": [
+    "references/skill-catalog.md",
+    "references/design-systems.md",
+    "references/setup.md"
+  ],
+  "scripts_copied": [],
+  "note": "This machine already has Open Design.app v0.24.1 installed with the MCP server wired into opencode (~/.config/opencode/opencode.json -> daemon-cli.mjs -> http://127.0.0.1:7456); /usr/bin/od is Apple's octal-dump utility, not the OD CLI. The bundle skill is the routing entry point: when-to-use boundaries vs presentation-authoring / open-slide / design-system / visual-design-and-branding / web-artifact-and-app-building / create-an-asset, the brief->direction->design-system->artifact->export loop, and the MCP surface. Runtime dependency: the app/daemon must be running."
+}

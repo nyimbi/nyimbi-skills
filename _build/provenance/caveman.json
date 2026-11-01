@@ -1,0 +1,19 @@
+{
+  "skill": "caveman",
+  "merged_from_count": 1,
+  "origin": "Adopted from https://github.com/JuliusBrussee/caveman (MIT with Engine-linked scope note, 108k stars) \u2014 skills/caveman/ core skill only",
+  "exact_duplicates_merged": [],
+  "near_duplicates_merged": [],
+  "dropped": [
+    {
+      "name": "caveman-compress, caveman-stats, cavecrew, caveman-commit, \u2026 (13 utility skills) + Engine",
+      "reason": "plugin-ecosystem components; the core behavior skill is the transferable asset"
+    }
+  ],
+  "source_roots": [
+    "Adopted from https://github.com/JuliusBrussee/caveman (MIT with Engine-linked scope note, 108k stars)"
+  ],
+  "reference_files": [],
+  "scripts_copied": "shipped with skill",
+  "note": "Session behavior skill: ultra-compressed communication mode (lite/full/ultra + wenyan variants) that cuts output tokens while keeping technical substance. The repo's utility skills (caveman-compress, caveman-stats, cavecrew, \u2026) and plugin/Engine components were not adopted \u2014 they belong to the installed-plugin experience."
+}

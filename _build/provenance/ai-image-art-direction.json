@@ -1,0 +1,18 @@
+{
+ "skill": "ai-image-art-direction",
+ "merged_from_count": 0,
+ "origin": "adopted from Visual Skills image skill (Serge Shima, CC BY 4.0); renamed to ai-image-art-direction, routing updated, craft content unchanged",
+ "exact_duplicates_merged": [],
+ "near_duplicates_merged": [],
+ "dropped": [],
+ "source_roots": [
+  "https://github.com/smixs/visual-skills"
+ ],
+ "reference_files": [
+  "references/*.md",
+  "references/patterns/*.md",
+  "LICENSE",
+  "NOTICE"
+ ],
+ "scripts_copied": []
+}

@@ -1,0 +1,27 @@
+{
+  "skill": "spreadsheet-authoring",
+  "merged_from_count": 2,
+  "exact_duplicates_merged": [
+    "xlsx (skills/skills/xlsx) + xlsx (awesome-claude-skills/document-skills/xlsx) — LICENSE.txt byte-identical (cmp), one copy kept as LICENSE.txt"
+  ],
+  "near_duplicates_merged": [
+    "SKILL.md: skills/skills (99 lines, recalc semantics, external-link failure mode, LibreOffice function-support matrix, openpyxl gotchas, financial-model conventions) merged with awesome-claude-skills (288 lines, formulas-not-values rule with worked examples, common workflow, recalc JSON shape, verification checklist, pandas/openpyxl best practices) — awesome-claude-skills longer, skills/skills materially deeper on recalculation and formula compatibility; both bodies retained once",
+    "recalc.py — two diverged implementations kept side by side: scripts/skills-recalc.py (uses the shared office.soffice runtime, external-workbook-link detection and refusal, MAX_LOCATIONS cap, locations_truncated reporting) and scripts/awesome-recalc.py (self-contained per-platform LibreOffice macro setup); SKILL.md tells the reader to prefer the first"
+  ],
+  "dropped": [
+    { "name": "awesome-claude-skills SKILL.md 'Overview', 'Important Requirements', 'Code Style Guidelines' framing prose", "reason": "boilerplate — folded into the workflow prerequisite step or dropped as non-format-specific" },
+    { "name": "awesome-claude-skills SKILL.md 'Library Selection' and 'Best Practices' bullet lists", "reason": "near-duplicate of the tools table and openpyxl gotchas already in the merged body; the genuinely useful pandas/openpyxl API detail moved to references/spreadsheet-recipes.md instead of being repeated" }
+  ],
+  "source_roots": [
+    "skills/skills/xlsx",
+    "awesome-claude-skills/document-skills/xlsx"
+  ],
+  "reference_files": [
+    "references/spreadsheet-recipes.md"
+  ],
+  "scripts_copied": [
+    "scripts/awesome-recalc.py",
+    "scripts/office/ (helpers, schemas, soffice.py, validate.py, validators/)",
+    "scripts/skills-recalc.py"
+  ]
+}

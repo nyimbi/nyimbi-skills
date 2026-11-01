@@ -1,0 +1,14 @@
+{
+  "skill": "i-have-adhd",
+  "merged_from_count": 1,
+  "origin": "Adopted verbatim from https://github.com/ayghri/i-have-adhd (MIT, 52k stars) \u2014 skills/i-have-adhd/",
+  "exact_duplicates_merged": [],
+  "near_duplicates_merged": [],
+  "dropped": [],
+  "source_roots": [
+    "Adopted verbatim from https://github.com/ayghri/i-have-adhd (MIT, 52k stars)"
+  ],
+  "reference_files": [],
+  "scripts_copied": "shipped with skill",
+  "note": "Session behavior skill: ADHD-friendly output shaping (lead with next action, numbered steps, state restated). User-invoked by design (disable-model-invocation: true); stays on until 'stop adhd mode'. agents/ subdirectory shipped with it."
+}

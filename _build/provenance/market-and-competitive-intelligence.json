@@ -1,0 +1,36 @@
+{
+  "skill": "market-and-competitive-intelligence",
+  "merged_from_count": 7,
+  "exact_duplicates_merged": [],
+  "near_duplicates_merged": [
+    "competitive-intel.md + competitive-ads-extractor/SKILL.md (both cover competitor analysis) → competitive-intel.md owns inference and response planning; references/competitive-ads-extractor.md is demoted to the ad-library collection method feeding it",
+    "market-mapping.md + profit-pool-analysis.md + frameworks-strategy.md (all touch market sizing/attractiveness) → market-mapping.md owns market definition, sizing, and segmentation; profit-pool-analysis.md owns profit concentration and links to it; frameworks-strategy.md contributes industry structure only",
+    "profit-pool-analysis.md + frameworks-financial.md profit/revenue tree → tree mechanics live in ../strategic-choices-and-economics/references/frameworks-financial.md, linked from the playbook",
+    "customer-segmentation.md + market-mapping.md segment map → segment-quality rules (MECE, observability, prioritization) live in customer-segmentation.md; market-mapping.md reuses them via link"
+  ],
+  "dedup": [
+    "Market sizing explained ONCE in references/market-mapping.md (boundary, two-method cross-check, TAM/SAM/SOM hand-off); profit-pool-analysis.md and frameworks-strategy.md link to it instead of restating sizing",
+    "Competitor analysis explained ONCE in references/competitive-intel.md; ad-library mining is a collection method in references/competitive-ads-extractor.md that feeds the competitor map",
+    "Strategy-framework library (Porter/BCG/Ansoff/Blue Ocean/VRIO/7S/Wardley/scenarios) held in references/frameworks-strategy.md and linked to by sibling skills; SKILL.md carries only the pointer and the shared when-NOT-to-use guardrail owned by strategy-diagnosis-and-framing",
+    "Market attractiveness vs right to win kept separate across playbooks with explicit cross-links so attractiveness is never re-derived"
+  ],
+  "dropped": [
+    {"name": "competitive-ads-extractor fake progress-bar transcript and duplicated 'what you can learn' prose", "reason": "decorative example output, superseded by the analysis template in references/competitive-ads-extractor.md"},
+    {"name": "competitive-ads-extractor campaign-planning and creative-inspiration workflows", "reason": "out of scope — this skill produces competitive evidence, not the user's own ad campaigns"}
+  ],
+  "source_roots": [
+    "management-consulting/references/frameworks-strategy.md",
+    "strategy-skills-for-claude/skills/02-market-and-competitive-intelligence",
+    "awesome-claude-skills/competitive-ads-extractor"
+  ],
+  "reference_files": [
+    "references/market-mapping.md",
+    "references/profit-pool-analysis.md",
+    "references/customer-segmentation.md",
+    "references/competitive-intel.md",
+    "references/competitive-ads-extractor.md",
+    "references/frameworks-strategy.md"
+  ],
+  "license_files": ["LICENSE"],
+  "scripts_copied": []
+}

@@ -1,0 +1,21 @@
+{
+ "skill": "sox-testing",
+ "merged_from_count": 2,
+ "origin": "Adopted from user's live skill set, then merged with audit-support (true duplicate pair: both SOX 404 control testing + sample selection + workpapers)",
+ "exact_duplicates_merged": [],
+ "near_duplicates_merged": [
+  "audit-support (374-line knowledge base: scoping, assertions, 4 sample methods, evidence standards, deficiency classification + aggregation + remediation, control types) folded into the sox-testing workflow"
+ ],
+ "dropped": [
+  {
+   "name": "audit-support",
+   "reason": "superseded \u2014 full content merged into sox-testing; no unique content dropped"
+  }
+ ],
+ "source_roots": [
+  "/Users/nyimbiodero/.claude/skills/sox-testing",
+  "~/.claude/skills/audit-support"
+ ],
+ "reference_files": [],
+ "scripts_copied": []
+}

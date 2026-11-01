@@ -1,0 +1,20 @@
+{
+ "skill": "film-poster",
+ "merged_from_count": 0,
+ "origin": "new synthesis: key-art and poster campaign track for the film-* family; layout hierarchy and specs written for this bundle",
+ "exact_duplicates_merged": [],
+ "near_duplicates_merged": [],
+ "dropped": [],
+ "source_roots": [
+  "https://aifilmchallenge.com/resources/guides/pipeline-templates",
+  "https://github.com/smixs/visual-skills",
+  "https://ffmpeg.org/ffmpeg-filters.html"
+ ],
+ "reference_files": [
+  "references/poster-layouts.md",
+  "references/poster-specs.md",
+  "assets/poster-template.html",
+  "references/text-models.md"
+ ],
+ "scripts_copied": []
+}

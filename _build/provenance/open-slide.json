@@ -1,0 +1,35 @@
+{
+  "skill": "open-slide",
+  "merged_from_count": 5,
+  "origin": "Adopted from https://github.com/open-slide/open-slide (MIT, 8.1k stars) — the framework's own agent skills, verbatim as reference documents",
+  "exact_duplicates_merged": [
+    "packages/core/skills/create-slide/SKILL.md -> references/create-slide/create-slide.md (renamed so skill loaders do not pick it up as a nested global skill)",
+    "packages/core/skills/slide-authoring/SKILL.md -> references/slide-authoring/slide-authoring.md",
+    "packages/core/skills/create-theme/SKILL.md -> references/create-theme/create-theme.md",
+    "packages/core/skills/current-slide/SKILL.md -> references/current-slide/current-slide.md",
+    "packages/core/skills/apply-comments/SKILL.md -> references/apply-comments/apply-comments.md"
+  ],
+  "near_duplicates_merged": [],
+  "dropped": [
+    { "name": "repo-root .agents/skills/* (shadcn, apple-design, frontend-design, review-animations, vercel-react-best-practices, web-design-guidelines)", "reason": "development skills for the framework's own codebase, not part of the slide-authoring capability" }
+  ],
+  "source_roots": [
+    "https://github.com/open-slide/open-slide (packages/core/skills/, commit on main 2026-09-27)"
+  ],
+  "reference_files": [
+    "references/create-slide/create-slide.md",
+    "references/slide-authoring/slide-authoring.md",
+    "references/slide-authoring/references/assets.md",
+    "references/slide-authoring/references/design-system.md",
+    "references/slide-authoring/references/morph.md",
+    "references/slide-authoring/references/page-numbers.md",
+    "references/slide-authoring/references/steps.md",
+    "references/slide-authoring/references/transitions.md",
+    "references/slide-authoring/references/webfonts.md",
+    "references/apply-comments/apply-comments.md",
+    "references/current-slide/current-slide.md",
+    "references/create-theme/create-theme.md"
+  ],
+  "scripts_copied": [],
+  "note": "The new SKILL.md is a bundle-style entry point (when-to-use, scaffold workflow, quality bar, reference map, output format) written for the bundle; the five reference documents are unmodified upstream content. Requires a live scaffolded project (npx @open-slide/cli init) — the only skill in the bundle with that runtime dependency. Boundary: presentation-authoring owns direct .pptx authoring and editing existing decks."
+}

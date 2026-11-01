@@ -1,0 +1,32 @@
+{
+  "skill": "research-and-insight-analysis",
+  "merged_from_count": 4,
+  "exact_duplicates_merged": [],
+  "near_duplicates_merged": [
+    "All four sources are structurally near-duplicate SKILL.md patterns (frontmatter + When to Use + What This Skill Does + How to Use + Instructions + one worked example + Tips + Related Use Cases) applied to four different evidence sets; the duplicated shell was replaced by one shared spine (frame → gather with provenance → structure → rank → quality bar → brief) and the per-source content was reduced to admissible-evidence / ranking / output-template differences in four reference files"
+  ],
+  "dropped": [
+    {"name": "lead-research-assistant: worked examples (Lenny's Newsletter lead, local business) and 'Related Use Cases'", "reason": "worked examples duplicate the output template already carried; the cross-links named sibling skills by generic phrase rather than by the bundle's skill names"},
+    {"name": "lead-research-assistant: CRM / connected-service usage notes", "reason": "no connector integration was specified in this bundle's tooling scope; the lead CSV is offered as the machine-readable handoff instead"},
+    {"name": "meeting-insights-analyzer: three worked examples (conflict avoidance, leadership facilitation, personal development) and 'Common Analysis Requests' list", "reason": "example transcripts and query catalogue folded into the five analysis lenses and the template's evidence rows"},
+    {"name": "meeting-insights-analyzer: per-tool transcript setup walkthroughs (Granola / Zoom / Google Meet / Fireflies / Otter)", "reason": "compressed to one evidence-sources line naming the tool formats; the method starts at inventory rather than tool-by-tool retrieval instructions"},
+    {"name": "developer-growth-analysis: three fully worked improvement areas plus a completed reading list", "reason": "the specific example (TypeScript generics/utility types/discriminated unions) is retained as the specificity bar; the rest was a sample report, not procedure"},
+    {"name": "domain-name-brainstormer: 'Competitor Analysis' advanced feature", "reason": "competitor and brand-collision analysis belongs to market-and-competitive-intelligence; collision checks are limited to trademark lookup on request"},
+    {"name": "domain-name-brainstormer: worked example output, multilingual naming, three example workflows, tips, pricing context", "reason": "priced the same ground as the TLD guide and naming bar already carried; example output replaced by the output template"}
+  ],
+  "source_roots": [
+    "awesome-claude-skills"
+  ],
+  "reference_files": [
+    "references/lead-research-assistant.md",
+    "references/meeting-insights-analyzer.md",
+    "references/developer-growth-analysis.md",
+    "references/domain-name-brainstormer.md"
+  ],
+  "scripts_copied": [],
+  "notes": [
+    "No license file was carried: none of the four source directories ships one.",
+    "All four sources are SKILL.md-only (no scripts, assets, or references), so nothing else needed namespacing or copying.",
+    "Boundaries encoded in the frontmatter 'Do not use for': market-and-competitive-intelligence (competitor/ad analysis), writing-and-internal-communications (prose), strategy-diagnosis-and-framing (strategic diagnosis), skill-authoring-and-agent-tooling (research about Claude's own tooling)."
+  ]
+}

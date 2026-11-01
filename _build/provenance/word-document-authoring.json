@@ -1,0 +1,60 @@
+{
+  "skill": "word-document-authoring",
+  "merged_from_count": 2,
+  "exact_duplicates_merged": [
+    "docx (skills/skills/docx) + docx (awesome-claude-skills/document-skills/docx) \u2014 LICENSE.txt byte-identical (cmp), one copy kept as LICENSE.txt",
+    "docx (skills/skills/docx) + docx (awesome-claude-skills/document-skills/docx) \u2014 scripts/office/schemas and ooxml/schemas are byte-identical (diff -rq silent across 40 XSDs); one copy kept at scripts/office/schemas",
+    "docx (skills/skills/docx) + docx (awesome-claude-skills/document-skills/docx) \u2014 scripts/__init__.py; awesome-claude-skills copy retained (identical apart from an explanatory comment)"
+  ],
+  "near_duplicates_merged": [
+    "Two parallel OOXML validator stacks: skills/skills/scripts/office/{validate.py,validators/*} (2,269 lines; CLI adds packed-file input, --auto-repair, --author redlining check) merged against awesome-claude-skills/ooxml/scripts/{validate.py,validation/*} (1,903 lines; directory-only CLI) \u2014 the richer office stack kept as scripts/office/, the ooxml one dropped",
+    "scripts/templates/{comments,commentsExtended,commentsExtensible,commentsIds,people}.xml \u2014 same five templates with a trivial XML declaration difference; awesome-claude-skills copy retained",
+    "SKILL.md: skills/skills (91 lines, dense docx-js footguns, edit/comment workflows) merged with awesome-claude-skills (196 lines, decision tree, text extraction, redlining batches, image rendering) \u2014 awesome-claude-skills richer, skills/skills footgun and helper detail retained in the merged body"
+  ],
+  "dropped": [
+    {
+      "name": "awesome-claude-skills/document-skills/docx/ooxml/scripts/validate.py",
+      "reason": "superseded by scripts/office/validate.py, which adds packed-file input, --auto-repair, and --author redline verification"
+    },
+    {
+      "name": "awesome-claude-skills/document-skills/docx/ooxml/scripts/validation/ (5 files)",
+      "reason": "superseded by scripts/office/validators/, a larger and more capable revision of the same validator set"
+    },
+    {
+      "name": "awesome-claude-skills/document-skills/docx/ooxml/schemas/ (40 XSDs, 1.0 MB)",
+      "reason": "byte-identical duplicate of scripts/office/schemas/"
+    },
+    {
+      "name": "skills/skills/docx/scripts/__init__.py",
+      "reason": "superseded \u2014 identical to the retained awesome-claude-skills copy"
+    },
+    {
+      "name": "skills/skills/docx/scripts/templates/ (5 files)",
+      "reason": "superseded \u2014 same templates; retained copies carry the encoding/standalone XML declaration Word itself writes"
+    },
+    {
+      "name": "awesome-claude-skills SKILL.md sections 'Overview', 'Code Style Guidelines', install-command Dependencies prose",
+      "reason": "boilerplate \u2014 folded into the workflow/prerequisite step or dropped as non-format-specific"
+    }
+  ],
+  "source_roots": [
+    "skills/skills/docx",
+    "awesome-claude-skills/document-skills/docx"
+  ],
+  "reference_files": [
+    "references/docx-js.md",
+    "references/ooxml.md"
+  ],
+  "scripts_copied": [
+    "scripts/__init__.py",
+    "scripts/accept_changes.py",
+    "scripts/comment.py",
+    "scripts/document.py",
+    "scripts/merge_runs.py",
+    "scripts/office/ (helpers, schemas, soffice.py, validate.py, validators/)",
+    "scripts/pack.py",
+    "scripts/templates/ (5 files)",
+    "scripts/unpack.py",
+    "scripts/utilities.py"
+  ]
+}

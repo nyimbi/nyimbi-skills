@@ -1,0 +1,39 @@
+{
+  "skill": "pdf-processing",
+  "merged_from_count": 2,
+  "exact_duplicates_merged": [
+    "pdf (skills/skills/pdf) + pdf (awesome-claude-skills/document-skills/pdf) — SKILL.md bodies identical except filename case; richer skills/skills revision retained (adds the ReportLab subscripts/superscripts section and the fuller trigger description)",
+    "pdf (skills/skills/pdf) + pdf (awesome-claude-skills/document-skills/pdf) — reference.md byte-identical (cmp), one copy kept as references/reference.md",
+    "pdf (skills/skills/pdf) + pdf (awesome-claude-skills/document-skills/pdf) — LICENSE.txt byte-identical (cmp), one copy kept as LICENSE.txt"
+  ],
+  "near_duplicates_merged": [
+    "forms.md (skills/skills, 294 lines, structure + visual + hybrid coordinate workflows) merged against forms.md (awesome-claude-skills, 205 lines, visual-only workflow) — longer structure-first revision kept as references/forms.md",
+    "fill_pdf_form_with_annotations.py — two diverged implementations kept side by side: scripts/skills-fill_pdf_form_with_annotations.py (auto-detects pdf_width/pdf_height vs image_width/image_height) and scripts/awesome-fill_pdf_form_with_annotations.py (image coordinates only); SKILL.md and references/forms.md tell the reader to prefer the first",
+    "check_bounding_boxes.py, check_fillable_fields.py, convert_pdf_to_images.py, create_validation_image.py, extract_form_field_info.py, fill_fillable_fields.py — same implementations, awesome-claude-skills revisions strictly richer (docstrings, pypdf selection-list workaround, radio-group handling); those kept, skills/skills copies dropped"
+  ],
+  "dropped": [
+    { "name": "awesome-claude-skills/document-skills/pdf/SKILL.md", "reason": "superseded — body is a strict subset of skills/skills/pdf/SKILL.md apart from filename casing; its shorter description did not meet the trigger-description bar" },
+    { "name": "awesome-claude-skills/document-skills/pdf/forms.md", "reason": "superseded — shorter, visual-only procedure; the skills/skills revision covers structure extraction, visual fallback, and the hybrid path" },
+    { "name": "skills/skills/pdf/scripts/{check_bounding_boxes,check_fillable_fields,convert_pdf_to_images,create_validation_image,extract_form_field_info,fill_fillable_fields}.py", "reason": "superseded — functionally identical to the retained awesome-claude-skills copies, which carry additional documentation and bug workarounds" }
+  ],
+  "source_roots": [
+    "skills/skills/pdf",
+    "awesome-claude-skills/document-skills/pdf"
+  ],
+  "reference_files": [
+    "references/forms.md",
+    "references/reference.md"
+  ],
+  "scripts_copied": [
+    "scripts/awesome-fill_pdf_form_with_annotations.py",
+    "scripts/check_bounding_boxes.py",
+    "scripts/check_bounding_boxes_test.py",
+    "scripts/check_fillable_fields.py",
+    "scripts/convert_pdf_to_images.py",
+    "scripts/create_validation_image.py",
+    "scripts/extract_form_field_info.py",
+    "scripts/extract_form_structure.py",
+    "scripts/fill_fillable_fields.py",
+    "scripts/skills-fill_pdf_form_with_annotations.py"
+  ]
+}

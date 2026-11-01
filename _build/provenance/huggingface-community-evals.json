@@ -1,0 +1,14 @@
+{
+  "skill": "huggingface-community-evals",
+  "merged_from_count": 1,
+  "origin": "Adopted verbatim from https://github.com/huggingface/skills (Apache-2.0) \u2014 skills/huggingface-community-evals/ (SKILL.md + 3 scripts)",
+  "exact_duplicates_merged": [],
+  "near_duplicates_merged": [],
+  "dropped": [],
+  "source_roots": [
+    "Adopted verbatim from https://github.com/huggingface/skills (Apache-2.0)"
+  ],
+  "reference_files": [],
+  "scripts_copied": "shipped with skill",
+  "note": "Official HF skill: inspect-ai and lighteval evaluations for Hub models on local hardware; vLLM/Transformers/accelerate backend selection."
+}

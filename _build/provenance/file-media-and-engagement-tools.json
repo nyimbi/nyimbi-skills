@@ -1,0 +1,66 @@
+{
+  "skill": "file-media-and-engagement-tools",
+  "merged_from_count": 7,
+  "exact_duplicates_merged": [
+    "slack-gif-creator core/requirements.txt — byte-identical in skills/skills and awesome-claude-skills; carried once",
+    "slack-gif-creator LICENSE.txt — both repos ship the Apache-2.0 text, differing only in the copyright placeholder line ('Copyright 2026 Anthropic, PBC.' vs 'Copyright [yyyy] [name of copyright owner]'); the Anthropic-filled copy is carried as LICENSE.txt",
+    "slack-gif-creator core/{validators,easing,frame_composer,gif_builder}.py — same modules in both repos, differing only in quote style and line wrapping for three of them; one copy carried"
+  ],
+  "near_duplicates_merged": [
+    "slack-gif-creator (skills/skills: 254-line SKILL.md, 4 core files, no templates) + slack-gif-creator (awesome-claude-skills: 646-line SKILL.md, 7 core files, 15 templates) — merged into references/slack-gif-creation.md carrying the richer revision; the skills/skills file set is otherwise a formatting-only reissue",
+    "slack-gif-creator core/gif_builder.py dedup threshold — skills/skills used the animation-preserving default 0.9995 while awesome-claude-skills used 0.98 in save(); merged by taking the awesome revision (which carries the 64KB/2048KB Slack size warnings) and switching save()'s dedup call and the default to 0.9995, with the docstring guidance from both"
+  ],
+  "dropped": [
+    {"name": "file-organizer / invoice-organizer / raffle-winner-picker / twitter-algorithm-optimizer 'When to Use', 'What This Skill Does', 'How to Use' prompt-catalogue sections", "reason": "trigger phrasing was absorbed into this skill's frontmatter description and When-to-use bullets; the prompt catalogues were examples, not procedure"},
+    {"name": "file-organizer worked examples, 'Common Organization Tasks', 'Pro Tips', 'Best Practices', 'Related Use Cases'", "reason": "restated the 7-step method and grouping axes already synthesized into references/file-organization.md"},
+    {"name": "invoice-organizer worked examples, 'Common Organization Patterns', 'Automation Setup', 'Pro Tips', 'Handling Special Cases', 'Related Use Cases'", "reason": "folded into the extraction table, grouping schemes, and quality gates in references/invoice-organization.md"},
+    {"name": "raffle-winner-picker three 'Example Workflows', 'Tips', 'Common Use Cases'", "reason": "folded into the Common-shapes table and fairness checklist in references/raffle-winner-selection.md"},
+    {"name": "twitter-algorithm-optimizer 'Example Optimizations', 'Best Practices', 'Common Pitfalls', 'When to Ask'", "reason": "the examples were restatements of the strategy map; pitfalls and signposting live in the quality gates"},
+    {"name": "video-downloader default output path '/mnt/user-data/outputs/'", "reason": "environment-specific artifact-directory path; the reference uses the current working directory as default and the -o option for anything else"},
+    {"name": "skills/skills slack-gif-creator SKILL.md (254 lines) and its 4-file core reissue", "reason": "superseded by the awesome-claude-skills revision, which is a superset of modules (adds typography, color_palettes, visual_effects, and all 15 templates); only its safer dedup threshold was merged in"},
+    {"name": "twitter-algorithm-optimizer frontmatter key 'license: AGPL-3.0 (referencing Twitter's algorithm source)' as a frontmatter key", "reason": "no licence file ships with that source and the declaration is scoped to that one technique, so it would misstate the licence of the other five sources; preserved verbatim as a licence note inside references/twitter-algorithm-optimization.md instead of being dropped or expanded"},
+    {"name": "composio-skills and any sibling-bundle overlap", "reason": "out of scope for this bundle by the consolidation brief"}
+  ],
+  "source_roots": [
+    "awesome-claude-skills",
+    "skills/skills"
+  ],
+  "reference_files": [
+    "references/file-organization.md",
+    "references/invoice-organization.md",
+    "references/video-downloading.md",
+    "references/raffle-winner-selection.md",
+    "references/twitter-algorithm-optimization.md",
+    "references/slack-gif-creation.md"
+  ],
+  "scripts_copied": [
+    "scripts/video-downloader.py",
+    "scripts/slack-gif-creator/core/color_palettes.py",
+    "scripts/slack-gif-creator/core/easing.py",
+    "scripts/slack-gif-creator/core/frame_composer.py",
+    "scripts/slack-gif-creator/core/gif_builder.py",
+    "scripts/slack-gif-creator/core/typography.py",
+    "scripts/slack-gif-creator/core/validators.py",
+    "scripts/slack-gif-creator/core/visual_effects.py",
+    "scripts/slack-gif-creator/requirements.txt",
+    "scripts/slack-gif-creator/templates/bounce.py",
+    "scripts/slack-gif-creator/templates/explode.py",
+    "scripts/slack-gif-creator/templates/fade.py",
+    "scripts/slack-gif-creator/templates/flip.py",
+    "scripts/slack-gif-creator/templates/kaleidoscope.py",
+    "scripts/slack-gif-creator/templates/morph.py",
+    "scripts/slack-gif-creator/templates/move.py",
+    "scripts/slack-gif-creator/templates/pulse.py",
+    "scripts/slack-gif-creator/templates/shake.py",
+    "scripts/slack-gif-creator/templates/slide.py",
+    "scripts/slack-gif-creator/templates/spin.py",
+    "scripts/slack-gif-creator/templates/wiggle.py",
+    "scripts/slack-gif-creator/templates/zoom.py"
+  ],
+  "notes": [
+    "Only slack-gif-creator ships a licence among the six source skills, so the merged skill carries that single LICENSE.txt (SPEC §5).",
+    "video-downloader's single script was namespaced to scripts/video-downloader.py per SPEC §6 (one file → scripts/<original-skill-dir-name>.py); its internal option flags were unchanged.",
+    "slack-gif-creator's scripts were namespaced to scripts/slack-gif-creator/ with original filenames kept (SPEC §6, several files). The modules import each other as top-level packages, so references/slack-gif-creation.md instructs running from that directory.",
+    "invoice-organization.md links to ../pdf-processing/ as the owner of PDF text extraction, forms, and merging, per the no-repeated-content rule."
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "skill": "cryptography-and-key-management",
+  "merged_from_count": 16,
+  "near_duplicate_groups": [
+    "migrating-to-post-quantum-cryptography + performing-post-quantum-cryptography-migration",
+    "configuring-hsm-for-key-storage + performing-hardware-security-module-integration"
+  ],
+  "source_roots": [
+    "Cybersecurity-Skills"
+  ],
+  "reference_files": [
+    "configuring-certificate-authority-with-openssl.md",
+    "configuring-hsm-for-key-storage.md",
+    "configuring-tls-1-3-for-secure-communications.md",
+    "implementing-aes-encryption-for-data-at-rest.md",
+    "implementing-digital-signatures-with-ed25519.md",
+    "implementing-end-to-end-encryption-for-messaging.md",
+    "implementing-envelope-encryption-with-aws-kms.md",
+    "implementing-jwt-signing-and-verification.md",
+    "implementing-rsa-key-pair-management.md",
+    "implementing-zero-knowledge-proof-for-authentication.md",
+    "migrating-to-post-quantum-cryptography.md",
+    "performing-cryptographic-audit-of-application.md",
+    "performing-hardware-security-module-integration.md",
+    "performing-hash-cracking-with-hashcat.md",
+    "performing-post-quantum-cryptography-migration.md",
+    "performing-ssl-certificate-lifecycle-management.md",
+    "technique-index.md"
+  ],
+  "scripts_copied": 28
+}

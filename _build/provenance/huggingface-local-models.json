@@ -1,0 +1,14 @@
+{
+  "skill": "huggingface-local-models",
+  "merged_from_count": 1,
+  "origin": "Adopted verbatim from https://github.com/huggingface/skills (Apache-2.0) \u2014 skills/huggingface-local-models/",
+  "exact_duplicates_merged": [],
+  "near_duplicates_merged": [],
+  "dropped": [],
+  "source_roots": [
+    "Adopted verbatim from https://github.com/huggingface/skills (Apache-2.0)"
+  ],
+  "reference_files": [],
+  "scripts_copied": "shipped with skill",
+  "note": "Official HF skill: selecting and running local models with llama.cpp/GGUF on CPU/Metal/CUDA/ROCm, quant selection, OpenAI-compatible local serving."
+}

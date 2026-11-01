@@ -1,0 +1,14 @@
+{
+  "skill": "webapp-testing",
+  "merged_from_count": 1,
+  "origin": "Adopted verbatim from https://github.com/anthropics/skills (Apache-2.0) \u2014 skills/webapp-testing/ (SKILL.md + scripts/with_server.py + examples)",
+  "exact_duplicates_merged": [],
+  "near_duplicates_merged": [],
+  "dropped": [],
+  "source_roots": [
+    "Adopted verbatim from https://github.com/anthropics/skills (Apache-2.0)"
+  ],
+  "reference_files": [],
+  "scripts_copied": "shipped with skill",
+  "note": "Fills the hands-on E2E gap: Playwright-driven testing of local web apps (UI verification, browser logs, screenshots). Upstream LICENSE.txt shipped with the skill."
+}

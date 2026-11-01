@@ -1,0 +1,45 @@
+{
+  "skill": "risk-performance-and-value-governance",
+  "merged_from_count": 5,
+  "exact_duplicates_merged": [],
+  "near_duplicates_merged": [
+    "kpi-architect + value-realization (both define metrics): value-realization owns the value ledger (benefit definition, baseline, target, timing, owner, proof standard, one-time vs recurring); kpi-architect owns the KPI system (driver tree, outcome/driver/activity split, leading indicators, thresholds, cadence) — ledger baselines/targets populate thresholds, each metric defined once",
+    "war-gaming + risk-and-mitigation (both stress-test the plan): war-gaming owns scenario generation (base/adverse/aggressive, vulnerabilities, early-warning signals, response playbook); risk-and-mitigation owns the register (likelihood x impact, mitigation, trigger, owner, residual, go/no-go) — every war-game vulnerability becomes one register row"
+  ],
+  "dropped": [
+    {
+      "name": "management-consulting/SKILL.md — mode table, MECE/issue-tree construction, evidence-label definitions, six-section Pyramid contract, epistemic rules, failure modes",
+      "reason": "method layer owned by strategy-diagnosis-and-framing; depth mode and synthesis contract linked, not restated"
+    },
+    {
+      "name": "war-gaming scenario-construction method (STEEP forces, signposts, strategy-scenario scoring)",
+      "reason": "Scenario Planning practitioner file assigned to market-and-competitive-intelligence; cross-linked in Reference map, not copied"
+    },
+    {
+      "name": "benefit sizing math (profit tree, driver tree, unit economics, waterfall) and challenge methods (pre-mortem, inversion)",
+      "reason": "frameworks-financial.md and frameworks-decision.md assigned to strategic-choices-and-economics; linked, not copied"
+    },
+    {
+      "name": "governance forum design and decision rights",
+      "reason": "owned by operating-model-and-execution; this skill supplies only the forum agenda and escalation triggers"
+    },
+    {
+      "name": "management-consulting/diagram rules, tooling-appendix.md, examples/, variants/",
+      "reason": "owned by strategy-diagnosis-and-framing or out of assigned scope"
+    }
+  ],
+  "source_roots": [
+    "strategy-skills-for-claude/skills/05-risk-performance-and-value-governance",
+    "management-consulting"
+  ],
+  "source_files": [
+    "strategy-skills-for-claude/skills/05-risk-performance-and-value-governance/kpi-architect.md",
+    "strategy-skills-for-claude/skills/05-risk-performance-and-value-governance/value-realization.md",
+    "strategy-skills-for-claude/skills/05-risk-performance-and-value-governance/risk-and-mitigation.md",
+    "strategy-skills-for-claude/skills/05-risk-performance-and-value-governance/war-gaming.md",
+    "management-consulting/SKILL.md",
+    "management-consulting/LICENSE"
+  ],
+  "reference_files": [],
+  "scripts_copied": 0
+}

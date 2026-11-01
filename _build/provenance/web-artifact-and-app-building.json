@@ -1,0 +1,51 @@
+{
+  "skill": "web-artifact-and-app-building",
+  "merged_from_count": 4,
+  "exact_duplicates_merged": [
+    "web-artifacts-builder (skills/skills) + artifacts-builder (awesome-claude-skills): same skill under two names — SKILL.md differed only in the frontmatter name and H1; scripts/ byte-identical (init-artifact.sh cffd9952…, bundle-artifact.sh 22f56bef…, shadcn-components.tar.gz 5046d34d…); LICENSE.txt differed only in the Apache-2.0 appendix copyright line — kept the filled-in 'Copyright 2026 Anthropic, PBC.' copy",
+    "webapp-testing (skills/skills) + webapp-testing (awesome-claude-skills): SKILL.md, scripts/with_server.py, and all three examples/ byte-identical; LICENSE.txt differed only in the Apache-2.0 appendix copyright line — kept the filled-in copy"
+  ],
+  "near_duplicates_merged": [
+    "web-artifacts-builder step 5 'testing is optional' + webapp-testing verification toolkit: merged so browser verification is a mandatory workflow step (skippable only on the user's instruction) rather than a bolt-on"
+  ],
+  "dropped": [
+    {
+      "name": "web-artifacts-builder — 'Design & Style Guidelines' paragraph as a standalone section",
+      "reason": "kept as the anti-slop floor in the quality bar; deeper visual direction is owned by visual-design-and-branding"
+    },
+    {
+      "name": "web-artifacts-builder — 'Display artifact to user' step",
+      "reason": "folded into the delivery step; no separate action"
+    },
+    {
+      "name": "web-artifacts-builder — duplicated step-by-step preamble (Quick Start restating the 5-step list)",
+      "reason": "restatement of the same steps at two levels of detail; one synthesis retained"
+    },
+    {
+      "name": "webapp-testing — 'Reference Files' and 'Best Practices' bullets restating the example list",
+      "reason": "examples are reachable from the reference file's closing section with their purpose stated once"
+    },
+    {
+      "name": "artifacts-builder (awesome-claude-skills) — alternate name and H1",
+      "reason": "superseded by the bundle's canonical skill name web-artifact-and-app-building"
+    }
+  ],
+  "source_roots": [
+    "skills/skills (Anthropic official)",
+    "awesome-claude-skills"
+  ],
+  "reference_files": [
+    "architecture-selection.md",
+    "browser-verification.md",
+    "react-setup-and-bundling.md"
+  ],
+  "scripts_copied": [
+    "scripts/web-artifacts-builder/init-artifact.sh",
+    "scripts/web-artifacts-builder/bundle-artifact.sh",
+    "scripts/web-artifacts-builder/shadcn-components.tar.gz",
+    "scripts/webapp-testing/with_server.py",
+    "scripts/webapp-testing/examples/element_discovery.py",
+    "scripts/webapp-testing/examples/static_html_automation.py",
+    "scripts/webapp-testing/examples/console_logging.py"
+  ]
+}

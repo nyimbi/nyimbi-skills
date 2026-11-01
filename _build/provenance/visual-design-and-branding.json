@@ -1,0 +1,73 @@
+{
+ "skill": "visual-design-and-branding",
+ "merged_from_count": 9,
+ "exact_duplicates_merged": [
+  "canvas-design (skills/skills) + canvas-design (awesome-claude-skills): SKILL.md byte-identical, canvas-fonts/ byte-identical; LICENSE.txt differed only in the Apache-2.0 appendix copyright line \u2014 kept the filled-in 'Copyright 2026 Anthropic, PBC.' copy",
+  "theme-factory (skills/skills) + theme-factory (awesome-claude-skills): SKILL.md, themes/, theme-showcase.pdf byte-identical; LICENSE.txt differed only in the Apache-2.0 appendix copyright line \u2014 kept the filled-in copy",
+  "brand-guidelines (skills/skills) + brand-guidelines (awesome-claude-skills): SKILL.md byte-identical; LICENSE.txt differed only in the Apache-2.0 appendix copyright line \u2014 kept the filled-in copy"
+ ],
+ "near_duplicates_merged": [
+  "canvas-design + algorithmic-art: same philosophy-first two-step structure \u2014 merged as static and generative branches of one composition decision, techniques kept distinct in separate reference files",
+  "theme-factory (the system) + brand-guidelines (the constraint): one role table row each in SKILL.md rather than two competing 'how to colour a page' sections",
+  "frontend-design (screen craft) + canvas-design (static craft): distinct composition rules per medium instead of one blended paragraph"
+ ],
+ "dropped": [
+  {
+   "name": "theme-factory \u2014 'Usage Instructions' four-step listing and 'Purpose' section",
+   "reason": "superseded by workflow steps 3 and 7; the theme catalogue table was retained in the reference"
+  },
+  {
+   "name": "brand-guidelines \u2014 'Technical Details' (python-pptx RGBColor specifics)",
+   "reason": "file-generation implementation detail belongs to presentation-authoring; this skill supplies the palette specification"
+  },
+  {
+   "name": "image-enhancer \u2014 example transcript, 'Inspired by' credit, and 'What This Skill Does' restatement",
+   "reason": "illustrative filler; the assess/enhance/export rules were synthesized into references/image-production.md"
+  },
+  {
+   "name": "canvas-design \u2014 'FINAL STEP' and 'MULTI-PAGE OPTION' as standalone sections",
+   "reason": "folded into workflow step 7 and the refine rule of references/canvas-design.md"
+  },
+  {
+   "name": "algorithmic-art \u2014 long HTML skeleton and sidebar markup blocks",
+   "reason": "the template file templates/viewer.html is the authoritative scaffold; duplicating its markup in prose would drift from it"
+  },
+  {
+   "name": "frontend-design \u2014 VS Code / screenshot-environment advice",
+   "reason": "environment-specific; the quality floor and critique loop were retained without the tooling advice"
+  },
+  {
+   "name": "frontend-design (adopted personal skill)",
+   "reason": "near-duplicate of this skill's frontend-design source technique \u2014 unique material (signature element, hero-as-thesis, structure-is-information, orchestrated motion, studio frame) folded into references/ui-craft.md"
+  }
+ ],
+ "source_roots": [
+  "skills/skills (Anthropic official)",
+  "awesome-claude-skills"
+ ],
+ "reference_files": [
+  "canvas-design.md",
+  "algorithmic-art.md",
+  "image-production.md",
+  "theme-system.md",
+  "ui-craft.md"
+ ],
+ "carried_assets": [
+  "LICENSE.txt",
+  "theme-showcase.pdf",
+  "themes/arctic-frost.md",
+  "themes/botanical-garden.md",
+  "themes/desert-rose.md",
+  "themes/forest-canopy.md",
+  "themes/golden-hour.md",
+  "themes/midnight-galaxy.md",
+  "themes/modern-minimalist.md",
+  "themes/ocean-depths.md",
+  "themes/sunset-boulevard.md",
+  "themes/tech-innovation.md",
+  "canvas-fonts/ (81 files: 54 TTF + 27 OFL licence files)",
+  "templates/viewer.html",
+  "templates/generator_template.js"
+ ],
+ "scripts_copied": []
+}

@@ -1,0 +1,36 @@
+{
+ "skill": "competitive-brief",
+ "merged_from_count": 3,
+ "origin": "merged from two existing personal skills (user-approved dedup)",
+ "exact_duplicates_merged": [
+  "~/.claude/skills/marketing-competitive-brief",
+  "~/.claude/skills/product-management-competitive-brief"
+ ],
+ "near_duplicates_merged": [
+  "merged union of both sources into one competitive-brief skill",
+  "competitive-intelligence (interactive HTML battlecard artifact) \u2014 research/talk-track content already covered by the brief; its unique HTML artifact spec (skeleton, color system, per-competitor data structure, delivery, refresh cadence) kept as references/battlecard-artifact.md"
+ ],
+ "dropped": [
+  {
+   "name": "~/.claude/skills/marketing-competitive-brief",
+   "reason": "superseded by the merged competitive-brief"
+  },
+  {
+   "name": "~/.claude/skills/product-management-competitive-brief",
+   "reason": "superseded by the merged competitive-brief"
+  },
+  {
+   "name": "competitive-intelligence",
+   "reason": "superseded \u2014 artifact spec moved to competitive-brief/references/battlecard-artifact.md; skill removed to eliminate trigger overlap"
+  }
+ ],
+ "source_roots": [
+  "~/.claude/skills/marketing-competitive-brief",
+  "~/.claude/skills/product-management-competitive-brief",
+  "~/.claude/skills/competitive-intelligence"
+ ],
+ "reference_files": [
+  "references/battlecard-artifact.md"
+ ],
+ "scripts_copied": []
+}

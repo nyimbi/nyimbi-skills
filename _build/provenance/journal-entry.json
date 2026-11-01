@@ -1,0 +1,28 @@
+{
+ "skill": "journal-entry",
+ "merged_from_count": 2,
+ "origin": "merged from two existing personal skills (user-approved dedup)",
+ "exact_duplicates_merged": [
+  "~/.claude/skills/journal-entry",
+  "~/.claude/skills/journal-entry-prep"
+ ],
+ "near_duplicates_merged": [
+  "merged union of both sources into one journal-entry skill"
+ ],
+ "dropped": [
+  {
+   "name": "~/.claude/skills/journal-entry",
+   "reason": "superseded by the merged journal-entry"
+  },
+  {
+   "name": "~/.claude/skills/journal-entry-prep",
+   "reason": "superseded by the merged journal-entry"
+  }
+ ],
+ "source_roots": [
+  "~/.claude/skills/journal-entry",
+  "~/.claude/skills/journal-entry-prep"
+ ],
+ "reference_files": [],
+ "scripts_copied": []
+}

@@ -1,0 +1,14 @@
+{
+  "skill": "deepagents-python-quickstart",
+  "merged_from_count": 1,
+  "origin": "Adopted verbatim from https://github.com/langchain-ai/langchain-skills (MIT, main 2026-09-28) \u2014 config/skills/deepagents-python-quickstart/",
+  "exact_duplicates_merged": [],
+  "near_duplicates_merged": [],
+  "dropped": [],
+  "source_roots": [
+    "https://github.com/langchain-ai/langchain-skills"
+  ],
+  "reference_files": [],
+  "scripts_copied": "shipped with skill",
+  "note": "Part of the official LangChain skills set (23 skills) adopted wholesale: LangChain fundamentals/RAG/middleware/quickstarts, LangGraph (persistence, decision models, HITL, CLI), Deep Agents (core/orchestration/memory/quickstarts), swarm, managed deep agents, eval engineering, LangSmith online evals, ecosystem primer."
+}

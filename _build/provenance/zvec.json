@@ -1,0 +1,13 @@
+{
+ "skill": "zvec",
+ "merged_from_count": 0,
+ "origin": "adopted from user's live skill set (single source, moved into bundle as-is apart from CONNECTORS.md link rewrite)",
+ "exact_duplicates_merged": [],
+ "near_duplicates_merged": [],
+ "dropped": [],
+ "source_roots": [
+  "/Users/nyimbiodero/.agents/skills/zvec"
+ ],
+ "reference_files": [],
+ "scripts_copied": []
+}

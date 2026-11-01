@@ -1,0 +1,14 @@
+{
+  "skill": "pydantic-ai-harness",
+  "merged_from_count": 1,
+  "origin": "Adopted verbatim from https://github.com/pydantic/skills (MIT, main 2026-09-28) \u2014 skills/pydantic-ai-harness/",
+  "exact_duplicates_merged": [],
+  "near_duplicates_merged": [],
+  "dropped": [],
+  "source_roots": [
+    "https://github.com/pydantic/skills"
+  ],
+  "reference_files": [],
+  "scripts_copied": "shipped with skill",
+  "note": "Official Pydantic skills repo (distributed via npx skills add pydantic/skills and the pydantic-ai plugin). First-party agent runtime capabilities package (Code Mode, filesystem/shell, sub-agents, planning, context compaction); requires pydantic-ai-slim>=2.1.8. Logfire observability skills (6) in the same repo deliberately not adopted."
+}

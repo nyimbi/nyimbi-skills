@@ -1,0 +1,20 @@
+{
+ "skill": "film-directing",
+ "merged_from_count": 0,
+ "origin": "adopted from Cinematic Director Skill (wangzhang-wu, MIT); renamed to film-directing, pipeline routing added, craft content unchanged",
+ "exact_duplicates_merged": [],
+ "near_duplicates_merged": [],
+ "dropped": [],
+ "source_roots": [
+  "https://github.com/wuwangzhang1216/DirectorSKILL"
+ ],
+ "reference_files": [
+  "references/*.md",
+  "references/director_styles/*.md",
+  "assets/*.md",
+  "LICENSE",
+  "NOTICE",
+  "CHANGELOG.md"
+ ],
+ "scripts_copied": []
+}

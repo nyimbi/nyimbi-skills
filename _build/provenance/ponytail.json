@@ -1,0 +1,19 @@
+{
+  "skill": "ponytail",
+  "merged_from_count": 1,
+  "origin": "Adopted verbatim from https://github.com/DietrichGebert/ponytail (MIT, 147k stars) \u2014 .openclaw/skills/ponytail/SKILL.md",
+  "exact_duplicates_merged": [],
+  "near_duplicates_merged": [],
+  "dropped": [
+    {
+      "name": "ponytail-audit, ponytail-help",
+      "reason": "companion utilities of the ponytail plugin, not needed standalone"
+    }
+  ],
+  "source_roots": [
+    "Adopted verbatim from https://github.com/DietrichGebert/ponytail (MIT, 147k stars)"
+  ],
+  "reference_files": [],
+  "scripts_copied": "shipped with skill",
+  "note": "Session behavior skill: lazy-senior-dev mode (YAGNI, stdlib first, no unrequested abstractions). Companion skills (ponytail-audit, ponytail-help) not adopted."
+}

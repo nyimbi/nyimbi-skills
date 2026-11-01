@@ -1,0 +1,14 @@
+{
+  "skill": "huggingface-llm-trainer",
+  "merged_from_count": 1,
+  "origin": "Adopted verbatim from https://github.com/huggingface/skills (Apache-2.0, 11k stars) \u2014 skills/huggingface-llm-trainer/ (SKILL.md + references + 8 scripts)",
+  "exact_duplicates_merged": [],
+  "near_duplicates_merged": [],
+  "dropped": [],
+  "source_roots": [
+    "Adopted verbatim from https://github.com/huggingface/skills (Apache-2.0, 11k stars)"
+  ],
+  "reference_files": [],
+  "scripts_copied": "shipped with skill",
+  "note": "Official HF skill: TRL/Unsloth training on HF Jobs (SFT, DPO, GRPO, reward modeling) + GGUF conversion for local deployment \u2014 the GGUF path pairs with the machine's Ollama workflow."
+}

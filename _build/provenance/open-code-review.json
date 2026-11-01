@@ -1,0 +1,24 @@
+{
+  "skill": "open-code-review",
+  "merged_from_count": 1,
+  "origin": "Adapted from the official agent skill shipped in https://github.com/alibaba/open-code-review (Apache-2.0, v1.12.9 via brew; skills/open-code-review/SKILL.md, main 2026-09-28)",
+  "exact_duplicates_merged": [],
+  "near_duplicates_merged": [
+    "official skills/open-code-review/SKILL.md -> SKILL.md (workflow/flags/gotchas/rules sections adapted; install + LLM sections rewritten for this machine: brew + local Ollama qwen3.6-coding; macOCR binary-name collision documented; bundle-style boundaries added vs code-review / security-review)"
+  ],
+  "dropped": [
+    {
+      "name": "official skills/open-code-review-delegate/SKILL.md",
+      "reason": "delegation mode (OCR emits a review spec for the host agent, no LLM needed) overlaps what the bundle's code-review skill already does natively; delegation remains available directly via `ocr delegate` if ever wanted"
+    }
+  ],
+  "source_roots": [
+    "https://github.com/alibaba/open-code-review (skills/, pages/src/content/docs/en/{configuration,faq}.md, main 2026-09-28)",
+    "https://open-codereview.ai (JS-rendered docs site; content recovered from repo pages/ source)"
+  ],
+  "reference_files": [
+    "references/ollama-local-models.md"
+  ],
+  "scripts_copied": [],
+  "note": "Machine state baked in: ocr 1.12.9 via brew (name collision with macOCR resolved via brew link --overwrite; macOCR reachable as ~/.local/bin/macocr); Ollama custom provider configured at 127.0.0.1:11434/v1 with qwen3.6-coding (verified end-to-end on a planted-bug scratch repo); qwen3.5:4b empirically fails under OCR's ~3k-token prompt despite passing bare tool-call tests; timeout_sec raised to 900."
+}

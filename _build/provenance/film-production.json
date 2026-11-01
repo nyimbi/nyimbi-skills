@@ -1,0 +1,28 @@
+{
+ "skill": "film-production",
+ "merged_from_count": 0,
+ "origin": "new synthesis: the production state machine for the film-* family, built on the AI Film Challenge shared pipeline and this machine's local stack",
+ "exact_duplicates_merged": [],
+ "near_duplicates_merged": [],
+ "dropped": [],
+ "source_roots": [
+  "https://aifilmchallenge.com/resources/guides/pipeline-templates",
+  "https://domer.io/blog/ai-script-to-storyboard-preproduction-workflow-8706bc51",
+  "https://mstudio.ai/blog/ai-filmmaking/how-to-prompt-ai-video-models",
+  "~/Developer/openmontage",
+  "~/src/CinematicPipeline"
+ ],
+ "reference_files": [
+  "references/pipeline.md",
+  "references/project-layout.md",
+  "references/feasibility.md",
+  "references/series-mode.md",
+  "references/gates.md",
+  "references/local-production-manifest.md",
+  "references/quality-ceiling.md"
+ ],
+ "scripts_copied": [
+  "scripts/filmctl.py",
+  "scripts/pull_models.py"
+ ]
+}

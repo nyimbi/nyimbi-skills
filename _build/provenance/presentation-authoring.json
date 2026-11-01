@@ -1,0 +1,42 @@
+{
+  "skill": "presentation-authoring",
+  "merged_from_count": 2,
+  "exact_duplicates_merged": [
+    "pptx (skills/skills/pptx) + pptx (awesome-claude-skills/document-skills/pptx) — LICENSE.txt byte-identical (cmp), one copy kept as LICENSE.txt",
+    "pptx (skills/skills/pptx) + pptx (awesome-claude-skills/document-skills/pptx) — ooxml/schemas byte-identical (diff -rq) to scripts/office/schemas across 40 XSDs; one copy kept"
+  ],
+  "near_duplicates_merged": [
+    "Two parallel OOXML validator stacks: skills/skills/scripts/office/{validate.py,validators/*} merged against awesome-claude-skills/ooxml/scripts/{validate.py,validation/*} — the richer office stack kept as scripts/office/, the ooxml one dropped; scripts/office/validate.py is the validator both SKILL.md revisions point at, with --original for template-derived decks",
+    "thumbnail.py — two diverged implementations kept side by side: scripts/skills-thumbnail.py (LibreOffice render + office.helpers, labels slides by XML filename, hidden-slide placeholders) and scripts/awesome-thumbnail.py (python-pptx + PIL, --outline-placeholders, per-grid column limits); SKILL.md tells the reader to prefer the first for fidelity",
+    "SKILL.md: skills/skills (238 lines, pptxgenjs footguns, template-edit commands, QA ladder, font QA-reliability table) merged with awesome-claude-skills (483 lines, html2pptx workflow, template inventory/rearrange/replace procedure, thumbnail usage) — awesome-claude-skills richer overall, skills/skills QA and footgun detail retained in the merged body"
+  ],
+  "dropped": [
+    { "name": "awesome-claude-skills/document-skills/pptx/ooxml/scripts/validate.py", "reason": "superseded by scripts/office/validate.py, which adds --original baselining for template decks, --auto-repair, and --author redline verification" },
+    { "name": "awesome-claude-skills/document-skills/pptx/ooxml/scripts/validation/ (5 files)", "reason": "superseded by scripts/office/validators/" },
+    { "name": "awesome-claude-skills/document-skills/pptx/ooxml/schemas/ (40 XSDs, 1.0 MB)", "reason": "byte-identical duplicate of scripts/office/schemas/" },
+    { "name": "SKILL.md design content from both sources — 10-palette and 18-palette colour tables, 'Design Ideas', 'Visual Details Options', 'Color Palette Selection', 'Layout Innovations' prose", "reason": "out of scope for this bundle: visual direction is owned by visual-design-and-branding; presentation-authoring owns the .pptx format, layouts, and tooling. QA-relevant typography (safe-list vs QA-unreliable fonts, size/spacing floors, overflow checks) was retained" },
+    { "name": "awesome-claude-skills SKILL.md 'Code Style Guidelines' and install-command Dependencies prose", "reason": "boilerplate — folded into the workflow prerequisite step" }
+  ],
+  "source_roots": [
+    "skills/skills/pptx",
+    "awesome-claude-skills/document-skills/pptx"
+  ],
+  "reference_files": [
+    "references/html2pptx.md",
+    "references/ooxml.md"
+  ],
+  "scripts_copied": [
+    "scripts/__init__.py",
+    "scripts/add_slide.py",
+    "scripts/awesome-thumbnail.py",
+    "scripts/clean.py",
+    "scripts/html2pptx.js",
+    "scripts/inventory.py",
+    "scripts/office/ (helpers, schemas, soffice.py, validate.py, validators/)",
+    "scripts/pack.py",
+    "scripts/rearrange.py",
+    "scripts/replace.py",
+    "scripts/skills-thumbnail.py",
+    "scripts/unpack.py"
+  ]
+}

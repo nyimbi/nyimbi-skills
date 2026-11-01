@@ -1,0 +1,49 @@
+{
+  "skill": "operating-model-and-execution",
+  "merged_from_count": 6,
+  "exact_duplicates_merged": [],
+  "near_duplicates_merged": [
+    "initiative-prioritizer + transformation-roadmap (overlapping sequencing): scoring, fit, capacity cut, and kill list owned by initiative-prioritizer step; phases, dependencies, gates, 90-day plan, and governance calendar owned by transformation-roadmap step — one concept, one home",
+    "operating-model-design governance forums + risk-performance-and-value-governance review cadence: forum structure and decision rights defined here; KPI/benefit/risk content of the agenda cross-linked to ../risk-performance-and-value-governance/SKILL.md"
+  ],
+  "dropped": [
+    {
+      "name": "management-consulting/SKILL.md — mode table, MECE/issue-tree construction, evidence-label definitions, six-section Pyramid contract, epistemic rules, failure modes",
+      "reason": "method layer owned by strategy-diagnosis-and-framing; depth-mode referenced in one line, contract linked, not restated"
+    },
+    {
+      "name": "management-consulting/SKILL.md — diagram rules and references/tooling-appendix.md",
+      "reason": "diagram templates and rendering owned by strategy-diagnosis-and-framing (references/diagram-templates.md)"
+    },
+    {
+      "name": "management-consulting/references/frameworks-problem-solving.md, frameworks-index.md, evidence-standards.md",
+      "reason": "assigned to strategy-diagnosis-and-framing; linked from Reference map instead of copied"
+    },
+    {
+      "name": "management-consulting/references/frameworks-strategy.md, frameworks-decision.md, frameworks-financial.md, frameworks-pricing.md",
+      "reason": "assigned to market-and-competitive-intelligence and strategic-choices-and-economics; linked, not copied"
+    },
+    {
+      "name": "management-consulting/examples/*.md, variants/*.md",
+      "reason": "examples owned by strategy-diagnosis-and-framing; variants out of assigned scope"
+    }
+  ],
+  "source_roots": [
+    "strategy-skills-for-claude/skills/04-operating-model-and-execution",
+    "management-consulting"
+  ],
+  "source_files": [
+    "strategy-skills-for-claude/skills/04-operating-model-and-execution/initiative-prioritizer.md",
+    "strategy-skills-for-claude/skills/04-operating-model-and-execution/operating-model-design.md",
+    "strategy-skills-for-claude/skills/04-operating-model-and-execution/transformation-roadmap.md",
+    "management-consulting/SKILL.md",
+    "management-consulting/references/frameworks-operations.md",
+    "management-consulting/references/frameworks-innovation.md",
+    "management-consulting/LICENSE"
+  ],
+  "reference_files": [
+    "references/frameworks-operations.md",
+    "references/frameworks-innovation.md"
+  ],
+  "scripts_copied": 0
+}

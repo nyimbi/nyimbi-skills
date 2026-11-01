@@ -1,0 +1,14 @@
+{
+  "skill": "migrating-langchain-to-pydantic-ai",
+  "merged_from_count": 1,
+  "origin": "Adopted verbatim from https://github.com/pydantic/skills (MIT, main 2026-09-28) \u2014 skills/migrating-langchain-to-pydantic-ai/",
+  "exact_duplicates_merged": [],
+  "near_duplicates_merged": [],
+  "dropped": [],
+  "source_roots": [
+    "https://github.com/pydantic/skills"
+  ],
+  "reference_files": [],
+  "scripts_copied": "shipped with skill",
+  "note": "Official Pydantic skills repo (distributed via npx skills add pydantic/skills and the pydantic-ai plugin). Migration guide from langchain to Pydantic AI. Logfire observability skills (6) in the same repo deliberately not adopted."
+}

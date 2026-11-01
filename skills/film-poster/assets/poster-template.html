@@ -1,0 +1,189 @@
+<!doctype html>
+<!--
+  Film poster template — 2000 × 3000 (2:3 digital one-sheet).
+
+  Replace the CSS variables and the text. Put approved art at 06_marketing/poster/art/
+  and set --art to url('art/master.png') (or keep the gradient for a layout test).
+
+  Render at full size with Chrome:
+    "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" \
+      --headless=new --disable-gpu --hide-scrollbars \
+      --screenshot=poster_2000x3000.png --window-size=2000,3000 \
+      "file:///absolute/path/to/poster-template.html"
+
+  For print, scale the same layout to 8100 × 12000 and export PDF with embedded fonts.
+  For 16:9 / 9:16 / 1:1, change --w and --h and re-place the type; do not stretch.
+-->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Poster</title>
+<style>
+  :root {
+    --w: 2000px;
+    --h: 3000px;
+
+    /* Art: replace with url('art/master.png') */
+    --art: radial-gradient(120% 90% at 50% 20%, #3b4a52 0%, #1b2226 45%, #0b0d0f 100%);
+
+    --ink: #f4f1ea;
+    --accent: #d9b45b;
+    --title-font: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    --body-font: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    --serif-font: Georgia, "Times New Roman", serif;
+
+    --title-size: 232px;
+    --title-tracking: 0.08em;
+    --tagline-size: 44px;
+    --credits-size: 19px;
+    --release-size: 30px;
+
+    /* Bottom-anchored type block; adjust for a top-title layout. */
+    --title-bottom: 560px;
+    --tagline-bottom: 470px;
+    --credits-bottom: 150px;
+  }
+
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; background: #000; }
+
+  .poster {
+    position: relative;
+    width: var(--w);
+    height: var(--h);
+    overflow: hidden;
+    color: var(--ink);
+    font-family: var(--body-font);
+    background: #0b0d0f;
+  }
+
+  .art {
+    position: absolute;
+    inset: 0;
+    background-image: var(--art);
+    background-size: cover;
+    background-position: center;
+  }
+
+  /* Darken top and bottom so type survives any art. */
+  .scrim {
+    position: absolute;
+    inset: 0;
+    background:
+      linear-gradient(to bottom, rgba(0,0,0,.55) 0%, rgba(0,0,0,0) 18%),
+      linear-gradient(to top, rgba(0,0,0,.88) 0%, rgba(0,0,0,.45) 22%, rgba(0,0,0,0) 42%);
+  }
+
+  .studio {
+    position: absolute;
+    top: 90px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    font-size: 22px;
+    letter-spacing: .38em;
+    text-transform: uppercase;
+    opacity: .85;
+  }
+
+  .title {
+    position: absolute;
+    left: 120px;
+    right: 120px;
+    bottom: var(--title-bottom);
+    margin: 0;
+    text-align: center;
+    font-family: var(--title-font);
+    font-size: var(--title-size);
+    font-weight: 800;
+    line-height: .92;
+    letter-spacing: var(--title-tracking);
+    text-transform: uppercase;
+    color: var(--ink);
+    text-wrap: balance;
+  }
+
+  .title .accent { color: var(--accent); }
+
+  .tagline {
+    position: absolute;
+    left: 160px;
+    right: 160px;
+    bottom: var(--tagline-bottom);
+    text-align: center;
+    font-family: var(--serif-font);
+    font-style: italic;
+    font-size: var(--tagline-size);
+    line-height: 1.25;
+    opacity: .92;
+  }
+
+  .bottom {
+    position: absolute;
+    left: 150px;
+    right: 150px;
+    bottom: var(--credits-bottom);
+    text-align: center;
+  }
+
+  .credits {
+    font-size: var(--credits-size);
+    line-height: 1.55;
+    letter-spacing: .06em;
+    text-transform: uppercase;
+    opacity: .82;
+    margin-bottom: 26px;
+  }
+
+  .release {
+    font-size: var(--release-size);
+    letter-spacing: .22em;
+    text-transform: uppercase;
+    margin-bottom: 18px;
+  }
+
+  .rating {
+    display: inline-block;
+    border: 3px solid var(--ink);
+    padding: 6px 16px;
+    font-size: 26px;
+    font-weight: 700;
+    letter-spacing: .12em;
+  }
+
+  .laurels {
+    position: absolute;
+    top: 150px;
+    left: 90px;
+    font-size: 18px;
+    line-height: 1.4;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    opacity: .8;
+  }
+</style>
+</head>
+<body>
+  <div class="poster">
+    <div class="art"></div>
+    <div class="scrim"></div>
+
+    <!-- Optional festival block -->
+    <div class="laurels">Official Selection<br>Festival Name 2026</div>
+
+    <div class="studio">Studio Name</div>
+
+    <h1 class="title">The Long<br>Way <span class="accent">Down</span></h1>
+    <div class="tagline">Some debts outlive the people who made them.</div>
+
+    <div class="bottom">
+      <div class="credits">
+        A Film by Director Name · Starring Lead One, Lead Two, Supporting Three ·
+        Written by Writer Name · Produced by Producer Name · Director of Photography DP Name
+      </div>
+      <div class="release">In Cinemas · 2026</div>
+      <div class="rating">R</div>
+    </div>
+  </div>
+</body>
+</html>

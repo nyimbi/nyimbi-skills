@@ -1,0 +1,24 @@
+{
+ "skill": "film-story-development",
+ "merged_from_count": 0,
+ "origin": "new synthesis: screenwriting and series-development stage of the film-* family",
+ "exact_duplicates_merged": [],
+ "near_duplicates_merged": [],
+ "dropped": [],
+ "source_roots": [
+  "https://aifilmchallenge.com/resources/guides/pipeline-templates",
+  "https://domer.io/blog/ai-script-to-storyboard-preproduction-workflow-8706bc51",
+  "https://fountain.io/syntax",
+  "https://www.savethecat.com/"
+ ],
+ "reference_files": [
+  "references/structure-models.md",
+  "references/fountain-format.md",
+  "references/ai-feasibility.md",
+  "references/series-bible-template.md",
+  "references/quality-gates.md"
+ ],
+ "scripts_copied": [
+  "scripts/storycheck.py"
+ ]
+}

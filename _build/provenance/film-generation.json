@@ -1,0 +1,25 @@
+{
+ "skill": "film-generation",
+ "merged_from_count": 0,
+ "origin": "new synthesis: provider probing, prompt compilation, variant and continuity QA for the film-* family; local stack probed 2026-10-30",
+ "exact_duplicates_merged": [],
+ "near_duplicates_merged": [],
+ "dropped": [],
+ "source_roots": [
+  "https://mstudio.ai/blog/ai-filmmaking/how-to-prompt-ai-video-models",
+  "https://ai.google.dev/gemini-api/docs/omni",
+  "https://docs.dev.runwayml.com/guides/models/",
+  "https://github.com/Wan-Video/Wan2.2",
+  "https://developers.openai.com/api/docs/guides/video-generation",
+  "~/src/ComfyUI",
+  "~/src/CinematicPipeline"
+ ],
+ "reference_files": [
+  "references/canonical-shot.md",
+  "references/model-dialects.md",
+  "references/local-stack.md",
+  "references/continuity-qa.md",
+  "references/cost-and-throughput.md"
+ ],
+ "scripts_copied": []
+}

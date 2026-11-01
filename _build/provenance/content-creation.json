@@ -1,0 +1,28 @@
+{
+ "skill": "content-creation",
+ "merged_from_count": 2,
+ "origin": "merged from two existing personal skills (user-approved dedup)",
+ "exact_duplicates_merged": [
+  "~/.claude/skills/draft-content",
+  "~/.claude/skills/content-creation"
+ ],
+ "near_duplicates_merged": [
+  "merged union of both sources into one content-creation skill"
+ ],
+ "dropped": [
+  {
+   "name": "~/.claude/skills/draft-content",
+   "reason": "superseded by the merged content-creation"
+  },
+  {
+   "name": "~/.claude/skills/content-creation",
+   "reason": "superseded by the merged content-creation"
+  }
+ ],
+ "source_roots": [
+  "~/.claude/skills/draft-content",
+  "~/.claude/skills/content-creation"
+ ],
+ "reference_files": [],
+ "scripts_copied": []
+}

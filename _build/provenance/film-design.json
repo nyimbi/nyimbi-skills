@@ -1,0 +1,19 @@
+{
+ "skill": "film-design",
+ "merged_from_count": 0,
+ "origin": "new synthesis: production design, style lock, world bible and continuity system for the film-* family",
+ "exact_duplicates_merged": [],
+ "near_duplicates_merged": [],
+ "dropped": [],
+ "source_roots": [
+  "https://aifilmchallenge.com/resources/guides/pipeline-templates",
+  "https://github.com/drkhaledalrefay-coder/refay-skills",
+  "https://github.com/smixs/visual-skills"
+ ],
+ "reference_files": [
+  "references/style-lock.md",
+  "references/world-bible-template.md",
+  "references/continuity-system.md"
+ ],
+ "scripts_copied": []
+}

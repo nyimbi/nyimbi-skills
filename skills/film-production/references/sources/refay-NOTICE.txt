@@ -1,0 +1,7 @@
+AI agent skills created by Khaled Al Refay (https://github.com/drkhaledalrefay-coder).
+
+Required attribution when sharing or adapting:
+"Based on work by Khaled Al Refay — licensed CC BY 4.0"
+
+Third-party credits:
+- cinematic-hero builds on techniques taught by Rodrigo Olivares / Dynamo Sites.

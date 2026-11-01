@@ -1,0 +1,24 @@
+{
+  "skill": "business-plan-authoring",
+  "merged_from_count": 0,
+  "note": "New synthesis skill (not a merge of source skills). Composes existing bundle skills: market-and-competitive-intelligence (market sizing, profit pools, segmentation, competitor response), strategic-choices-and-economics (business-case-builder, frameworks-financial, frameworks-pricing), strategy-diagnosis-and-framing (assumption-audit, evidence-standards), executive-communication-and-alignment (narrative discipline), presentation-authoring (.pptx handoff for the deck). Adds: live web-research protocol with citation rules, section-by-section hostile-defense template, driver-based projection module, mandatory red-team pass, and a plan-to-deck compression map.",
+  "exact_duplicates_merged": [],
+  "near_duplicates_merged": [],
+  "dropped": [],
+  "composes_bundle_skills": [
+    "market-and-competitive-intelligence",
+    "strategic-choices-and-economics",
+    "strategy-diagnosis-and-framing",
+    "executive-communication-and-alignment",
+    "presentation-authoring"
+  ],
+  "source_roots": [],
+  "reference_files": [
+    "research-protocol.md",
+    "section-defense.md",
+    "projections.md",
+    "hostile-review.md",
+    "deck-map.md"
+  ],
+  "scripts_copied": []
+}

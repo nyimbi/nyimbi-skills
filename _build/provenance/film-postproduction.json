@@ -1,0 +1,20 @@
+{
+ "skill": "film-postproduction",
+ "merged_from_count": 0,
+ "origin": "new synthesis: edit, sound, finish, QC and delivery stage of the film-* family",
+ "exact_duplicates_merged": [],
+ "near_duplicates_merged": [],
+ "dropped": [],
+ "source_roots": [
+  "https://aifilmchallenge.com/resources/guides/pipeline-templates",
+  "https://ffmpeg.org/ffmpeg-filters.html",
+  "https://suno.com/mcp"
+ ],
+ "reference_files": [
+  "references/edit-and-sound.md",
+  "references/ffmpeg-cookbook.md",
+  "references/qc-and-delivery.md",
+  "references/suno-mcp.md"
+ ],
+ "scripts_copied": []
+}

@@ -1,0 +1,17 @@
+{
+ "skill": "ai-video-directing",
+ "merged_from_count": 0,
+ "origin": "adopted from Visual Skills video skill (Serge Shima, CC BY 4.0); renamed to ai-video-directing, routing updated, craft content unchanged",
+ "exact_duplicates_merged": [],
+ "near_duplicates_merged": [],
+ "dropped": [],
+ "source_roots": [
+  "https://github.com/smixs/visual-skills"
+ ],
+ "reference_files": [
+  "references/*.md",
+  "LICENSE",
+  "NOTICE"
+ ],
+ "scripts_copied": []
+}

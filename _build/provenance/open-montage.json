@@ -1,0 +1,22 @@
+{
+  "skill": "open-montage",
+  "merged_from_count": 7,
+  "origin": "Platform wrapper for https://github.com/calesthio/OpenMontage (AGPLv3, 61k stars, main 2026-09-28)",
+  "exact_duplicates_merged": [],
+  "near_duplicates_merged": [],
+  "dropped": [],
+  "source_roots": [
+    "Platform wrapper for https://github.com/calesthio/OpenMontage (AGPLv3, 61k stars, main 2026-09-28)"
+  ],
+  "reference_files": [
+    "references/skill-index.md",
+    "references/core/remotion.md",
+    "references/core/hyperframes.md",
+    "references/core/ffmpeg.md",
+    "references/core/whisperx.md",
+    "references/core/subtitle-sync.md",
+    "references/core/color-grading.md"
+  ],
+  "scripts_copied": [],
+  "note": "Runtime installed at ~/Developer/openmontage (make setup: Python venv + remotion-composer npm + piper-tts). 12 production pipelines, 100+ tools, 60+ providers, zero-key free path, approval gates, budget caps, post-render self-review. The runtime's 157 skill files are read in place (documented in the skill), not duplicated into the bundle \u2014 same pattern as open-design. Boundaries: video-use (editing existing footage), cinematic-pipeline (fully-local LTX 9:16 cinematics), open-design (OD-app motion graphics)."
+}

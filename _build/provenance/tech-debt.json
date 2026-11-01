@@ -1,0 +1,28 @@
+{
+ "skill": "tech-debt",
+ "merged_from_count": 2,
+ "origin": "merged from two existing personal skills (user-approved dedup)",
+ "exact_duplicates_merged": [
+  "~/.claude/skills/tech-debt",
+  "~/.claude/skills/remove-tech-debt"
+ ],
+ "near_duplicates_merged": [
+  "merged union of both sources into one tech-debt skill"
+ ],
+ "dropped": [
+  {
+   "name": "~/.claude/skills/tech-debt",
+   "reason": "superseded by the merged tech-debt"
+  },
+  {
+   "name": "~/.claude/skills/remove-tech-debt",
+   "reason": "superseded by the merged tech-debt"
+  }
+ ],
+ "source_roots": [
+  "~/.claude/skills/tech-debt",
+  "~/.claude/skills/remove-tech-debt"
+ ],
+ "reference_files": [],
+ "scripts_copied": []
+}

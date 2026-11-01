@@ -1,0 +1,74 @@
+{
+  "skill": "skill-authoring-and-agent-tooling",
+  "merged_from_count": 11,
+  "exact_duplicates_merged": [
+    "mcp-builder reference/evaluation.md — byte-identical in skills/skills and awesome-claude-skills; carried once as references/mcp_evaluation.md",
+    "mcp-builder scripts/evaluation.py, connections.py, example_evaluation.xml, requirements.txt — byte-identical in both repos; carried once under scripts/mcp-builder/",
+    "LICENSE.txt — skill-creator, mcp-builder, academy-guide and claude-api copies under skills/skills are byte-identical Apache-2.0; carried once"
+  ],
+  "near_duplicates_merged": [
+    "skill-creator (skills/skills, 485-line SKILL.md, agents/ assets/ eval-viewer/ references/ scripts/) + skill-creator (awesome-claude-skills, 209-line SKILL.md, 3 scripts) — merged into the authoring/eval workflow; richer revision taken per supporting file",
+    "mcp-builder (skills/skills, 236-line SKILL.md) + mcp-builder (awesome-claude-skills, 328-line SKILL.md) — merged into workflow step 4 with transport, character-limit and test-not-hang guidance from both",
+    "mcp-builder reference/mcp_best_practices.md — awesome-claude-skills revision (915 lines) kept as base, skills/skills modern transport guidance (Streamable HTTP preferred, SSE deprecated, selection table, DNS-rebinding detail) folded in",
+    "mcp-builder reference/node_mcp_server.md — skills/skills revision (969 lines, structuredContent/outputSchema/StreamableHTTP) kept over awesome-claude-skills (915 lines, legacy SSE transport)",
+    "mcp-builder reference/python_mcp_server.md — awesome-claude-skills revision (751 lines, superset incl. CHARACTER_LIMIT section) kept over skills/skills (718 lines)",
+    "connect + connect-apps — same Composio Tool Router concept, two entry points (SDK snippet vs /plugin install); merged into a single topic in workflow step 4 noting both source paths",
+    "LICENSE.txt copyright-line variants (skills/skills 'Copyright 2026 Anthropic, PBC.' vs awesome-claude-skills 'Copyright [yyyy] [name of copyright owner]') — identical Apache-2.0 text, Anthropic-filled copy kept"
+  ],
+  "dropped": [
+    {"name": "template-skill (awesome-claude-skills)", "reason": "6-line placeholder stub; its structure (frontmatter name/description + body, plus scripts/ references/ assets/ layout) is folded into workflow steps 2-3 rather than shipped as a standalone skill"},
+    {"name": "skill-creator scripts/package_skill.py + scripts/quick_validate.py (awesome-claude-skills)", "reason": "superseded by the richer skills/skills revisions (YAML frontmatter parsing, allowed-keys check, name/description length limits, .skill packaging with build-artifact exclusion)"},
+    {"name": "mcp-builder reference/node_mcp_server.md SSE transport example (awesome-claude-skills)", "reason": "SSE is deprecated in the current MCP specification in favour of Streamable HTTP; the retained revision documents the current transports"},
+    {"name": "composio-skills/*-automation (832 files)", "reason": "deliberately excluded from this bundle by the consolidation brief; only connect/connect-apps were assigned here"}
+  ],
+  "source_roots": [
+    "skills/skills",
+    "awesome-claude-skills"
+  ],
+  "reference_files": [
+    "references/schemas.md",
+    "references/agents/grader.md",
+    "references/agents/comparator.md",
+    "references/agents/analyzer.md",
+    "references/mcp_best_practices.md",
+    "references/python_mcp_server.md",
+    "references/node_mcp_server.md",
+    "references/mcp_evaluation.md",
+    "references/agent-trace-debugging.md",
+    "references/claude-api/README.md",
+    "references/claude-api/python/",
+    "references/claude-api/typescript/",
+    "references/claude-api/go/",
+    "references/claude-api/java/",
+    "references/claude-api/ruby/",
+    "references/claude-api/php/",
+    "references/claude-api/csharp/",
+    "references/claude-api/curl/",
+    "references/claude-api/shared/"
+  ],
+  "scripts_copied": [
+    "scripts/skill_creator/__init__.py",
+    "scripts/skill_creator/aggregate_benchmark.py",
+    "scripts/skill_creator/generate_report.py",
+    "scripts/skill_creator/improve_description.py",
+    "scripts/skill_creator/init_skill.py",
+    "scripts/skill_creator/package_skill.py",
+    "scripts/skill_creator/quick_validate.py",
+    "scripts/skill_creator/run_eval.py",
+    "scripts/skill_creator/run_loop.py",
+    "scripts/skill_creator/utils.py",
+    "scripts/mcp-builder/evaluation.py",
+    "scripts/mcp-builder/connections.py",
+    "scripts/mcp-builder/example_evaluation.xml",
+    "scripts/mcp-builder/requirements.txt",
+    "eval-viewer/generate_review.py",
+    "eval-viewer/viewer.html",
+    "assets/eval_review.html"
+  ],
+  "notes": [
+    "skill_creator scripts are namespaced to scripts/skill_creator/ (hyphen replaced by underscore so `python -m scripts.skill_creator.<name>` resolves); their four intra-package imports were repointed from scripts.<module> to scripts.skill_creator.<module>.",
+    "references/mcp_evaluation.md script paths were repointed from scripts/ to scripts/mcp-builder/.",
+    "skill-share frontmatter declares 'Complete terms in LICENSE.txt' but ships no licence file; langsmith-fetch declares MIT in its body but ships no licence file — no licence text was invented.",
+    "claude-api/SKILL.md is carried as references/claude-api/README.md with its YAML frontmatter stripped and in-skill phrasing adjusted to in-reference so its relative paths to the language folders keep resolving."
+  ]
+}

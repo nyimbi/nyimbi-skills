@@ -1,0 +1,21 @@
+{
+  "skill": "scientific-research",
+  "merged_from_count": 6,
+  "origin": "Curated subset of https://github.com/K-Dense-AI/scientific-agent-skills (MIT, 47k stars, v2.68.0, main 2026-09-28) \u2014 6 of its 166 skills",
+  "exact_duplicates_merged": [],
+  "near_duplicates_merged": [],
+  "dropped": [],
+  "source_roots": [
+    "Curated subset of https://github.com/K-Dense-AI/scientific-agent-skills (MIT, 47k stars, v2.68.0, main 2026-09-28)"
+  ],
+  "reference_files": [
+    "references/paper-lookup/paper-lookup.md",
+    "references/literature-review/literature-review.md",
+    "references/scientific-visualization/scientific-visualization.md",
+    "references/scikit-learn/scikit-learn.md",
+    "references/pytorch-lightning/pytorch-lightning.md",
+    "references/database-lookup/database-lookup.md"
+  ],
+  "scripts_copied": "shipped with skill",
+  "note": "Upstream SKILL.md files renamed to <name>.md to avoid nested skill pickup; scripts/ and references/ kept verbatim and path-consistent. The upstream's own guidance (install topical subsets, not all 166) is followed; extension path documented (gh skill install / npx skills add). Fills the zero-literature-research gap in the bundle."
+}

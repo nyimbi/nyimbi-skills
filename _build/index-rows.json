@@ -1,0 +1,176 @@
+[
+ [
+  "application-api-mobile-and-ai-security",
+  "Test and secure applications across every surface they expose: web apps, REST and GraphQL APIs, mobile clients, and AI/LLM systems, plus smart contracts.",
+  103,
+  107
+ ],
+ [
+  "cloud-container-and-devsecops-security",
+  "Secure the path from commit to running workload: secrets and SAST/SCA in CI, infrastructure-as-code scanning, container image hardening and vulnerability scanning, SBOM and signing, Kubernetes admissi",
+  117,
+  121
+ ],
+ [
+  "cryptography-and-key-management",
+  "Design, implement, audit, and migrate cryptographic systems: symmetric and asymmetric encryption, key management and HSMs, PKI and certificate lifecycles, TLS configuration, digital signatures, JWT/to",
+  16,
+  18
+ ],
+ [
+  "digital-forensics-and-evidence",
+  "Acquire, preserve, and interpret digital evidence so the result survives scrutiny: forensically sound disk and memory imaging with hash verification and chain of custody, Windows/Linux/Mac artifact pa",
+  41,
+  45
+ ],
+ [
+  "executive-communication-and-alignment",
+  "Win the decision and the alignment behind it: produce answer-first decision memos with recommendation, options, evidence, risks, and an explicit decision request; build executive narratives with the P",
+  4,
+  1
+ ],
+ [
+  "file-media-and-engagement-tools",
+  "Six hands-on tools for files, media, and engagement: organize a messy folder into a stated structure with duplicate detection and an approved move plan, file invoices and receipts into a tax-ready tre",
+  7,
+  7
+ ],
+ [
+  "identity-zero-trust-and-endpoint-security",
+  "Treat identity as the perimeter and the endpoint as its boundary.",
+  75,
+  79
+ ],
+ [
+  "malware-analysis-and-reverse-engineering",
+  "Work out what a suspicious sample does, how it evades defenses, and what to detect: safe handling and hashing, static triage with PE inspection and YARA, unpacking (UPX and modified headers), dynamic ",
+  39,
+  42
+ ],
+ [
+  "market-and-competitive-intelligence",
+  "Read the external environment and decide where to play: define and size markets with top-down and bottom-up cross-checks, segment them MECE, map where profit pools actually sit, define priority custom",
+  7,
+  7
+ ],
+ [
+  "network-and-wireless-security",
+  "Secure and monitor network infrastructure: segmentation with VLANs, firewall zones and ACLs; IDS/IPS with Suricata and Snort; traffic analysis with Zeek, Arkime, Wireshark, tshark, Scapy and NetFlow; ",
+  45,
+  49
+ ],
+ [
+  "offensive-security-and-red-teaming",
+  "Plan and run authorized offensive operations: red team engagements, adversary emulation, penetration tests (external, internal/assumed-breach, Active Directory, web, API, mobile, thick client, wireles",
+  59,
+  63
+ ],
+ [
+  "operating-model-and-execution",
+  "Design how the organization will actually work once a strategy is chosen, then turn it into sequenced delivery: capabilities, roles, decision rights, governance, processes, and ways of working, plus i",
+  6,
+  3
+ ],
+ [
+  "ot-ics-and-firmware-security",
+  "Secure industrial control systems and the firmware beneath them: Purdue model and IEC 62443 zone/conduit segmentation, OT asset discovery and safe vulnerability assessment (Claroty, passive monitoring",
+  35,
+  39
+ ],
+ [
+  "pdf-processing",
+  "Use this skill whenever the user wants to manipulate PDF files.",
+  2,
+  3
+ ],
+ [
+  "presentation-authoring",
+  "Use this skill whenever a PowerPoint file is involved as input, output, or both.",
+  2,
+  3
+ ],
+ [
+  "research-and-insight-analysis",
+  "Run one research method across four kinds of question: qualify sales leads against an ideal customer profile with scores and outreach angles, mine meeting transcripts for behavioral and communication ",
+  4,
+  5
+ ],
+ [
+  "risk-performance-and-value-governance",
+  "Know whether execution is working and what could break it: design the KPI system (outcome, driver, and leading indicators with owners, thresholds, and review cadence), define the value ledger that tur",
+  5,
+  1
+ ],
+ [
+  "security-incident-response-and-soc",
+  "Run the full lifecycle of an active security incident \u2014 alert triage, severity and SLA assignment, containment, eradication, recovery, and post-incident review \u2014 plus the SOC machinery around it: play",
+  102,
+  105
+ ],
+ [
+  "skill-authoring-and-agent-tooling",
+  "Build, test, wire, and debug Claude itself: author new skills and rewrite weak ones, run skill evals against a baseline with a review viewer, tune a skill description until it triggers, package and va",
+  11,
+  79
+ ],
+ [
+  "spreadsheet-authoring",
+  "Use this skill whenever a spreadsheet file is the primary input or output.",
+  2,
+  2
+ ],
+ [
+  "strategic-choices-and-economics",
+  "Decide which option to take and what it is worth: generate distinct strategic options, compare them against the decision's own criteria, build quantified business cases with base/downside/upside econo",
+  8,
+  8
+ ],
+ [
+  "strategy-diagnosis-and-framing",
+  "Diagnose what is true and why: build a defensible fact base, structure ambiguous business problems, and frame testable hypotheses before anyone picks a strategy.",
+  13,
+  12
+ ],
+ [
+  "threat-hunting-and-detection",
+  "Proactively search the environment for adversary activity that no alert fired on, then turn what you find into durable detection content.",
+  71,
+  74
+ ],
+ [
+  "threat-intelligence-osint-and-phishing-defense",
+  "Produce external threat intelligence and adversary knowledge: run the intelligence lifecycle (direction, collection, processing, analysis, dissemination, feedback), collect and enrich OSINT, share ind",
+  76,
+  80
+ ],
+ [
+  "visual-design-and-branding",
+  "Decide how something looks, then produce it: poster and art composition, theme and colour-system selection, type scale and typography, brand palette and identity constraints, distinctive UI design dir",
+  9,
+  16
+ ],
+ [
+  "vulnerability-management-and-compliance",
+  "Run the vulnerability lifecycle end to end \u2014 discover the estate, scan it with credentials, prioritize with CVSS plus KEV, EPSS, asset criticality and SSVC, assign severity-based SLAs with escalation,",
+  38,
+  42
+ ],
+ [
+  "web-artifact-and-app-building",
+  "Build interactive web artifacts and small browser apps end to end: scope the artifact, choose between a single-file HTML build and a React + Tailwind + shadcn/ui multi-component project, scaffold it, ",
+  4,
+  4
+ ],
+ [
+  "word-document-authoring",
+  "Use this skill whenever the user wants to create, read, edit, or review a Word document.",
+  2,
+  3
+ ],
+ [
+  "writing-and-internal-communications",
+  "Draft, structure, and polish written communications people actually act on: internal status reports, leadership updates, 3P updates, company newsletters, FAQs, incident notes, project updates, documen",
+  7,
+  10
+ ]
+]

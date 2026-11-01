@@ -1,0 +1,28 @@
+{
+ "skill": "research-synthesis",
+ "merged_from_count": 2,
+ "origin": "merged from two existing personal skills (user-approved dedup)",
+ "exact_duplicates_merged": [
+  "~/.claude/skills/research-synthesis",
+  "~/.claude/skills/synthesize-research"
+ ],
+ "near_duplicates_merged": [
+  "merged union of both sources into one research-synthesis skill"
+ ],
+ "dropped": [
+  {
+   "name": "~/.claude/skills/research-synthesis",
+   "reason": "superseded by the merged research-synthesis"
+  },
+  {
+   "name": "~/.claude/skills/synthesize-research",
+   "reason": "superseded by the merged research-synthesis"
+  }
+ ],
+ "source_roots": [
+  "~/.claude/skills/research-synthesis",
+  "~/.claude/skills/synthesize-research"
+ ],
+ "reference_files": [],
+ "scripts_copied": []
+}
