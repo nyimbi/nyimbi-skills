@@ -1,0 +1,35 @@
+{
+  "skill": "product-strategy",
+  "merged_from_count": 2,
+  "exact_duplicates_merged": [],
+  "near_duplicates_merged": [
+    "maigentic/stratarts 10-dimension idea validation, Business Model Canvas, JTBD personas, 90-day GTM, growth loops and monetization → rewritten as one startup/product layer, with the scoring model and thresholds made explicit.",
+    "tjboudreaux/cc-plugin-product-strategist April Dunford positioning, launch ops, behavior signals and strategy-to-ops → merged into positioning.md and launch-and-ops.md; roadmap/RICE and OKRs share one reference with GTM."
+  ],
+  "dedup": [
+    "Opportunity thesis, validation, positioning, GTM, roadmap, growth and launch are written once in this skill; strategy-core routes to it rather than restating startup method.",
+    "RICE prioritization is not reimplemented: the reference points at operating-model-and-execution/scripts/rice_prioritizer.py, and the product-specific reach/impact inputs are defined here.",
+    "Financial modelling for a fundraise stays with business-plan-authoring and strategic-choices-and-economics; this skill only defines the unit economics the model must consume."
+  ],
+  "dropped": [
+    {"name": "StratArts per-phase checklists", "reason": "duplicated the bundle's existing quality-gate pattern; consolidated into one validation gate"},
+    {"name": "Product Strategist slide and deck templates", "reason": "presentation-authoring owns deck artifacts; the narrative handoff lives in business-plan-authoring"},
+    {"name": "vendor-specific tool lists", "reason": "not durable; the methods are tool-agnostic"}
+  ],
+  "source_roots": [
+    "maigentic/stratarts",
+    "tjboudreaux/cc-plugin-product-strategist"
+  ],
+  "reference_files": [
+    "references/validation.md",
+    "references/positioning.md",
+    "references/growth-and-monetization.md",
+    "references/launch-and-ops.md",
+    "references/ATTRIBUTION.md"
+  ],
+  "license_files": [
+    "references/licenses/stratarts-LICENSE",
+    "references/licenses/product-strategist-LICENSE"
+  ],
+  "scripts_copied": []
+}

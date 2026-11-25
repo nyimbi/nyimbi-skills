@@ -1,0 +1,34 @@
+{
+  "skill": "mac-maintenance",
+  "merged_from_count": 1,
+  "note": "New authored maintenance skill. Reviewed tw93/mole (GPL-3.0) behaviourally for dry-run, path validation, whitelist, process guards, operation logging, project artifact purge and installer cleanup. No Mole code, scripts, templates or assets were copied; the skill is an independent MIT implementation. Rejected Mole's uninstall, slim, automatic DNS/Spotlight/periodic optimization, system cache cleaning, and permanent-deletion defaults.",
+  "exact_duplicates_merged": [],
+  "near_duplicates_merged": [
+    "The user's pasted maintenance checklist was triaged rather than adopted wholesale: safe items (cache pruning, logs, Downloads triage, developer caches, startup audit) are implemented; destructive or low-value items (sudo purge, killall mDNSResponder, docker prune -a --volumes, /var/log deletion, force-empty Trash by default, blind zombie killing) are documented as rejected.",
+    "The audit, plan, apply, power and schedule scripts share one safety contract: read-only default, one category per apply, whitelist, quarantine, operation log, second-audit verification."
+  ],
+  "dropped": [
+    {"name": "Mole shell implementation", "reason": "GPL-3.0; not copied into an MIT bundle"},
+    {"name": "Mole uninstall and slim workflows", "reason": "too broad or destructive for a routine maintenance skill"},
+    {"name": "Automatic DNS/Spotlight/periodic optimization", "reason": "low value and disruptive; manual-only guidance retained"},
+    {"name": "sudo purge, killall daemons, docker -a --volumes, /var/log deletion", "reason": "unsafe or destructive; explicitly rejected"}
+  ],
+  "source_roots": ["tw93/Mole (review only, GPL-3.0)"],
+  "reference_files": [
+    "references/safety.md",
+    "references/storage.md",
+    "references/power.md",
+    "references/system-health.md",
+    "references/runbook.md",
+    "references/mole-review.md",
+    "references/sources/INDEX.md"
+  ],
+  "license_files": ["references/sources/mole/LICENSE"],
+  "scripts_authored": [
+    "scripts/mac_audit.py",
+    "scripts/mac_plan.py",
+    "scripts/mac_apply.py",
+    "scripts/mac_power.py",
+    "scripts/mac_schedule.py"
+  ]
+}

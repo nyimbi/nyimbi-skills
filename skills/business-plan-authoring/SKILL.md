@@ -163,8 +163,10 @@ logic of what to build (see `strategy-diagnosis-and-framing`).
 | TAM/SAM/SOM, profit pools, segmentation, competitor response modelling | [../market-and-competitive-intelligence/SKILL.md](../market-and-competitive-intelligence/SKILL.md) and its references |
 | Base/downside/upside scenarios, decision thresholds, false-precision rules | [../strategic-choices-and-economics/references/business-case-builder.md](../strategic-choices-and-economics/references/business-case-builder.md) |
 | Unit economics and financial mechanics | [../strategic-choices-and-economics/references/frameworks-financial.md](../strategic-choices-and-economics/references/frameworks-financial.md) |
+| Reproducible NPV/IRR/payback, unit economics, pricing and sensitivity calculators | [../strategic-choices-and-economics/references/finance-and-deals.md](../strategic-choices-and-economics/references/finance-and-deals.md) |
 | Pricing power and packaging claims | [../strategic-choices-and-economics/references/frameworks-pricing.md](../strategic-choices-and-economics/references/frameworks-pricing.md) |
 | Assumption register and kill conditions | [../strategy-diagnosis-and-framing/references/assumption-audit.md](../strategy-diagnosis-and-framing/references/assumption-audit.md) |
+| Validating the product and market before writing the plan — idea scoring, positioning, GTM | [../product-strategy/SKILL.md](../product-strategy/SKILL.md) |
 | Evidence standards for what counts as proof | [../strategy-diagnosis-and-framing/references/evidence-standards.md](../strategy-diagnosis-and-framing/references/evidence-standards.md) |
 | Executing-summary and narrative discipline, hostile-question prep | [../executive-communication-and-alignment/SKILL.md](../executive-communication-and-alignment/SKILL.md) |
 | Producing the actual `.pptx` from the deck-map outline (format, layouts, OOXML) | [../presentation-authoring/SKILL.md](../presentation-authoring/SKILL.md) |

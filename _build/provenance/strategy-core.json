@@ -1,0 +1,45 @@
+{
+  "skill": "strategy-core",
+  "merged_from_count": 4,
+  "exact_duplicates_merged": [],
+  "near_duplicates_merged": [
+    "Natan-Mohart/24-strategy-skills-for-claude taxonomy → the engagement modes and the method index; its calculators are distributed to the seven owner skills rather than duplicated here.",
+    "maigentic/stratarts startup methods → product-strategy and the Fundraise/Product engagement modes; no startup prose copied verbatim.",
+    "tjboudreaux/cc-plugin-product-strategist methods → product-strategy; positioning and validation kept there, routing only here.",
+    "aapersh/strategy-skills-for-claude → already the source of the seven existing strategy skills; reviewed, no new text copied (no licence)."
+  ],
+  "dedup": [
+    "One orchestrator only: decision question, house rules, engagement modes, depth ladder, pipeline and routing table written once in SKILL.md; the seven sibling skills keep their own methods.",
+    "Personal context, house style, engagement templates and calculator index split into references/ so the SKILL.md stays a routing surface.",
+    "Calculator inventory lives in references/calculators.md and points at the owner skill's scripts; no calculator is copied into strategy-core."
+  ],
+  "dropped": [
+    {"name": "Natan-Mohart per-skill SKILL.md prose", "reason": "the seven existing strategy skills already own the method layer; only taxonomy and calculators were adopted"},
+    {"name": "StratArts and Product Strategist per-skill scaffolding", "reason": "duplicated intake, quality gates and output templates already present in the bundle"},
+    {"name": "aapersh skill text", "reason": "no licence; repository reviewed for completeness only, and its material already underlies the existing seven skills"}
+  ],
+  "source_roots": [
+    "aapersh/strategy-skills-for-claude",
+    "Natan-Mohart/24-strategy-skills-for-claude",
+    "maigentic/stratarts",
+    "tjboudreaux/cc-plugin-product-strategist"
+  ],
+  "reference_files": [
+    "references/personal-context.md",
+    "references/house-style.md",
+    "references/engagement-templates.md",
+    "references/calculators.md",
+    "references/ATTRIBUTION.md",
+    "references/sources/INDEX.md",
+    "references/sources/aapersh-README.md",
+    "references/sources/natan-mohart-README.md",
+    "references/sources/stratarts-README.md",
+    "references/sources/product-strategist-README.md"
+  ],
+  "license_files": [
+    "references/licenses/natan-mohart-LICENSE",
+    "references/licenses/stratarts-LICENSE",
+    "references/licenses/product-strategist-LICENSE"
+  ],
+  "scripts_copied": []
+}

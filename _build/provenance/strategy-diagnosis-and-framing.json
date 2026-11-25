@@ -3,9 +3,10 @@
   "merged_from_count": 13,
   "exact_duplicates_merged": [],
   "near_duplicates_merged": [
-    "framework-selection guide (management-consulting/SKILL.md) + frameworks-index.md one-line list → split: selection rules and when-NOT-to-use stay in SKILL.md, framework one-liners and pointers stay in references/frameworks-index.md",
-    "growth-barriers.md + frameworks-financial.md revenue/profit tree → driver-tree mechanics live in ../strategic-choices-and-economics/references/frameworks-financial.md; growth-barriers.md owns only the constraint diagnosis and links across",
-    "assumption-audit.md + epistemic rules/kill-conditions (management-consulting/SKILL.md) → rules stay in SKILL.md, the register and test plan live in references/assumption-audit.md and feed the recommendation's kill conditions"
+    "framework-selection guide (management-consulting/SKILL.md) + frameworks-index.md one-line list \u2192 split: selection rules and when-NOT-to-use stay in SKILL.md, framework one-liners and pointers stay in references/frameworks-index.md",
+    "growth-barriers.md + frameworks-financial.md revenue/profit tree \u2192 driver-tree mechanics live in ../strategic-choices-and-economics/references/frameworks-financial.md; growth-barriers.md owns only the constraint diagnosis and links across",
+    "assumption-audit.md + epistemic rules/kill-conditions (management-consulting/SKILL.md) \u2192 rules stay in SKILL.md, the register and test plan live in references/assumption-audit.md and feed the recommendation's kill conditions",
+    "Full-potential diagnostic and full_potential_calc.py merged from Natan-Mohart/24-strategy-skills-for-claude (MIT); methodology kept local, calculator copied with licence."
   ],
   "dedup": [
     "Mode detection, MECE, issue-tree, hypothesis, evidence, Pyramid synthesis, devil's advocate, framework selection, epistemic rules, quality checklist, anti-patterns and gotchas written ONCE in SKILL.md (synthesized from management-consulting/SKILL.md); the three playbooks and copied references link back instead of restating them",
@@ -13,10 +14,22 @@
     "Per-deliverable workflows and output templates (situation assessment, growth barriers, assumption audit) live in references/, each prefixed with its depth mode and SKILL.md gates"
   ],
   "dropped": [
-    {"name": "management-consulting/references/tooling-appendix.md", "reason": "environment-specific rendering pipelines, outside this skill's scope"},
-    {"name": "management-consulting/references/frameworks-innovation.md", "reason": "out of scope for the three strategy skills in this assignment"},
-    {"name": "management-consulting/references/frameworks-operations.md", "reason": "out of scope for the three strategy skills in this assignment"},
-    {"name": "management-consulting/README.md, assets/, docs/, variants/", "reason": "boilerplate and non-skill material"}
+    {
+      "name": "management-consulting/references/tooling-appendix.md",
+      "reason": "environment-specific rendering pipelines, outside this skill's scope"
+    },
+    {
+      "name": "management-consulting/references/frameworks-innovation.md",
+      "reason": "out of scope for the three strategy skills in this assignment"
+    },
+    {
+      "name": "management-consulting/references/frameworks-operations.md",
+      "reason": "out of scope for the three strategy skills in this assignment"
+    },
+    {
+      "name": "management-consulting/README.md, assets/, docs/, variants/",
+      "reason": "boilerplate and non-skill material"
+    }
   ],
   "source_roots": [
     "management-consulting",
@@ -33,8 +46,13 @@
     "references/end-to-end-full-case.md",
     "references/end-to-end-quick-structure.md",
     "references/issue-tree-good-vs-bad.md",
-    "references/recommendation-good-vs-bad.md"
+    "references/recommendation-good-vs-bad.md",
+    "references/full-potential-diagnostic.md"
   ],
-  "license_files": ["LICENSE"],
-  "scripts_copied": []
+  "license_files": [
+    "LICENSE"
+  ],
+  "scripts_copied": [
+    "scripts/full_potential_calc.py"
+  ]
 }

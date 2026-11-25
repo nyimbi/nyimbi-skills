@@ -9,7 +9,9 @@ description: >-
   workflow, MECE issue trees, evidence labeling (fact, inference, assumption,
   estimate), Pyramid synthesis, devil's-advocate challenge, framework selection, and
   the delivery quality checklist. It also runs three deliverables: situation
-  assessment, growth-barrier diagnosis, and assumption audit. Use when the user says
+  assessment, growth-barrier diagnosis, and assumption audit, plus a full-potential
+  diagnostic that sizes the value at stake against a peer benchmark with a
+  reproducible calculator. Use when the user says
   "help me think through X", "structure this problem", "build an issue tree",
   "where are we really", "why are we not growing", "what has to be true", "audit these
   assumptions", "what are the key considerations", or asks for a recommendation, a
@@ -195,6 +197,7 @@ Verify before delivering:
 | Situation assessment — fact base, baseline, current-state read | [references/situation-assessment.md](references/situation-assessment.md) |
 | Growth-barrier diagnosis — driver tree, binding constraint | [references/growth-barriers.md](references/growth-barriers.md) |
 | Assumption audit — load-bearing beliefs, test plan | [references/assumption-audit.md](references/assumption-audit.md) |
+| Full-potential diagnostic — peer benchmark, metric tree, value at stake, three moves (calculator) | [references/full-potential-diagnostic.md](references/full-potential-diagnostic.md) |
 | MECE, issue trees, hypothesis trees, 7-step, Pyramid, SCQA | [references/frameworks-problem-solving.md](references/frameworks-problem-solving.md) |
 | One-line framework index and where each group's practitioner file lives | [references/frameworks-index.md](references/frameworks-index.md) |
 | Evidence rules: `[F]/[I]/[A]/[E]`, sourcing, confidence, triangulation | [references/evidence-standards.md](references/evidence-standards.md) |

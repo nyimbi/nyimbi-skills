@@ -7,7 +7,8 @@ description: >-
   proof-backed value, build a strategic risk register with likelihood, impact,
   mitigations, triggers, owners, and residual risk, and war-game the plan against
   competitor moves, market shifts, regulation, customer response, and execution
-  failure. Use when the user asks "what should we measure?", "kill these vanity
+  failure. Includes a risk matrix scored with velocity and a decision-tree expected
+  value calculator that reports maximin separately. Use when the user asks "what should we measure?", "kill these vanity
   metrics", "build a KPI tree", "how do we make benefits stick?", "track the
   synergies", "what could go wrong?", "build a risk register", "war-game this
   strategy", or "what could break this plan?" — or for board risk reviews,
@@ -160,12 +161,13 @@ Verify before delivering:
 
 ## Reference map
 
-This skill ships no framework file of its own — scenario construction, financial
-proof math, and challenge methods are owned by sibling skills and linked here rather
-than copied.
+Scenario construction, financial proof math, and challenge methods are owned by
+sibling skills and linked here rather than copied. The risk-velocity matrix and
+decision-tree calculators live with this skill.
 
 | Situation | Open |
 |---|---|
+| Risk scoring with velocity, decision-tree EV, value-realization bridge (calculators) | [references/risk-and-decision-calculators.md](references/risk-and-decision-calculators.md) |
 | Scenario construction, driving forces, signposts, strategy-vs-scenario stress test | [../market-and-competitive-intelligence/references/frameworks-strategy.md](../market-and-competitive-intelligence/references/frameworks-strategy.md) |
 | Benefit math: profit tree, driver/KPI tree, unit economics, waterfall bridges | [../strategic-choices-and-economics/references/frameworks-financial.md](../strategic-choices-and-economics/references/frameworks-financial.md) |
 | Challenging the register: pre-mortem, second-order thinking, inversion | [../strategic-choices-and-economics/references/frameworks-decision.md](../strategic-choices-and-economics/references/frameworks-decision.md) |

@@ -8,13 +8,15 @@ description: >-
   infer likely rival moves with pre-committed responses. This skill also owns the
   shared strategy-framework library the other strategy skills link to — Porter's Five
   Forces, Value Chain, Ansoff, BCG growth-share, GE nine-box, Blue Ocean, VRIO, 7S,
-  Wardley mapping, and scenario planning. Use when the user asks "how big is this
+  Wardley mapping, and scenario planning. Ships a TAM/SAM/SOM calculator that
+  triangulates top-down against bottom-up and applies serviceable filters explicitly.
+  Use when the user asks "how big is this
   market", "where is the white space", "which customers should we prioritize", "where
   does the profit sit", "what will competitors do next", "map this category", "is this
   industry attractive", or "extract [competitor]'s ads and tell me what messaging is
   working". Do not use for the internal fact base or root-cause diagnosis
-  (strategy-diagnosis-and-framing), for choosing or valuing options (strategic-choices
-  and-economics), or for general research with no market or competitor question
+  (strategy-diagnosis-and-framing), for choosing or valuing options
+  (strategic-choices-and-economics), or for general research with no market or competitor question
   (research-and-insight-analysis); a full fundraise business plan that builds on
   this skill's market work is business-plan-authoring.
 license: MIT
@@ -128,6 +130,7 @@ devil's-advocate gates from that skill.
 | Situation | Open |
 |---|---|
 | Sizing, segmentation, white space, where-to-play options | [references/market-mapping.md](references/market-mapping.md) |
+| TAM/SAM/SOM triangulation — top-down vs bottom-up, serviceable filters, SOM (calculator) | [references/market-sizing-calculator.md](references/market-sizing-calculator.md) |
 | Profit concentration, value-capture, margin leakage | [references/profit-pool-analysis.md](references/profit-pool-analysis.md) |
 | Customer segments, ICP, segment prioritization | [references/customer-segmentation.md](references/customer-segmentation.md) |
 | Competitor mapping, likely moves, response plan | [references/competitive-intel.md](references/competitive-intel.md) |

@@ -1,13 +1,14 @@
 # skill-bundle
 
-A single, deduplicated bundle of **143 skills**: **30 domain skills** consolidated
+A single, deduplicated bundle of **149 skills**: **30 domain skills** consolidated
 from **876 unique source skills** across five upstream collections, **55
 skills adopted** from the user's live skill set (`~/.claude/skills`,
 `~/.agents/skills`, `~/.pi/agent/skills`) after every internal duplicate was
 merged, **51 skills adopted** from external projects, and **7 new film-production
 syntheses** (`film-production`, `film-story-development`, `film-design`,
 `character-design`, `film-generation`, `film-postproduction`, `film-poster`) plus
-the earlier `business-plan-authoring`.
+the earlier `business-plan-authoring`, and **2 new strategy syntheses**
+(`strategy-core`, `product-strategy`) built from four upstream strategy collections.
 
 The external set: 3 platform wrappers (`open-slide` MIT, `open-design`
 Apache-2.0, `open-montage` AGPLv3), 1 `open-code-review` (Apache-2.0), 4 official
@@ -29,7 +30,7 @@ skills (`film-directing` MIT from DirectorSKILL, `ai-video-directing` and
 | New film syntheses | **7** (production, story, design, character, generation, post, poster) |
 | New engine syntheses | **1** (`machine-works` — two-engine routing skill: April Zhu's colorfigures SVG engine + elvarofficial/teardown three.js pipeline, each vendored intact as `engines/ink` / `engines/webgl` with a shared doctrine in SKILL.md) |
 | New course syntheses | **1** (`course` — the seven-phase curriculum method proven on the Agentic Engineering course: capability → outline → critique → rewrite → paced lessons → corrections → synthesis; default 20 lessons at ≥10,000 words with tables and drawn SVG diagrams) |
-| Bundle skills | **146** (30 consolidated + 55 personal + 53 external + 6 film + 1 engine synthesis + 1 course synthesis) — `ai-video-directing` merged into `film-directing` by the film-skills unification (9e57546); `diagram-design` adopted whole (cathrynlavery, MIT, 45 types, machine gates canaried: self_check exit-1 on corruption, verify-geometry 17 findings on planted shift + 83 green assertions) |
+| Bundle skills | **149** (30 consolidated + 55 personal + 53 external + 6 film + 1 engine synthesis + 1 course synthesis + 2 strategy syntheses + 1 local-maintenance synthesis) — `ai-video-directing` merged into `film-directing` by the film-skills unification (9e57546); `diagram-design` adopted whole (cathrynlavery, MIT, 45 types, machine gates canaried: self_check exit-1 on corruption, verify-geometry 17 findings on planted shift + 83 green assertions) |
 | Upstream compression | ~30x (817 cyber skills → 13 domain skills) |
 | Deliberately excluded | 832 `composio-skills` generated API automations |
 
@@ -61,17 +62,25 @@ and pulls a reference file only when the situation warrants it.
 | `ot-ics-and-firmware-security` | 35 | Purdue/IEC 62443 zones, safe OT assessment, SCADA protocols, firmware extraction |
 | `cryptography-and-key-management` | 16 | Encryption design, key hierarchy, HSM/PKCS#11, PKI/TLS, signatures, PQC migration |
 
-### Strategy & consulting (7 skills, from 21 playbooks + 1 consulting method + 1 new)
+### Strategy & consulting (9 skills, from 21 playbooks + 3 upstream strategy collections + 3 new)
 
 | Skill | Merged from | Covers |
 |---|---:|---|
-| `strategy-diagnosis-and-framing` | 13 | **Owns the method layer**: depth modes, MECE, issue trees, hypothesis, evidence, synthesis, plus situation/growth/assumption diagnosis |
-| `market-and-competitive-intelligence` | 7 | Market sizing, segmentation, profit pools, competitor response modelling, ad-library mining. Owns `frameworks-strategy.md` |
-| `strategic-choices-and-economics` | 8 | Option generation, business cases, portfolio review, pricing. Owns decision/financial/pricing frameworks |
-| `operating-model-and-execution` | 6 | Capabilities, decision rights, governance, initiative prioritisation, transformation roadmap |
-| `risk-performance-and-value-governance` | 5 | KPI design, value ledger, risk register, war gaming |
-| `executive-communication-and-alignment` | 4 | Decision memos, Pyramid/SCQA narratives, stakeholder pre-wiring |
+| `strategy-core` | 4 collections | **Personalised orchestrator**: house rules, engagement modes, depth ladder, Frame → Diagnose → Choose → Value → Design → Govern → Communicate pipeline, `strategy/<slug>/` artefact layout |
+| `strategy-diagnosis-and-framing` | 13 | **Owns the method layer**: depth modes, MECE, issue trees, hypothesis, evidence, synthesis, situation/growth/assumption diagnosis, full-potential benchmark calculator |
+| `market-and-competitive-intelligence` | 7 | Market sizing (TAM/SAM/SOM calculator), segmentation, profit pools, competitor response modelling, ad-library mining. Owns `frameworks-strategy.md` |
+| `strategic-choices-and-economics` | 8 | Option generation, business cases, portfolio review, pricing, synergy and negotiation. Owns decision/financial/pricing frameworks and six calculators |
+| `operating-model-and-execution` | 6 | Capabilities, decision rights, governance, initiative prioritisation (RICE), transformation roadmap, spans/layers and 100-day plan |
+| `risk-performance-and-value-governance` | 5 | KPI design, value ledger, risk register with velocity, decision-tree EV, war gaming |
+| `executive-communication-and-alignment` | 4 | Decision memos, Pyramid/SCQA narratives, stakeholder grid and coalition math |
 | `business-plan-authoring` | — (new) | Venture-grade business plans that survive a hostile funder: live web research with citations, driver-based 24–36 month projections, per-section defense template, mandatory red-team pass, and a plan-to-deck compression map (hands the `.pptx` to `presentation-authoring`). Composes the five skills above |
+| `product-strategy` | 2 collections | Idea validation, Business Model Canvas, JTBD personas, Dunford positioning, 90-day GTM, RICE roadmap, growth loops, monetization, launch and behavior signals |
+
+### Local machine (1 skill, new)
+
+| Skill | Reviewed | Covers |
+|---|---:|---|
+| `mac-maintenance` | 1 (Mole, GPL-3.0, behaviour only) | Read-only audit; storage/cache plan; one-category apply with quarantine; Xcode, project, package-manager and Docker cleanup; power, battery and thermal audit; startup, updates, security, backup and network checks |
 
 ### Personal operations & craft (58 skills, adopted from the live skill set)
 
@@ -191,7 +200,7 @@ skill-bundle/
     ├── SPEC.md                   the consolidation spec every skill follows
     ├── merge_cyber.py            regenerates the cyber reference/script layer
     ├── cyber-clusters.json       817 techniques → 13 clusters
-    └── provenance/<skill>.json   what each skill was merged from (142 files)
+    └── provenance/<skill>.json   what each skill was merged from (143 files)
 ```
 
 ### Two classes of reference file
@@ -291,11 +300,13 @@ Consolidated 30:
       because it is a new synthesis of bundle content, not a merge of a
       licensed source file)
 
-All 143 (re-verified 2026-10-30, after the film-family adoption):
+All 149 (re-verified 2026-11-02, after the mac-maintenance adoption):
 
-- [x] `name` frontmatter equals directory name — 143/143
-- [x] description present — 143/143
-- [x] provenance JSON valid, complete, no orphans — 142/143
+- [x] `name` frontmatter equals directory name — 149/149
+- [x] description present — 149/149
+- [x] provenance JSON valid, complete, no orphans — 144/149
+      (five adopted skills — `ai-design-check`, `course`, `diagram-design`, `impeccable`,
+      `machine-works` — have none; they predate or sit outside the provenance audit)
       (`impeccable` still has none; it was adopted after the provenance audit)
 - [x] no broken authored relative links — 0 broken
 - [x] no name collisions between consolidated, personal, external and film sets
@@ -355,6 +366,8 @@ read live from disk.
 | `awesome-claude-skills/` | 32 hand-written (832 composio excluded) |
 | `skills/skills/` | 19 Anthropic skills + 1 template |
 | `strategy-skills-for-claude/` | 21 playbooks in 6 phases |
+| [andreworia/claude-powerpoint-skills](https://github.com/andreworia/claude-powerpoint-skills) · [claude-pptx-skills](https://github.com/andreworia/claude-pptx-skills) (MIT) | 31 Oria deck skills distilled into two `presentation-authoring` references: deck craft and template/brand/file mechanics |
+| [tw93/Mole](https://github.com/tw93/mole) (GPL-3.0) | Behavioural review only: dry-run, path validation, whitelist, process guards, operation log, project purge, installer cleanup. No code copied; see `mac-maintenance/references/mole-review.md` |
 | `management-consulting/` | 1 skill + 11 framework references + 4 worked examples |
 | Personal skill set (`~/.claude/skills`, `~/.agents/skills`, `~/.pi/agent/skills`) | 63 unique skills → 55 after merging 8 duplicate overlaps (originals removed from the agent roots; the bundle is now the single source of truth) |
 | [open-slide](https://github.com/open-slide/open-slide) (MIT) | 5 agent skills (`create-slide`, `slide-authoring`, `create-theme`, `current-slide`, `apply-comments`) + 7 primitive references, adopted verbatim as reference docs of the `open-slide` skill |

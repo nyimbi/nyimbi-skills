@@ -3,16 +3,17 @@
   "merged_from_count": 4,
   "exact_duplicates_merged": [],
   "near_duplicates_merged": [
-    "decision-memo + narrative-builder (both answer-first Pyramids): one recommendation and one evidence set, written once — decision-memo owns the one-page document for a decision-maker, narrative-builder owns the headline sequence and hostile-question prep for a deck or a room",
-    "stakeholder-alignment pre-wire + decision-memo risks section: resistance points and objections live in the stakeholder map; the memo only cites them, it does not re-derive them"
+    "decision-memo + narrative-builder (both answer-first Pyramids): one recommendation and one evidence set, written once \u2014 decision-memo owns the one-page document for a decision-maker, narrative-builder owns the headline sequence and hostile-question prep for a deck or a room",
+    "stakeholder-alignment pre-wire + decision-memo risks section: resistance points and objections live in the stakeholder map; the memo only cites them, it does not re-derive them",
+    "Power/interest grid and coalition math merged from Natan-Mohart/24-strategy-skills-for-claude (MIT); the skill now ships its own stakeholder reference."
   ],
   "dropped": [
     {
-      "name": "management-consulting/SKILL.md — mode table, MECE/issue-tree construction, evidence-label definitions, six-section Pyramid contract, epistemic rules, failure modes",
+      "name": "management-consulting/SKILL.md \u2014 mode table, MECE/issue-tree construction, evidence-label definitions, six-section Pyramid contract, epistemic rules, failure modes",
       "reason": "method layer owned by strategy-diagnosis-and-framing; depth mode, evidence rules, and the answer-first contract are linked, not restated"
     },
     {
-      "name": "management-consulting/SKILL.md — diagram rules and references/tooling-appendix.md",
+      "name": "management-consulting/SKILL.md \u2014 diagram rules and references/tooling-appendix.md",
       "reason": "diagram templates and rendering owned by strategy-diagnosis-and-framing (references/diagram-templates.md)"
     },
     {
@@ -39,6 +40,10 @@
     "management-consulting/SKILL.md",
     "management-consulting/LICENSE"
   ],
-  "reference_files": [],
-  "scripts_copied": 0
+  "reference_files": [
+    "references/stakeholder-grid.md"
+  ],
+  "scripts_copied": [
+    "scripts/power_interest_grid.py"
+  ]
 }

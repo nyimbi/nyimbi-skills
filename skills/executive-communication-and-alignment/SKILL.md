@@ -5,7 +5,9 @@ description: >-
   with recommendation, options, evidence, risks, and an explicit decision request;
   build executive narratives with the Pyramid Principle and SCQA so the recommendation
   lands in the first minute; and map stakeholders, decision criteria, influence paths,
-  and pre-wire actions that get to yes before the meeting. Use when the user says
+  and pre-wire actions that get to yes before the meeting, with a power/interest
+  coalition calculator that sums support against opposition by power, not headcount.
+  Use when the user says
   "write this up for leadership", "draft a decision memo", "build the board
   storyline", "make this land", "prep the hostile questions", "how do we get this
   approved", "pre-wire this with the ExCo", or for investment recommendations,
@@ -136,12 +138,13 @@ Verify before delivering:
 
 ## Reference map
 
-This skill ships no framework file of its own — evidence, diagrams, and worked
-examples are owned by `strategy-diagnosis-and-framing` and linked here rather than
-copied.
+Evidence, diagrams, and worked examples are owned by
+`strategy-diagnosis-and-framing` and linked here rather than copied. The stakeholder
+grid and coalition math live with this skill.
 
 | Situation | Open |
 |---|---|
+| Stakeholder grid, coalition math, pre-wiring and memo audience (calculator) | [references/stakeholder-grid.md](references/stakeholder-grid.md) |
 | Worked example — Full Case end to end, from clarify to synthesis | [../strategy-diagnosis-and-framing/references/end-to-end-full-case.md](../strategy-diagnosis-and-framing/references/end-to-end-full-case.md) |
 | Worked example — good vs bad recommendation (the bar this skill writes to) | [../strategy-diagnosis-and-framing/references/recommendation-good-vs-bad.md](../strategy-diagnosis-and-framing/references/recommendation-good-vs-bad.md) |
 | Depth modes and the six-section answer-first contract (bottom line → arguments → risks → kill conditions → next actions) | [../strategy-diagnosis-and-framing/SKILL.md](../strategy-diagnosis-and-framing/SKILL.md) |

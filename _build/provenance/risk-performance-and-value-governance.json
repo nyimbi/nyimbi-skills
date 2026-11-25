@@ -3,12 +3,13 @@
   "merged_from_count": 5,
   "exact_duplicates_merged": [],
   "near_duplicates_merged": [
-    "kpi-architect + value-realization (both define metrics): value-realization owns the value ledger (benefit definition, baseline, target, timing, owner, proof standard, one-time vs recurring); kpi-architect owns the KPI system (driver tree, outcome/driver/activity split, leading indicators, thresholds, cadence) — ledger baselines/targets populate thresholds, each metric defined once",
-    "war-gaming + risk-and-mitigation (both stress-test the plan): war-gaming owns scenario generation (base/adverse/aggressive, vulnerabilities, early-warning signals, response playbook); risk-and-mitigation owns the register (likelihood x impact, mitigation, trigger, owner, residual, go/no-go) — every war-game vulnerability becomes one register row"
+    "kpi-architect + value-realization (both define metrics): value-realization owns the value ledger (benefit definition, baseline, target, timing, owner, proof standard, one-time vs recurring); kpi-architect owns the KPI system (driver tree, outcome/driver/activity split, leading indicators, thresholds, cadence) \u2014 ledger baselines/targets populate thresholds, each metric defined once",
+    "war-gaming + risk-and-mitigation (both stress-test the plan): war-gaming owns scenario generation (base/adverse/aggressive, vulnerabilities, early-warning signals, response playbook); risk-and-mitigation owns the register (likelihood x impact, mitigation, trigger, owner, residual, go/no-go) \u2014 every war-game vulnerability becomes one register row",
+    "Risk scoring with velocity, decision-tree EV and value-realization bridge merged from Natan-Mohart/24-strategy-skills-for-claude (MIT); the skill now ships its own calculator reference instead of linking only to siblings."
   ],
   "dropped": [
     {
-      "name": "management-consulting/SKILL.md — mode table, MECE/issue-tree construction, evidence-label definitions, six-section Pyramid contract, epistemic rules, failure modes",
+      "name": "management-consulting/SKILL.md \u2014 mode table, MECE/issue-tree construction, evidence-label definitions, six-section Pyramid contract, epistemic rules, failure modes",
       "reason": "method layer owned by strategy-diagnosis-and-framing; depth mode and synthesis contract linked, not restated"
     },
     {
@@ -40,6 +41,11 @@
     "management-consulting/SKILL.md",
     "management-consulting/LICENSE"
   ],
-  "reference_files": [],
-  "scripts_copied": 0
+  "reference_files": [
+    "references/risk-and-decision-calculators.md"
+  ],
+  "scripts_copied": [
+    "scripts/risk_matrix.py",
+    "scripts/decision_tree_ev.py"
+  ]
 }

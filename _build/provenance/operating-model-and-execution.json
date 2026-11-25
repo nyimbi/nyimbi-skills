@@ -3,16 +3,17 @@
   "merged_from_count": 6,
   "exact_duplicates_merged": [],
   "near_duplicates_merged": [
-    "initiative-prioritizer + transformation-roadmap (overlapping sequencing): scoring, fit, capacity cut, and kill list owned by initiative-prioritizer step; phases, dependencies, gates, 90-day plan, and governance calendar owned by transformation-roadmap step — one concept, one home",
-    "operating-model-design governance forums + risk-performance-and-value-governance review cadence: forum structure and decision rights defined here; KPI/benefit/risk content of the agenda cross-linked to ../risk-performance-and-value-governance/SKILL.md"
+    "initiative-prioritizer + transformation-roadmap (overlapping sequencing): scoring, fit, capacity cut, and kill list owned by initiative-prioritizer step; phases, dependencies, gates, 90-day plan, and governance calendar owned by transformation-roadmap step \u2014 one concept, one home",
+    "operating-model-design governance forums + risk-performance-and-value-governance review cadence: forum structure and decision rights defined here; KPI/benefit/risk content of the agenda cross-linked to ../risk-performance-and-value-governance/SKILL.md",
+    "Spans-and-layers org cost, RICE kill list and 100-day block plan merged from Natan-Mohart and StratArts (MIT); calculators copied with licences."
   ],
   "dropped": [
     {
-      "name": "management-consulting/SKILL.md — mode table, MECE/issue-tree construction, evidence-label definitions, six-section Pyramid contract, epistemic rules, failure modes",
+      "name": "management-consulting/SKILL.md \u2014 mode table, MECE/issue-tree construction, evidence-label definitions, six-section Pyramid contract, epistemic rules, failure modes",
       "reason": "method layer owned by strategy-diagnosis-and-framing; depth-mode referenced in one line, contract linked, not restated"
     },
     {
-      "name": "management-consulting/SKILL.md — diagram rules and references/tooling-appendix.md",
+      "name": "management-consulting/SKILL.md \u2014 diagram rules and references/tooling-appendix.md",
       "reason": "diagram templates and rendering owned by strategy-diagnosis-and-framing (references/diagram-templates.md)"
     },
     {
@@ -43,7 +44,11 @@
   ],
   "reference_files": [
     "references/frameworks-operations.md",
-    "references/frameworks-innovation.md"
+    "references/frameworks-innovation.md",
+    "references/org-design-and-100-day.md"
   ],
-  "scripts_copied": 0
+  "scripts_copied": [
+    "scripts/spans_layers.py",
+    "scripts/rice_prioritizer.py"
+  ]
 }

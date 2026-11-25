@@ -5,7 +5,8 @@ description: >-
   turn it into sequenced delivery: capabilities, roles, decision rights, governance,
   processes, and ways of working, plus initiative prioritization with a kill list
   and a transformation roadmap with workstreams, milestones, decision gates, and a
-  first-90-day plan. Use when the user asks to "design our operating model", "redraw
+  first-90-day plan. Includes a spans-and-layers org-cost calculator and a RICE
+  prioritizer that produces a kill list, not just a ranking. Use when the user asks to "design our operating model", "redraw
   decision rights", "set up transformation governance", "build a roadmap for this
   strategy", "sequence this program", "which projects matter most", "prioritize this
   initiative list", "cut the portfolio down", or "how do we make this happen" — or for
@@ -146,6 +147,7 @@ Verify before delivering:
 | Situation | Open |
 |---|---|
 | Change adoption and org transition — ADKAR, Kotter, Lewin, Influence Model, journey map, NPS | [references/frameworks-operations.md](references/frameworks-operations.md) |
+| Org design and 100-day plan — spans/layers cost, RICE kill list, day 1–30/31–60/61–100 | [references/org-design-and-100-day.md](references/org-design-and-100-day.md) |
 | Designing a new service or business model — JTBD, Business Model Canvas, Value Proposition Canvas, advantage matrix | [references/frameworks-innovation.md](references/frameworks-innovation.md) |
 | Depth modes (Quick Structure / Full Case / Client Deliverable), MECE, evidence labels, answer-first contract | [../strategy-diagnosis-and-framing/SKILL.md](../strategy-diagnosis-and-framing/SKILL.md) |
 | Picking a framework for the design problem — one-line index of every group's practitioner file | [../strategy-diagnosis-and-framing/references/frameworks-index.md](../strategy-diagnosis-and-framing/references/frameworks-index.md) |
