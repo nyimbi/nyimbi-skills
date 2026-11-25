@@ -1,22 +1,6 @@
 ---
 name: presentation-authoring
-description: >- For design artifacts rendered inside the OpenDesign app (DESIGN.md brand-bound, live preview, HTML/PDF/PPTX/MP4 export), see open-design.
-  Use this skill whenever a PowerPoint file is involved as input, output, or both.
-  Triggers include "build a deck from this outline", "turn these notes into slides",
-  "fill in this template", "fix the layout", "add speaker notes", "duplicate that
-  slide", "reorder the slides", "extract the text from this presentation", "make
-  thumbnails of every slide", and any mention of .pptx, .potx, "deck", "slides", or
-  "presentation" — even when the extracted content will be reused elsewhere, like in
-  an email or summary. It owns the PowerPoint format and its tooling: pptxgenjs and
-  html2pptx for authoring, raw OOXML unpack/edit/repack for existing decks,
-  template-filling with slide rearrangement and text replacement, layouts, speaker
-  notes, native charts, and the three-stage QA of content, file schema, and rendered
-  slides. Do not use for deciding what the slides should say (see
-  writing-and-internal-communications), for choosing the visual identity or palette
-  (see visual-design-and-branding), or for HTML/web deliverables (see
-  web-artifact-and-app-building); for agent-authored, web-native, presentable
-  decks — React slides on a 1920×1080 canvas with browser present mode and
-  HTML/PDF/PPTX export (see open-slide).
+description: "For design artifacts rendered inside the OpenDesign app (DESIGN.md brand-bound, live preview, HTML/PDF/PPTX/MP4 export), see open-design. Use this skill whenever a PowerPoint file is involved as input, output, or both. Triggers include \"build a deck from this outline\", \"turn these notes into slides\", \"fill in this template\", \"fix the layout\", \"add speaker notes\", \"duplicate that slide\", \"reorder the slides\", \"extract the text from this presentation\", \"make thumbnails of every slide\", and any mention of .pptx, .potx, \"deck\", \"slides\", or \"presentation\" — even when the extracted content will be reused elsewhere, like in an email or summary. It owns the PowerPoint format and its tooling: pptxgenjs and html2pptx for authoring, raw OOXML unpack/edit/repack for existing decks, template-filling with slide rearrangement and text replacement, layouts, speaker notes, native charts, and the three-stage QA of content, file schema, and rendered slides. Also carries a deck-craft layer — ghost deck, action titles, chart selection, exhibit finishing, partner review — and a template/brand layer covering masters, placeholders, theme binding, accessibility, export and file size. Do not use for deciding what the slides should say (see writing-and-internal-communications), for choosing the visual identity or palette (see visual-design-and-branding), or for HTML/web deliverables (see web-artifact-and-app-building); for agent-authored, web-native, presentable decks — React slides on a 1920×1080 canvas with browser present mode and HTML/PDF/PPTX export (see open-slide)."
 ---
 
 # Presentation Authoring
@@ -49,9 +33,31 @@ HTML/PDF) and a scaffolded open-slide project is acceptable — this skill remai
 the route for direct `.pptx` authoring, existing-deck edits, and template fills.
 `open-design` when the deck is meant to be produced inside the OpenDesign app (brand-bound render, live preview, template/theme picker) — that route owns the app loop; this skill owns direct `.pptx` authoring and edits.
 
+## Default template
+
+Use [`assets/nyimbi-strategy.potx`](assets/nyimbi-strategy.potx) unless a client template is
+mandated. It is 16:9 (13.333 × 7.5 in), with nine layouts: Title, Title and Content, Section
+Divider, Two Content, Comparison, Chart or Table with Source, Image with Caption,
+Full-bleed Image, Title Only.
+
+- Theme: warm paper `FBFAF7`, ink `111827`, one teal accent `0F766E`; Georgia headings,
+  Arial body.
+- Grid: 0.6 in side margins, title top 0.55 in, body top 1.60 in, footer rule 6.92 in.
+- Every content layout carries a slide-number field. If a viewer does not show it, enable
+  Header & Footer in PowerPoint; LibreOffice may not render the field.
+- The template is installed at
+  `~/Library/Group Containers/UBF8T346G9.Office/User Content.localized/Templates.localized/nyimbi-strategy.potx`.
+- Rebuild with `python3 scripts/build_template.py`; regenerate the render check with
+  `python3 scripts/build_template_preview.py`. Edit the scripts, not the binaries.
+
 ## Workflow
 
-1. **Choose the route.** Everything downstream depends on it.
+1. **Choose the route.** Everything downstream depends on it. If the storyline is not
+   already settled in an approved memo or ghost deck, run
+   [`references/deck-craft.md`](references/deck-craft.md) first: titles and exhibit
+   sketches are agreed before any slide is built. If the deck must sit on a corporate
+   template, load [`references/template-and-brand.md`](references/template-and-brand.md)
+   before authoring.
 
    | Task | Approach |
    |---|---|
@@ -61,8 +67,20 @@ the route for direct `.pptx` authoring, existing-deck edits, and template fills.
    | **Read** content | `markitdown deck.pptx`; visual grid: `scripts/skills-thumbnail.py` |
 
    Prerequisites: `pptxgenjs`, `markitdown[pptx]`, `Pillow`, `defusedxml`, `lxml`,
-   `python-pptx`, LibreOffice (`soffice`), `pdftoppm`. `pptxgenjs` is preinstalled —
-   write the script and `require('pptxgenjs')` directly; only install if that fails.
+   `python-pptx`, LibreOffice (`soffice`), `pdftoppm`. Check before authoring:
+
+   ```bash
+   node -e "require('pptxgenjs')" && echo pptxgenjs-ok
+   node -e "require('playwright');require('sharp')" && echo html2pptx-ok
+   python3 -c "import pptx, PIL, defusedxml, lxml; print('python-ok')"
+   ```
+
+   The bundle does not vendor `node_modules`; a machine may have only the Python
+   side. Install the Node packages in the deck project (`npm install pptxgenjs`;
+   `npm install playwright sharp && npx playwright install chromium` for
+   `html2pptx`) and run the script from that project. If Node cannot be installed,
+   `python-pptx` is sufficient for straightforward creation and edits; keep the
+   LibreOffice render-and-inspect step.
 
 2. **Authoring a new deck.** Read
    [`references/html2pptx.md`](references/html2pptx.md) in full first. The
@@ -224,6 +242,14 @@ the route for direct `.pptx` authoring, existing-deck edits, and template fills.
       documented slack
 - [ ] Layout arity matches content arity — no empty placeholders, no content forced
       into a column it does not fit
+- [ ] The ghost deck or approved outline exists; every title is a claim, not a topic;
+      the title-only read reconstructs the argument
+- [ ] Each chart type follows from its message; one element is highlighted; the chart
+      has a reference line where a comparison matters and no chart junk
+- [ ] If a template is in use: slides sit on real layouts, content is in placeholders,
+      colours and fonts are theme-bound, and the brand audit has no Blockers
+- [ ] If the deck is external or public-sector: accessibility check run, contrast
+      measured, reading order verified, and the PDF exported with structure tags
 
 ## Reference map
 
@@ -231,6 +257,11 @@ the route for direct `.pptx` authoring, existing-deck edits, and template fills.
 |---|---|
 | Authoring slides — HTML slide syntax, html2pptx API, pptxgenjs charts/tables/shapes, icons and gradients | [html2pptx.md](references/html2pptx.md) |
 | Editing OOXML — slide structure, text/list/shape/image/table patterns, slide operations, packing checklist | [ooxml.md](references/ooxml.md) |
+| Deck craft — ghost deck, action titles, executive summary, decision page, chart selection, waterfall, colour, data-ink, framework slides, partner review | [deck-craft.md](references/deck-craft.md) |
+| Template and brand — masters, layouts, placeholders, theme binding, grid, assets, fonts, export, accessibility, notes, file size, audit | [template-and-brand.md](references/template-and-brand.md) |
+| Oria source packs and licences, and what was adapted | [sources/INDEX.md](references/sources/INDEX.md) |
+| Default personal template — 16:9, nine layouts, theme, grid | [assets/nyimbi-strategy.potx](assets/nyimbi-strategy.potx) |
+| Rebuild the template and its rendered preview | `scripts/build_template.py`, `scripts/build_template_preview.py` |
 
 Executable helpers: `scripts/rearrange.py`, `scripts/inventory.py`,
 `scripts/replace.py`, `scripts/add_slide.py`, `scripts/clean.py`,

@@ -1,6 +1,6 @@
 ---
 name: ponytail
-description: "Lazy senior dev mode for any coding task (write, refactor, fix, review): YAGNI, stdlib first, no unrequested abstractions. Not for non-coding requests." Alternative session styles: caveman (token compression), i-have-adhd (ADHD-friendly output shaping). For rewriting existing written text, see humanizer.
+description: "Lazy senior dev mode for any coding task (write, refactor, fix, review): YAGNI, stdlib first, no unrequested abstractions. Not for non-coding requests. Alternative session styles: caveman (token compression), i-have-adhd (ADHD-friendly output shaping). For rewriting existing written text, see humanizer."
 homepage: https://github.com/DietrichGebert/ponytail
 license: MIT
 ---

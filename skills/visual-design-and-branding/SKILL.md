@@ -1,22 +1,6 @@
 ---
 name: visual-design-and-branding
-description: >- For design artifacts rendered inside the OpenDesign app (DESIGN.md brand-bound, live preview, HTML/PDF/PPTX/MP4 export), see open-design.
-  Decide how something looks, then produce it: poster and art composition, theme
-  and colour-system selection, type scale and typography, brand palette and
-  identity constraints, distinctive UI design direction, generative p5.js art,
-  image upscaling and export. Use when the user says "design a poster", "make
-  this look better", "pick a theme for this deck", "apply our brand colours",
-  "give this a distinctive visual identity", "this looks generic or templated",
-  "create generative art", or "upscale this screenshot". This skill owns the
-  design-decision sequence — audience, aesthetic direction, type scale, colour
-  system, layout, production — and keeps five distinct techniques: preset theme
-  system, brand constraints, UI craft, static composition, image enhancement. Do
-  not use for the words or the document structure
-  (writing-and-internal-communications); for generating PowerPoint, Word, or
-  Excel files (presentation-authoring, word-document-authoring,
-  spreadsheet-authoring); or for scoping, building, and browser-testing
-  interactive web artifacts (web-artifact-and-app-building), which defers to
-  this skill only for visual direction.
+description: "For design artifacts rendered inside the OpenDesign app (DESIGN.md brand-bound, live preview, HTML/PDF/PPTX/MP4 export), see open-design. Decide how something looks, then produce it: poster and art composition, theme and colour-system selection, type scale and typography, brand palette and identity constraints, distinctive UI design direction, generative p5.js art, image upscaling and export. Use when the user says \"design a poster\", \"make this look better\", \"pick a theme for this deck\", \"apply our brand colours\", \"give this a distinctive visual identity\", \"this looks generic or templated\", \"create generative art\", or \"upscale this screenshot\". This skill owns the design-decision sequence — audience, aesthetic direction, type scale, colour system, layout, production — and keeps five distinct techniques: preset theme system, brand constraints, UI craft, static composition, image enhancement. Do not use for the words or the document structure (writing-and-internal-communications); for generating PowerPoint, Word, or Excel files (presentation-authoring, word-document-authoring, spreadsheet-authoring); or for scoping, building, and browser-testing interactive web artifacts (web-artifact-and-app-building), which defers to this skill only for visual direction."
 license: Apache-2.0
 ---
 

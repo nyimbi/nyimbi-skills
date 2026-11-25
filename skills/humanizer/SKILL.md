@@ -1,13 +1,9 @@
 ---
 name: humanizer
-description: | For live session output-style modes (token compression, ADHD-friendly shaping, lazy-senior-dev style), see ponytail, i-have-adhd, caveman.
-  Rewrite AI-sounding text so it reads naturally without changing what it says.
-  Use when editing or reviewing prose for inflated claims,
-  sales language, vague sources, repetitive structure, stock AI words, passive
-  voice, filler, or chatbot artifacts. Based on Wikipedia's "Signs of AI writing."
+description: "For live session output-style modes (token compression, ADHD-friendly shaping, lazy-senior-dev style), see ponytail, i-have-adhd, caveman. Rewrite AI-sounding text so it reads naturally without changing what it says. Use when editing or reviewing prose for inflated claims, sales language, vague sources, repetitive structure, stock AI words, passive voice, filler, or chatbot artifacts. Also checks for invisible Unicode marks and authoring-tool metadata before delivery. Based on Wikipedia's \"Signs of AI writing.\""
 license: MIT
 metadata:
-  version: "2.11.2"
+  version: "2.12.0"
 ---
 
 # Humanizer: remove AI writing patterns
@@ -429,6 +425,63 @@ These details often carry the writer's voice. Keep them unless they hurt the mea
 
 ---
 
+## Watermarks and invisible marks
+
+A watermark is not one thing. Check three layers separately, because each needs a different method.
+
+### Invisible characters
+
+Some tools and model providers insert zero-width spaces, joiners, direction controls, variation selectors, tag characters, a byte-order mark, or a soft hyphen. They are invisible in a browser and survive copy and paste. They can carry an identifier, and they can break search, diff, and code.
+
+Run the checker before delivery:
+
+```bash
+python3 ~/.claude/scripts/text_hygiene.py --check path/to/file.md
+python3 ~/.claude/scripts/text_hygiene.py --fix path/to/file.md
+```
+
+The checker reports the code point, the Unicode name, and a short context. `--fix` removes the invisible marks and writes a timestamped backup first. It also reports unusual spaces, such as no-break and thin spaces, but does not remove them by default, because some layouts need them. Review those by hand. Use `--strict` when a file must have no metadata findings either; the default fails only on invisible marks.
+
+The checker catches the common carriers: U+00AD, U+180E, U+200B to U+200F, U+202A to U+202E, U+2060 to U+2064, U+2066 to U+2069, U+FEFF, variation selectors, and tag characters. The docs-qa gate runs the same character check as rule TY006, so a project with that gate catches these marks before delivery. The checker does not catch a homoglyph substitution that uses a visible lookalike letter. That is a different problem and needs a script-confusable check.
+
+### Document metadata
+
+Text can also carry a mark in its properties rather than its characters:
+
+- DOCX: `docProps/core.xml`, `docProps/app.xml`, `docProps/custom.xml`, comments, tracked changes, and revision identifiers.
+- PDF: Author, Creator, Producer, XMP, custom properties, and embedded attachments.
+- HTML: `<meta name="generator">`, comments, and build identifiers.
+- Markdown: front matter with `author`, `generator`, `model`, or `tool`.
+- Images: EXIF, XMP, and C2PA provenance.
+
+`text_hygiene.py` reports DOCX document properties and PDF properties when `pdfinfo` is installed. It does not rewrite them. Remove or blank them with the format's own tool before external release. Check comments and tracked changes separately, because they can contain a name, a tool, or a draft instruction.
+
+Do not strip provenance that a contract, licence, or regulation requires. If a customer requires C2PA or a signed manifest, keep it and disclose it. The rule is to remove accidental tool marks, not required provenance.
+
+### Statistical and stylometric marks
+
+A model provider can bias token selection with a secret key. That is a statistical watermark. Text detectors also score style. Neither is a character or a metadata field, so editing cannot prove removal. Paraphrasing may reduce a statistical signal, but it does not guarantee that the mark is gone.
+
+Be honest about the limit:
+
+- Use a model or provider that does not apply a statistical watermark when the deliverable must be mark-free.
+- Write from source notes and your own structure rather than paraphrasing a generated draft.
+- If a provider publishes a detector, verify with that detector and the provider's key. Do not claim removal without that check.
+- Disclose the tool and the editing process when the reader has a right to know.
+
+Do not describe a rewrite as "watermark-free" when you have only removed invisible characters. That is a claim about a statistical mark you did not test.
+
+### The delivery pass
+
+1. Run `text_hygiene.py --check` on every text file in the package.
+2. Run `--fix` on the files with invisible marks. Read the backup path in the output.
+3. Remove or blank authoring-tool metadata in DOCX, PDF, HTML, and Markdown.
+4. Check for visible attribution: "Generated with", an AI badge, a tool comment, a commit trailer, or a footer.
+5. Re-run `--check` and confirm zero invisible marks.
+6. Keep any provenance the customer or the law requires, and say so.
+
+---
+
 ## How to return the result
 
 **Pasted text (default).** Return the draft, a short list of remaining AI patterns, and the final rewrite.
@@ -446,6 +499,7 @@ These details often carry the writer's voice. Keep them unless they hurt the mea
    - **"Did the rewrite add or remove any fact, name, number, date, quote, citation, ranking, or other claim?"**
    Treat any unsupported addition or lost claim as an error.
 4. Write the final version. State each point naturally instead of patching one flagged phrase at a time. If a sentence stays awkward, rewrite the paragraph around its main point. Apply the dash rule in §14.
+5. Run the watermark pass: check for invisible marks, fix them, remove authoring-tool metadata, and re-check. Do not claim a statistical watermark is removed unless you verified it with the provider's detector.
 
 Return the result required by [How to return the result](#how-to-return-the-result).
 

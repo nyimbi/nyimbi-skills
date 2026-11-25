@@ -1,21 +1,6 @@
 ---
 name: strategic-choices-and-economics
-description: >-
-  Decide which option to take and what it is worth: generate distinct strategic
-  options, compare them against the decision's own criteria, build quantified business
-  cases with base/downside/upside economics and sensitivities, review portfolios of
-  bets for allocation moves, and diagnose pricing power and discount leakage. Carries
-  the decision, financial, and pricing framework libraries the strategy group links to
-  — RAPID, weighted decision matrices, pre-mortem, second-order thinking, inversion,
-  profit and revenue trees, TAM/SAM/SOM, unit economics, waterfall bridges, value-based
-  and competitive pricing, freemium. Use when the user asks "what are our options",
-  "should we invest in this", "build the business case", "what is the ROI and payback",
-  "where should we invest", "should we raise prices", "how should we package this", or
-  "which path do we take". Do not use for the fact base or root-cause diagnosis
-(strategy-diagnosis-and-framing), for sizing markets or reading competitors
-(market-and-competitive-intelligence), for roadmaps, org design, and initiative
-delivery (operating-model-and-execution), or for a fundraise-ready business plan with
-projections and a red-team pass (business-plan-authoring).
+description: "Decide which option to take and what it is worth: generate distinct strategic options, compare them against the decision's own criteria, build quantified business cases with base/downside/upside economics and sensitivities, review portfolios of bets for allocation moves, and diagnose pricing power and discount leakage. Carries the decision, financial, and pricing framework libraries the strategy group links to — RAPID, weighted decision matrices, pre-mortem, second-order thinking, inversion, profit and revenue trees, TAM/SAM/SOM, unit economics, waterfall bridges, value-based and competitive pricing, freemium. Ships dependency-free calculators for NPV/IRR/ payback, unit economics and LTV:CAC, Van Westendorp and elasticity pricing, the GE-McKinsey portfolio, synergy cases, and BATNA/ZOPA. Use when the user asks \"what are our options\", \"should we invest in this\", \"build the business case\", \"what is the ROI and payback\", \"where should we invest\", \"should we raise prices\", \"how should we package this\", or \"which path do we take\". Do not use for the fact base or root-cause diagnosis (strategy-diagnosis-and-framing), for sizing markets or reading competitors (market-and-competitive-intelligence), for roadmaps, org design, and initiative delivery (operating-model-and-execution), or for a fundraise-ready business plan with projections and a red-team pass (business-plan-authoring)."
 license: MIT
 ---
 
@@ -120,6 +105,7 @@ full sequence with the evidence, synthesis, and devil's-advocate gates.
 |---|---|
 | Option generation, criteria, recommendation logic | [references/strategic-options.md](references/strategic-options.md) |
 | Business case: value/cost drivers, scenarios, ROI/NPV, sensitivity | [references/business-case-builder.md](references/business-case-builder.md) |
+| Finance and deals — NPV/IRR/payback, unit economics, pricing, portfolio, synergy, BATNA/ZOPA (calculators) | [references/finance-and-deals.md](references/finance-and-deals.md) |
 | Portfolio scoring and allocation moves | [references/portfolio-review.md](references/portfolio-review.md) |
 | Pricing diagnosis, WTP, discount leakage, rollout tests | [references/pricing-strategy.md](references/pricing-strategy.md) |
 | Decision frameworks: RAPID, decision matrix, pre-mortem, second-order thinking, inversion | [references/frameworks-decision.md](references/frameworks-decision.md) |

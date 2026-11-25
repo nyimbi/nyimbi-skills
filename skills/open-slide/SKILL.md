@@ -1,22 +1,6 @@
 ---
 name: open-slide
-description: >- For design artifacts rendered inside the OpenDesign app (DESIGN.md brand-bound, live preview, HTML/PDF/PPTX/MP4 export), see open-design.
-  Author presentation decks with the open-slide agent-native slide framework —
-  the agent writes the slides as React components on a fixed 1920×1080 canvas,
-  with themes, typed design tokens, stepped reveals, page transitions, morph
-  transitions, built-in speaker notes and presenter mode, a click-to-comment
-  in-browser inspector, and export to self-contained static HTML, print-ready
-  PDF, and editable PPTX. Use when the user wants a modern, visually rich,
-  presentable deck (pitch deck, product or executive presentation, keynote), a
-  deck presented in a browser, "make a deck about X" where visual craft is the
-  point, speaker notes or presenter mode, or "export this deck to PPTX/HTML"
-  from a web source. Requires a scaffolded open-slide project (Node + network:
-  npx @open-slide/cli init) — one project per deck. Do not use for direct .pptx
-  authoring or editing an existing PowerPoint file, when PowerPoint is the only
-  required format and no Node runtime is available (see
-  presentation-authoring), for single-file HTML artifacts that are not decks
-  (see web-artifact-and-app-building), or for architecture and process diagrams
-  (see archify).
+description: "For design artifacts rendered inside the OpenDesign app (DESIGN.md brand-bound, live preview, HTML/PDF/PPTX/MP4 export), see open-design. Author presentation decks with the open-slide agent-native slide framework — the agent writes the slides as React components on a fixed 1920×1080 canvas, with themes, typed design tokens, stepped reveals, page transitions, morph transitions, built-in speaker notes and presenter mode, a click-to-comment in-browser inspector, and export to self-contained static HTML, print-ready PDF, and editable PPTX. Use when the user wants a modern, visually rich, presentable deck (pitch deck, product or executive presentation, keynote), a deck presented in a browser, \"make a deck about X\" where visual craft is the point, speaker notes or presenter mode, or \"export this deck to PPTX/HTML\" from a web source. Requires a scaffolded open-slide project (Node + network: npx @open-slide/cli init) — one project per deck. Do not use for direct .pptx authoring or editing an existing PowerPoint file, when PowerPoint is the only required format and no Node runtime is available (see presentation-authoring), for single-file HTML artifacts that are not decks (see web-artifact-and-app-building), or for architecture and process diagrams (see archify)."
 license: MIT
 ---
 

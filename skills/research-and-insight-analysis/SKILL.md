@@ -1,24 +1,6 @@
 ---
 name: research-and-insight-analysis
-description: >- For scientific literature reviews and research databases (arXiv/PubMed/Semantic Scholar + 78 scientific DBs), see scientific-research.
-  Run one research method across four kinds of question: qualify sales leads
-  against an ideal customer profile with scores and outreach angles, mine
-  meeting transcripts for behavioral and communication patterns with
-  timestamped quotes, turn Claude Code history into a prioritized skill-gap
-  report with curated learning, and brainstorm domain names with live
-  availability checks. Frame the question, gather evidence with provenance,
-  structure the findings, rank and qualify them, and deliver a brief someone
-  can act on the same day. Use when the user says "find me leads that match our
-  ICP", "research this company or person", "build a target list", "when do I
-  avoid conflict in meetings", "what are my communication patterns", "analyze
-  my coding history and tell me what to learn", "suggest domain names and check
-  availability", "score and shortlist these options", or "turn these
-  transcripts/notes into insights". Do not use for competitor, ad or positioning
-  analysis (see market-and-competitive-intelligence), for drafting or polishing
-  prose and documents (see writing-and-internal-communications), for diagnosing
-  a business's strategic problem (see strategy-diagnosis-and-framing), or for
-  questions about Claude's own skills, MCP servers and agents (see
-  skill-authoring-and-agent-tooling).
+description: "For scientific literature reviews and research databases (arXiv/PubMed/Semantic Scholar + 78 scientific DBs), see scientific-research. Run one research method across four kinds of question: qualify sales leads against an ideal customer profile with scores and outreach angles, mine meeting transcripts for behavioral and communication patterns with timestamped quotes, turn Claude Code history into a prioritized skill-gap report with curated learning, and brainstorm domain names with live availability checks. Frame the question, gather evidence with provenance, structure the findings, rank and qualify them, and deliver a brief someone can act on the same day. Use when the user says \"find me leads that match our ICP\", \"research this company or person\", \"build a target list\", \"when do I avoid conflict in meetings\", \"what are my communication patterns\", \"analyze my coding history and tell me what to learn\", \"suggest domain names and check availability\", \"score and shortlist these options\", or \"turn these transcripts/notes into insights\". Do not use for competitor, ad or positioning analysis (see market-and-competitive-intelligence), for drafting or polishing prose and documents (see writing-and-internal-communications), for diagnosing a business's strategic problem (see strategy-diagnosis-and-framing), or for questions about Claude's own skills, MCP servers and agents (see skill-authoring-and-agent-tooling)."
 ---
 
 # Research and Insight Analysis

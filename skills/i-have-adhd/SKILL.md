@@ -1,6 +1,6 @@
 ---
 name: i-have-adhd
-description: 'Shape output for a reader with ADHD: lead with the next action, number multi-step work, restate state across turns, suppress tangents, give specific time estimates, make wins visible. Invoke with /i-have-adhd; stays on until "stop adhd mode".' Alternative session styles: ponytail (lazy senior dev), caveman (token compression). For rewriting existing written text, see humanizer.
+description: "Shape output for a reader with ADHD: lead with the next action, number multi-step work, restate state across turns, suppress tangents, give specific time estimates, make wins visible. Invoke with /i-have-adhd; stays on until \"stop adhd mode\". Alternative session styles: ponytail (lazy senior dev), caveman (token compression). For rewriting existing written text, see humanizer."
 disable-model-invocation: true
 license: MIT
 metadata:

@@ -1,21 +1,6 @@
 ---
 name: web-artifact-and-app-building
-description: >- For design artifacts rendered inside the OpenDesign app (DESIGN.md brand-bound, live preview, HTML/PDF/PPTX/MP4 export), see open-design.
-  Build interactive web artifacts and small browser apps end to end: scope the
-  artifact, choose between a single-file HTML build and a React + Tailwind +
-  shadcn/ui multi-component project, scaffold it, develop it, bundle everything
-  into one self-contained HTML file, then verify it in a real browser and
-  iterate. Use when the user says "build me an artifact", "make an interactive
-  dashboard / tool / landing page", "create a React artifact with shadcn",
-  "bundle this into a single HTML file", "test this app in a browser", "why is
-  my artifact blank", or asks to scope, prototype, ship, or debug a
-  browser-based deliverable. Architecture, build, bundling, and Playwright
-  browser verification are one workflow here — verification is not an optional
-  extra step. Do not use for how it looks: visual direction, palette,
-  typography, and branding belong to visual-design-and-branding; for slide
-  decks, Word documents, or spreadsheets (presentation-authoring,
-  word-document-authoring, spreadsheet-authoring); or for authoring agent
-  skills, plugins, and MCP servers (skill-authoring-and-agent-tooling).
+description: "For design artifacts rendered inside the OpenDesign app (DESIGN.md brand-bound, live preview, HTML/PDF/PPTX/MP4 export), see open-design. Build interactive web artifacts and small browser apps end to end: scope the artifact, choose between a single-file HTML build and a React + Tailwind + shadcn/ui multi-component project, scaffold it, develop it, bundle everything into one self-contained HTML file, then verify it in a real browser and iterate. Use when the user says \"build me an artifact\", \"make an interactive dashboard / tool / landing page\", \"create a React artifact with shadcn\", \"bundle this into a single HTML file\", \"test this app in a browser\", \"why is my artifact blank\", or asks to scope, prototype, ship, or debug a browser-based deliverable. Architecture, build, bundling, and Playwright browser verification are one workflow here — verification is not an optional extra step. Do not use for how it looks: visual direction, palette, typography, and branding belong to visual-design-and-branding; for slide decks, Word documents, or spreadsheets (presentation-authoring, word-document-authoring, spreadsheet-authoring); or for authoring agent skills, plugins, and MCP servers (skill-authoring-and-agent-tooling)."
 license: Apache-2.0
 ---
 
